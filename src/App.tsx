@@ -1,191 +1,26 @@
-import { memo, useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { ArrowLeft, Camera, Check, ChevronRight, ClipboardCopy, Download, Pencil, RotateCcw, X } from "lucide-react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import gsap from "gsap";
 import Sortable from "sortablejs";
-import { COLOR_SWATCHES, DEFAULT_TIERS } from "./constants";
+import { COLOR_SWATCHES } from "./constants";
+import { FolderView, MenuView, TierlistView } from "./components/AppViews";
+import { LoadingOverlay } from "./components/LoadingOverlay";
+import { ProfileOutput } from "./components/ProfileOutput";
+import { TierItem } from "./components/TierItem";
+import { TierlistModals } from "./components/TierlistModals";
 import { tierlists } from "./data/generated/tierlists.generated";
 import { GridShader } from "./lib/shader";
-import type { Rankings, TierConfig, TierlistDefinition, TierlistEntry, TierlistFolder, TierlistImage } from "./types";
+import { profileLog, isProfileEnabled } from "./lib/profile";
+import { parseRouteFromLocation, routePath } from "./lib/routing";
+import { restoreSortableDom } from "./lib/sortableDom";
+import { buildInitialRankings, cloneDefaultTiers, findFolderById, findParentFolderForTierlist, findTierlistById, nextPaint } from "./lib/tierlistHelpers";
+import { loadTierlistState, saveTierlistState } from "./lib/tierlistStorage";
+import type { AppRoute, ModalName, ViewName } from "./appTypes";
+import type { Rankings, TierConfig, TierlistDefinition, TierlistFolder } from "./types";
 
-type ViewName = "menu" | "folder" | "tierlist";
-type ModalName = "none" | "edit" | "reset" | "screenshot";
-type AppRoute =
-  | { view: "menu" }
-  | { view: "folder"; id: string }
-  | { view: "tierlist"; id: string };
-type SavedTierlistState = {
-  tierConfig: TierConfig[];
-  rankings: Rankings;
-  tierIdCounter: number;
-  sourceSignature?: string;
-};
-
-const STORAGE_PREFIX = "tc2-tierlist-state:";
-const STORAGE_VERSION = 1;
 const INITIAL_POOL_RENDER_COUNT = 160;
 const POOL_RENDER_CHUNK_SIZE = 180;
 const POOL_RENDER_CHUNK_DELAY_MS = 16;
 const STORAGE_SAVE_DELAY_MS = 250;
-
-function isFolder(entry: TierlistEntry): entry is TierlistFolder {
-  return "type" in entry && entry.type === "folder";
-}
-
-function cloneDefaultTiers() {
-  return DEFAULT_TIERS.map((tier) => ({ ...tier }));
-}
-
-function calculateLabelFontSize(label: string) {
-  const len = label.length;
-  if (len <= 2) return "2rem";
-  if (len <= 4) return "1.5rem";
-  if (len <= 8) return "1rem";
-  if (len <= 12) return "0.8rem";
-  if (len <= 18) return "0.65rem";
-  return "0.55rem";
-}
-
-function publicAssetUrl(path: string) {
-  return `${import.meta.env.BASE_URL}${path}`.replace(/\/{2,}/g, "/");
-}
-
-function findTierlistById(id: string, entries: TierlistEntry[]): TierlistDefinition | null {
-  for (const entry of entries) {
-    if (isFolder(entry)) {
-      const found = findTierlistById(id, entry.children);
-      if (found) return found;
-    } else if (entry.id === id) {
-      return entry;
-    }
-  }
-  return null;
-}
-
-function findFolderById(id: string, entries: TierlistEntry[]): TierlistFolder | null {
-  for (const entry of entries) {
-    if (!isFolder(entry)) continue;
-    if (entry.id === id) return entry;
-    const found = findFolderById(id, entry.children);
-    if (found) return found;
-  }
-  return null;
-}
-
-function findParentFolderForTierlist(id: string, entries: TierlistEntry[], parent: TierlistFolder | null = null): TierlistFolder | null {
-  for (const entry of entries) {
-    if (isFolder(entry)) {
-      const found = findParentFolderForTierlist(id, entry.children, entry);
-      if (found) return found;
-    } else if (entry.id === id) {
-      return parent;
-    }
-  }
-  return null;
-}
-
-function appBasePath() {
-  const path = new URL(import.meta.env.BASE_URL, window.location.origin).pathname;
-  return path.endsWith("/") ? path.slice(0, -1) : path;
-}
-
-function routePath(route: AppRoute) {
-  const base = appBasePath();
-  const suffix = route.view === "menu"
-    ? "/"
-    : `/${route.view}/${encodeURIComponent(route.id)}`;
-  return `${base}${suffix}`.replace(/\/{2,}/g, "/") || "/";
-}
-
-function parseRouteFromLocation(): AppRoute {
-  const base = appBasePath();
-  let pathname = window.location.pathname;
-  if (base && pathname.startsWith(base)) pathname = pathname.slice(base.length) || "/";
-
-  const [, routeType, encodedId] = pathname.match(/^\/(folder|tierlist)\/(.+)$/) || [];
-  if (routeType && encodedId) {
-    try {
-      return { view: routeType as "folder" | "tierlist", id: decodeURIComponent(encodedId) };
-    } catch {
-      return { view: "menu" };
-    }
-  }
-
-  return { view: "menu" };
-}
-
-function buildInitialRankings(tierConfig: TierConfig[], images: TierlistImage[]): Rankings {
-  const rankings: Rankings = { pool: images.map((image) => image.id) };
-  tierConfig.forEach((tier) => {
-    rankings[tier.id] = [];
-  });
-  return rankings;
-}
-
-function storageKey(tierlistId: string) {
-  return `${STORAGE_PREFIX}${STORAGE_VERSION}:${tierlistId}`;
-}
-
-function tierlistSourceSignature(tierlist: TierlistDefinition) {
-  return tierlist.images.map((image) => image.id).join("|");
-}
-
-function loadTierlistState(tierlist: TierlistDefinition): SavedTierlistState | null {
-  try {
-    const raw = window.localStorage.getItem(storageKey(tierlist.id));
-    if (!raw) return null;
-    const parsed = JSON.parse(raw) as Partial<SavedTierlistState>;
-    if (!Array.isArray(parsed.tierConfig) || !parsed.rankings) return null;
-
-    const imageIds = new Set(tierlist.images.map((image) => image.id));
-    const tierConfig = parsed.tierConfig
-      .filter((tier): tier is TierConfig => Boolean(tier?.id && tier.label && tier.color))
-      .map((tier) => ({ id: tier.id, label: tier.label, color: tier.color }));
-    if (!tierConfig.length) return null;
-
-    const rankings: Rankings = { pool: [] };
-    const assignedIds = new Set<string>();
-    const tierIds = new Set(["pool", ...tierConfig.map((tier) => tier.id)]);
-
-    tierIds.forEach((tierId) => {
-      if (tierId === "pool") return;
-      const savedIds = Array.isArray(parsed.rankings?.[tierId]) ? parsed.rankings[tierId] : [];
-      rankings[tierId] = savedIds.filter((id) => {
-        if (!imageIds.has(id) || assignedIds.has(id)) return false;
-        assignedIds.add(id);
-        return true;
-      });
-    });
-
-    tierlist.images.forEach((image) => {
-      if (!assignedIds.has(image.id)) rankings.pool.push(image.id);
-    });
-
-    return {
-      tierConfig,
-      rankings,
-      tierIdCounter: Number.isFinite(parsed.tierIdCounter) ? Number(parsed.tierIdCounter) : tierConfig.length,
-      sourceSignature: tierlistSourceSignature(tierlist),
-    };
-  } catch {
-    return null;
-  }
-}
-
-function saveTierlistState(tierlist: TierlistDefinition, tierConfig: TierConfig[], rankings: Rankings, tierIdCounter: number) {
-  try {
-    window.localStorage.setItem(storageKey(tierlist.id), JSON.stringify({ tierConfig, rankings, tierIdCounter, sourceSignature: tierlistSourceSignature(tierlist) }));
-  } catch {
-    // Storage can be unavailable in private/restricted browser contexts.
-  }
-}
-
-function nextPaint() {
-  return new Promise<void>((resolve) => {
-    window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => resolve());
-    });
-  });
-}
 
 export default function App() {
   const [view, setView] = useState<ViewName>("menu");
@@ -207,6 +42,7 @@ export default function App() {
   const rankingsRef = useRef<Rankings>(rankings);
   const screenshotFontCssRef = useRef<string | null>(null);
   const saveTimeoutRef = useRef<number | null>(null);
+  const routeStartRef = useRef<{ id: string; startedAt: number } | null>(null);
   const pendingSaveRef = useRef<{
     tierlist: TierlistDefinition;
     tierConfig: TierConfig[];
@@ -218,14 +54,40 @@ export default function App() {
     return new Map((currentTierlist?.images || []).map((image) => [image.id, image]));
   }, [currentTierlist]);
 
-  const poolItems = useMemo(
-    () => (rankings.pool || []).slice(0, visiblePoolCount).map((id) => <TierItem key={id} image={currentImagesById.get(id)} />),
-    [rankings.pool, visiblePoolCount, currentImagesById],
-  );
+  const poolItems = useMemo(() => {
+    const startedAt = performance.now();
+    const poolIds = rankings.pool || [];
+    const items = poolIds.slice(0, visiblePoolCount).map((id) => <TierItem key={id} image={currentImagesById.get(id)} />);
+    profileLog("pool render", {
+      totalPoolItems: poolIds.length,
+      visiblePoolItems: Math.min(visiblePoolCount, poolIds.length),
+      durationMs: Math.round((performance.now() - startedAt) * 100) / 100,
+    });
+    return items;
+  }, [rankings.pool, visiblePoolCount, currentImagesById]);
 
   useEffect(() => {
     rankingsRef.current = rankings;
   }, [rankings]);
+
+  useEffect(() => {
+    if (!isProfileEnabled() || !("PerformanceObserver" in window)) return;
+    let observer: PerformanceObserver | null = null;
+    try {
+      observer = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          profileLog("long task", {
+            durationMs: Math.round(entry.duration * 100) / 100,
+            startTimeMs: Math.round(entry.startTime * 100) / 100,
+          });
+        });
+      });
+      observer.observe({ entryTypes: ["longtask"] });
+    } catch {
+      profileLog("long task observer unavailable");
+    }
+    return () => observer?.disconnect();
+  }, []);
 
   useEffect(() => {
     if (view !== "tierlist" || !currentTierlist) return;
@@ -288,6 +150,23 @@ export default function App() {
   }, [view, rankings.pool, visiblePoolCount]);
 
   useEffect(() => {
+    if (!isProfileEnabled() || view !== "tierlist" || !currentTierlist || !routeStartRef.current) return;
+    const route = routeStartRef.current;
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        if (routeStartRef.current !== route) return;
+        profileLog("tierlist route painted", {
+          id: currentTierlist.id,
+          totalItems: currentTierlist.images.length,
+          visiblePoolItems: Math.min(visiblePoolCount, rankings.pool?.length || 0),
+          durationMs: Math.round((performance.now() - route.startedAt) * 100) / 100,
+        });
+        routeStartRef.current = null;
+      });
+    });
+  }, [view, currentTierlist, visiblePoolCount, rankings.pool]);
+
+  useEffect(() => {
     if (!canvasRef.current) return;
     shaderRef.current = new GridShader(canvasRef.current);
     return () => shaderRef.current?.destroy();
@@ -319,8 +198,6 @@ export default function App() {
 
     if (!itemId) return;
 
-    // Sortable mutates the DOM immediately. React still owns these nodes, so
-    // restore the old DOM order first and let React perform the actual move.
     restoreSortableDom(rankingsRef.current, fromTier, toTier);
 
     setRankings((previous) => {
@@ -346,10 +223,14 @@ export default function App() {
     sortableRef.current = [];
     if (view !== "tierlist") return;
 
+    const startedAt = performance.now();
+    let zoneCount = 0;
     document.querySelectorAll<HTMLElement>(".tier-items, .pool-items").forEach((zone) => {
+      zoneCount += 1;
+      const prefersTouchDrag = window.matchMedia("(pointer: coarse)").matches;
       const sortable = new Sortable(zone, {
         group: "tierlist-items",
-        animation: 150,
+        animation: prefersTouchDrag ? 0 : 150,
         easing: "cubic-bezier(0.25, 1, 0.5, 1)",
         ghostClass: "tier-item--ghost",
         chosenClass: "tier-item--chosen",
@@ -360,19 +241,24 @@ export default function App() {
         touchStartThreshold: 3,
         scroll: true,
         scrollSensitivity: 80,
-        scrollSpeed: 10,
-        bubbleScroll: true,
+        scrollSpeed: prefersTouchDrag ? 6 : 10,
+        bubbleScroll: !prefersTouchDrag,
         draggable: ".tier-item",
+        forceFallback: prefersTouchDrag,
+        fallbackOnBody: true,
+        fallbackTolerance: prefersTouchDrag ? 8 : 3,
         onStart: (event) => {
-          shaderRef.current?.setPaused(true);
           event.item.classList.add("tier-item--active");
         },
         onEnd: (event) => {
-          shaderRef.current?.setPaused(false);
           handleSortableEnd(event);
         },
       });
       sortableRef.current.push(sortable);
+    });
+    profileLog("sortable setup", {
+      zones: zoneCount,
+      durationMs: Math.round((performance.now() - startedAt) * 100) / 100,
     });
 
     return () => {
@@ -404,8 +290,17 @@ export default function App() {
   }, [modal, tierConfig]);
 
   const loadTierlistView = useCallback((tierlist: TierlistDefinition) => {
+    const startedAt = performance.now();
+    routeStartRef.current = { id: tierlist.id, startedAt };
     setLoading(true);
+    const stateStartedAt = performance.now();
     const savedState = loadTierlistState(tierlist);
+    profileLog("load saved state", {
+      id: tierlist.id,
+      items: tierlist.images.length,
+      restored: Boolean(savedState),
+      durationMs: Math.round((performance.now() - stateStartedAt) * 100) / 100,
+    });
     const tiers = savedState?.tierConfig || cloneDefaultTiers();
     setTierConfig(tiers);
     setTierIdCounter(savedState?.tierIdCounter || 0);
@@ -414,6 +309,11 @@ export default function App() {
     setRankings(savedState?.rankings || buildInitialRankings(tiers, tierlist.images));
     setLoading(false);
     setView("tierlist");
+    profileLog("load tierlist state scheduled", {
+      id: tierlist.id,
+      items: tierlist.images.length,
+      durationMs: Math.round((performance.now() - startedAt) * 100) / 100,
+    });
   }, []);
 
   const applyRoute = useCallback((route: AppRoute) => {
@@ -526,9 +426,13 @@ export default function App() {
     shaderRef.current?.setPaused(true);
 
     let exportContainer: HTMLDivElement | null = null;
+    const screenshotStartedAt = performance.now();
 
     try {
       await nextPaint();
+      profileLog("screenshot overlay painted", {
+        durationMs: Math.round((performance.now() - screenshotStartedAt) * 100) / 100,
+      });
 
       exportContainer = document.createElement("div");
       exportContainer.className = "screenshot-container";
@@ -539,15 +443,25 @@ export default function App() {
       document.body.appendChild(exportContainer);
 
       const { getFontEmbedCSS, toPng } = await import("html-to-image");
+      const fontStartedAt = performance.now();
       screenshotFontCssRef.current ||= await getFontEmbedCSS(exportContainer);
+      profileLog("screenshot font css", {
+        cached: Boolean(screenshotFontCssRef.current),
+        durationMs: Math.round((performance.now() - fontStartedAt) * 100) / 100,
+      });
 
+      const exportStartedAt = performance.now();
       const dataUrl = await toPng(exportContainer, {
         backgroundColor: "#414254",
-        canvasWidth: exportContainer.scrollWidth * 3,
-        canvasHeight: exportContainer.scrollHeight * 3,
         fontEmbedCSS: screenshotFontCssRef.current,
         pixelRatio: 3,
         style: { transform: "none" },
+      });
+      profileLog("screenshot export", {
+        width: exportContainer.scrollWidth * 3,
+        height: exportContainer.scrollHeight * 3,
+        dataUrlLength: dataUrl.length,
+        durationMs: Math.round((performance.now() - exportStartedAt) * 100) / 100,
       });
       setScreenshotUrl(dataUrl);
       setCopyState("idle");
@@ -557,6 +471,9 @@ export default function App() {
       document.body.style.cursor = "default";
       shaderRef.current?.setPaused(false);
       setScreenshotGenerating(false);
+      profileLog("screenshot total", {
+        durationMs: Math.round((performance.now() - screenshotStartedAt) * 100) / 100,
+      });
     }
   };
 
@@ -581,233 +498,40 @@ export default function App() {
   return (
     <div className="app-container">
       <canvas id="shader-canvas" ref={canvasRef} />
-      {loading && (
-        <div className="loading-overlay">
-          <div className="loading-spinner" />
-          <div className="loading-text">Loading...</div>
-        </div>
-      )}
-      {screenshotGenerating && (
-        <div className="loading-overlay">
-          <div className="loading-spinner" />
-          <div className="loading-text">Generating Screenshot...</div>
-        </div>
-      )}
+      {loading && <LoadingOverlay label="Loading..." />}
+      {screenshotGenerating && <LoadingOverlay label="Generating Screenshot..." />}
+      <ProfileOutput />
 
-      <div id="menu-view" className={`view ${view === "menu" ? "view--active" : ""}`}>
-        <Menu title="TC2 Tierlist Maker" entries={tierlists} onFolder={openFolder} onTierlist={openTierlist} />
-      </div>
+      <MenuView view={view} onFolder={openFolder} onTierlist={openTierlist} />
+      <FolderView view={view} folder={currentFolder} onBack={navigateTo} onFolder={openFolder} onTierlist={openTierlist} />
+      <TierlistView
+        view={view}
+        tierlist={currentTierlist}
+        tierConfig={tierConfig}
+        rankings={rankings}
+        imagesById={currentImagesById}
+        poolItems={poolItems}
+        screenshotGenerating={screenshotGenerating}
+        onBack={goBackFromTierlist}
+        onReset={() => setModal("reset")}
+        onEdit={() => setModal("edit")}
+        onScreenshot={takeScreenshot}
+      />
 
-      <div id="folder-view" className={`view ${view === "folder" ? "view--active" : ""}`}>
-        <div className="menu">
-          <button className="menu__btn menu__btn--back" onClick={() => navigateTo({ view: "menu" })}>
-            <ArrowLeft />
-            <span>Back</span>
-          </button>
-          <h1 className="menu__title">{currentFolder?.name || "Folder Name"}</h1>
-          <div className="menu__subtitle">Select a tierlist</div>
-          <div className="menu__buttons">
-            {(currentFolder?.children || []).map((entry) => (
-              <MenuButton key={entry.id} entry={entry} onFolder={openFolder} onTierlist={openTierlist} />
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <div id="tierlist-view" className={`view ${view === "tierlist" ? "view--active" : ""}`}>
-        <header className="header">
-          <button className="btn btn--back" onClick={goBackFromTierlist}>
-            <ArrowLeft />
-            <span>Back</span>
-          </button>
-          <h1 className="header__title">{currentTierlist?.name || "Tierlist"}</h1>
-          <div className="header__actions">
-            <button className="btn" onClick={() => setModal("reset")}>
-              <RotateCcw />
-              <span>Reset</span>
-            </button>
-            <button className="btn btn--edit" onClick={() => setModal("edit")}>
-              <Pencil />
-              <span>Edit Tiers</span>
-            </button>
-            <button className="btn" onClick={takeScreenshot} disabled={screenshotGenerating}>
-              <Camera />
-              <span>Screenshot</span>
-            </button>
-          </div>
-        </header>
-        <main className="main-content">
-          <div id="tier-container" className="tier-container">
-            {tierConfig.map((tier) => (
-              <TierRow key={tier.id} tier={tier} itemIds={rankings[tier.id] || []} imagesById={currentImagesById} />
-            ))}
-          </div>
-          <div className="pool-container">
-            <div className="pool-header">Available Items</div>
-            <div className="pool-items">
-              {poolItems}
-            </div>
-          </div>
-        </main>
-      </div>
-
-      {modal === "reset" && (
-        <Modal title="Reset Tierlist" size="small" showClose={false} onClose={() => setModal("none")}>
-          <p style={{ textAlign: "center", margin: 0 }}>Are you sure you want to reset?<br />All items will return to the pool.</p>
-          <div className="modal__actions">
-            <button className="btn" onClick={() => setModal("none")}>Cancel</button>
-            <button className="btn btn--back" onClick={resetTierlist}>Reset</button>
-          </div>
-        </Modal>
-      )}
-
-      {modal === "edit" && (
-        <Modal title="Edit Tiers" size="small" onClose={() => setModal("none")}>
-          <div className="edit-tiers-list">
-            {tierConfig.map((tier) => (
-              <div className="edit-tier-row" data-tier-id={tier.id} key={tier.id}>
-                <input
-                  type="text"
-                  className="edit-tier-color"
-                  value={tier.color}
-                  data-coloris
-                  style={{ background: tier.color, color: "transparent", cursor: "pointer" }}
-                  onChange={(event) => setTierConfig((tiers) => tiers.map((item) => item.id === tier.id ? { ...item, color: event.target.value } : item))}
-                />
-                <input
-                  type="text"
-                  className="edit-tier-label"
-                  value={tier.label}
-                  maxLength={25}
-                  placeholder="Label"
-                  onChange={(event) => setTierConfig((tiers) => tiers.map((item) => item.id === tier.id ? { ...item, label: event.target.value || item.id } : item))}
-                />
-                <button className="edit-tier-delete" title="Delete tier" onClick={() => deleteTier(tier.id)}>x</button>
-              </div>
-            ))}
-          </div>
-          <button className="btn btn--add-tier" onClick={addTier}>+ Add Tier</button>
-        </Modal>
-      )}
-
-      {modal === "screenshot" && (
-        <Modal title="Screenshot Preview" onClose={() => setModal("none")}>
-          <div className="screenshot-preview-container">
-            <img src={screenshotUrl} alt="Screenshot Preview" />
-          </div>
-          <div className="modal__actions">
-            <button className="btn" onClick={copyScreenshot}>
-              {copyState === "copied" ? <Check /> : <ClipboardCopy />}
-              {copyState === "copied" ? "Copied!" : "Copy to Clipboard"}
-            </button>
-            <button className="btn" onClick={downloadScreenshot}>
-              <Download />
-              Download Image
-            </button>
-          </div>
-        </Modal>
-      )}
-    </div>
-  );
-}
-
-function restoreSortableDom(rankings: Rankings, fromTier: string, toTier: string) {
-  const nodeById = new Map(
-    [...document.querySelectorAll<HTMLElement>(".tier-item")]
-      .map((node) => [node.dataset.id || "", node] as const)
-      .filter(([id]) => Boolean(id)),
-  );
-
-  new Set([fromTier, toTier]).forEach((tierId) => {
-    const container = getSortableContainer(tierId);
-    if (!container) return;
-    (rankings[tierId] || []).forEach((id) => {
-      const node = nodeById.get(id);
-      if (node) container.appendChild(node);
-    });
-  });
-}
-
-function getSortableContainer(tierId: string) {
-  if (tierId === "pool") return document.querySelector<HTMLElement>(".pool-items");
-  return document.querySelector<HTMLElement>(`[data-tier="${CSS.escape(tierId)}"] .tier-items`);
-}
-
-function Menu({ title, entries, onFolder, onTierlist }: {
-  title: string;
-  entries: TierlistEntry[];
-  onFolder: (folder: TierlistFolder) => void;
-  onTierlist: (id: string) => void;
-}) {
-  return (
-    <div className="menu">
-      <h1 className="menu__title">{title}</h1>
-      <div className="menu__subtitle">Select a tierlist</div>
-      <div className="menu__buttons">
-        {entries.map((entry) => <MenuButton key={entry.id} entry={entry} onFolder={onFolder} onTierlist={onTierlist} />)}
-      </div>
-    </div>
-  );
-}
-
-function MenuButton({ entry, onFolder, onTierlist }: {
-  entry: TierlistEntry;
-  onFolder: (folder: TierlistFolder) => void;
-  onTierlist: (id: string) => void;
-}) {
-  if (isFolder(entry)) {
-    return (
-      <button className="menu__btn menu__btn--folder" onClick={() => onFolder(entry)}>
-        {entry.name}
-        <ChevronRight />
-      </button>
-    );
-  }
-  return <button className="menu__btn" onClick={() => onTierlist(entry.id)}>{entry.name}</button>;
-}
-
-const TierRow = memo(function TierRow({ tier, itemIds, imagesById }: {
-  tier: TierConfig;
-  itemIds: string[];
-  imagesById: Map<string, TierlistImage>;
-}) {
-  return (
-    <div className="tier-row" data-tier={tier.id}>
-      <div className="tier-label" data-tier={tier.id} style={{ background: tier.color, color: "#1a1a1a", fontSize: calculateLabelFontSize(tier.label) }}>
-        {tier.label}
-      </div>
-      <div className="tier-items">
-        {itemIds.map((id) => <TierItem key={id} image={imagesById.get(id)} />)}
-      </div>
-    </div>
-  );
-});
-
-const TierItem = memo(function TierItem({ image }: { image?: TierlistImage }) {
-  if (!image) return null;
-  return (
-    <div className="tier-item" data-id={image.id} data-name={image.name}>
-      <img src={publicAssetUrl(image.src)} alt={image.name} width="70" height="70" loading="lazy" decoding="async" />
-    </div>
-  );
-});
-
-function Modal({ title, size = "medium", showClose = true, onClose, children }: {
-  title: string;
-  size?: "small" | "medium" | "large";
-  showClose?: boolean;
-  onClose: () => void;
-  children: React.ReactNode;
-}) {
-  return (
-    <div className="modal active">
-      <div className={`modal__content modal__content--${size}`}>
-        <div className="modal__header">
-          <h2 className="modal__title">{title}</h2>
-          {showClose && <button className="modal__close btn btn--back btn--square" onClick={onClose}><X /></button>}
-        </div>
-        <div className="modal__body">{children}</div>
-      </div>
+      <TierlistModals
+        modal={modal}
+        tierConfig={tierConfig}
+        screenshotUrl={screenshotUrl}
+        copyState={copyState}
+        onClose={() => setModal("none")}
+        onReset={resetTierlist}
+        onAddTier={addTier}
+        onDeleteTier={deleteTier}
+        onTierColorChange={(tierId, color) => setTierConfig((tiers) => tiers.map((item) => item.id === tierId ? { ...item, color } : item))}
+        onTierLabelChange={(tierId, label) => setTierConfig((tiers) => tiers.map((item) => item.id === tierId ? { ...item, label } : item))}
+        onCopyScreenshot={copyScreenshot}
+        onDownloadScreenshot={downloadScreenshot}
+      />
     </div>
   );
 }

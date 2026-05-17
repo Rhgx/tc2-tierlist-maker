@@ -218,6 +218,9 @@
     position: relative;
     opacity: 1;
     transform: scale(1);
+    contain: layout paint;
+    touch-action: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .tier-item:active {
@@ -350,6 +353,9 @@
     position: relative;
     opacity: 1;
     transform: scale(1);
+    contain: layout paint;
+    touch-action: none;
+    -webkit-tap-highlight-color: transparent;
     /* Prevent selection and dragging ghosts */
     user-select: none;
     -webkit-user-select: none;
@@ -361,6 +367,21 @@
     object-fit: cover;
     /* Prevent dragging the image itself */
     pointer-events: none;
+}
+
+@media (pointer: coarse) {
+    .tier-item--active {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .tier-item--dropped {
+        animation: none;
+    }
+
+    .tier-item[data-name]::after {
+        display: none;
+    }
 }
 .modal {
     position: fixed;
@@ -474,4 +495,25 @@
     justify-content: center;
     gap: var(--spacing-md);
     width: 100%;
+}
+
+.profile-output {
+    position: fixed;
+    right: 8px;
+    bottom: 8px;
+    z-index: 5000;
+    width: min(560px, calc(100vw - 16px));
+    max-height: 45vh;
+    overflow: auto;
+    padding: 8px;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.85);
+    color: #d8ffd8;
+    border: 1px solid var(--highlight);
+    border-radius: var(--radius-sm);
+    font-family: Consolas, monospace;
+    font-size: 11px;
+    line-height: 1.35;
+    white-space: pre-wrap;
+    pointer-events: none;
 }
