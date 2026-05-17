@@ -1,4 +1,4 @@
-export const unusualsGeneratedAt = "2026-05-17T06:56:48.685Z";
+export const unusualsGeneratedAt = "2026-05-17T15:53:59.132Z";
 export const unusuals = [
   {
     "name": "Anarchy Flash",
@@ -146,13 +146,6 @@ export const unusuals = [
     "series": "Community Sparkle",
     "pageUrl": "https://typicalcolors2.fandom.com/wiki/Item_Qualities/Unusual#Community_Sparkle",
     "imageUrl": "tc2-assets/unusuals/community-sparkle-65a32dfc62.gif"
-  },
-  {
-    "name": "Cosmetic",
-    "section": "Miscellaneous effects",
-    "series": "Haunted",
-    "pageUrl": "https://typicalcolors2.fandom.com/wiki/Item_Qualities/Unusual#Cosmetic",
-    "imageUrl": "tc2-assets/unusuals/cosmetic-139377dce1.gif"
   },
   {
     "name": "Crabulous Flash",
@@ -440,6 +433,20 @@ export const unusuals = [
     "series": "Series 10",
     "pageUrl": "https://typicalcolors2.fandom.com/wiki/Item_Qualities/Unusual#Glacierbound",
     "imageUrl": "tc2-assets/unusuals/glacierbound-a865229f32.gif"
+  },
+  {
+    "name": "Haunted (Cosmetic)",
+    "section": "Miscellaneous effects",
+    "series": "Haunted",
+    "pageUrl": "https://typicalcolors2.fandom.com/wiki/Item_Qualities/Unusual#Cosmetic",
+    "imageUrl": "tc2-assets/unusuals/haunted-cosmetic-139377dce1.gif"
+  },
+  {
+    "name": "Haunted (Weapon)",
+    "section": "Miscellaneous effects",
+    "series": "Haunted",
+    "pageUrl": "https://typicalcolors2.fandom.com/wiki/Item_Qualities/Unusual#Weapon",
+    "imageUrl": "tc2-assets/unusuals/haunted-weapon-722248343a.gif"
   },
   {
     "name": "Haunting Hematite",
@@ -1014,13 +1021,6 @@ export const unusuals = [
     "series": "Series 1",
     "pageUrl": "https://typicalcolors2.fandom.com/wiki/Item_Qualities/Unusual#Vivid_Plasma",
     "imageUrl": "tc2-assets/unusuals/vivid-plasma-ac8f4674de.gif"
-  },
-  {
-    "name": "Weapon",
-    "section": "Miscellaneous effects",
-    "series": "Haunted",
-    "pageUrl": "https://typicalcolors2.fandom.com/wiki/Item_Qualities/Unusual#Weapon",
-    "imageUrl": "tc2-assets/unusuals/weapon-722248343a.gif"
   },
   {
     "name": "Winter's Wrath",

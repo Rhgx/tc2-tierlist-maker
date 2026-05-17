@@ -51,7 +51,7 @@ function parseUnusualsHtml(html) {
       const imageUrl = getRawImageUrl(image);
       if (!caption || !imageUrl) return;
       unusuals.push({
-        name: cleanupEffectName(caption),
+        name: unusualEffectName(caption, series),
         section: cleanText(section),
         series: cleanText(series),
         pageUrl: `${WIKI_PAGE_URL}#${encodeURIComponent(item.id || caption.replace(/\s+/g, "_"))}`,
@@ -60,8 +60,20 @@ function parseUnusualsHtml(html) {
     });
   });
 
-  return [...new Map(unusuals.map((item) => [item.name.toLowerCase(), item])).values()]
+  return [...new Map(unusuals.map((item) => [unusualDedupeKey(item), item])).values()]
     .sort((a, b) => a.name.localeCompare(b.name));
+}
+
+function unusualEffectName(caption, series) {
+  const name = cleanupEffectName(caption);
+  if (/^haunted$/i.test(cleanText(series)) && /^(weapon|cosmetic)$/i.test(name)) {
+    return `Haunted (${name})`;
+  }
+  return name;
+}
+
+function unusualDedupeKey(item) {
+  return `${item.name.toLowerCase()}|${item.imageUrl}`;
 }
 
 function cleanupEffectName(value) {

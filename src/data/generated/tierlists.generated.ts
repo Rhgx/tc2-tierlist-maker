@@ -1,6 +1,6 @@
 import type { TierlistEntry } from "../../types";
 
-export const tierlistsGeneratedAt = "2026-05-17T15:09:58.810Z";
+export const tierlistsGeneratedAt = "2026-05-17T15:53:59.153Z";
 export const tierlists: TierlistEntry[] = [
   {
     "type": "folder",
@@ -4356,13 +4356,6 @@ export const tierlists: TierlistEntry[] = [
         "sourceId": "unusual-community-sparkle"
       },
       {
-        "id": "unusual-cosmetic",
-        "name": "Cosmetic",
-        "src": "tc2-assets/unusuals/cosmetic-139377dce1.gif",
-        "sourceKind": "unusual",
-        "sourceId": "unusual-cosmetic"
-      },
-      {
         "id": "unusual-crabulous-flash",
         "name": "Crabulous Flash",
         "src": "tc2-assets/unusuals/crabulous-flash-b43a3ef926.gif",
@@ -4648,6 +4641,20 @@ export const tierlists: TierlistEntry[] = [
         "src": "tc2-assets/unusuals/glacierbound-a865229f32.gif",
         "sourceKind": "unusual",
         "sourceId": "unusual-glacierbound"
+      },
+      {
+        "id": "unusual-haunted-cosmetic",
+        "name": "Haunted (Cosmetic)",
+        "src": "tc2-assets/unusuals/haunted-cosmetic-139377dce1.gif",
+        "sourceKind": "unusual",
+        "sourceId": "unusual-haunted-cosmetic"
+      },
+      {
+        "id": "unusual-haunted-weapon",
+        "name": "Haunted (Weapon)",
+        "src": "tc2-assets/unusuals/haunted-weapon-722248343a.gif",
+        "sourceKind": "unusual",
+        "sourceId": "unusual-haunted-weapon"
       },
       {
         "id": "unusual-haunting-hematite",
@@ -5222,13 +5229,6 @@ export const tierlists: TierlistEntry[] = [
         "src": "tc2-assets/unusuals/vivid-plasma-ac8f4674de.gif",
         "sourceKind": "unusual",
         "sourceId": "unusual-vivid-plasma"
-      },
-      {
-        "id": "unusual-weapon",
-        "name": "Weapon",
-        "src": "tc2-assets/unusuals/weapon-722248343a.gif",
-        "sourceKind": "unusual",
-        "sourceId": "unusual-weapon"
       },
       {
         "id": "unusual-winter-s-wrath",
