@@ -1,0 +1,7 @@
+/* Minimal animation styles - GSAP handles most animations */
+
+/* Drop zone visual feedback - kept as CSS for simplicity */
+.tier-items.drag-over,
+.pool-items.drag-over {
+    background: rgba(142, 138, 117, 0.15);
+}

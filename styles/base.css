@@ -1,0 +1,87 @@
+/* CSS Reset & Design System Variables */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background: var(--grid-back);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+:root {
+    /* Background grid */
+    --grid-back: #414254;
+    --grid-lines: #575767;
+    
+    /* Button gradient */
+    --button-edge: #28202B;
+    
+    /* Metallic panel effect */
+    --metal-dark: #2B2C35;
+    --metal-light: #30313C;
+    --metal-darker: #26262F;
+    
+    /* Highlight border */
+    --highlight: #8E8A75;
+    
+    /* Text */
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --text-dark: #1a1a1a;
+    
+    /* Tier colors */
+    --tier-s: #ff7f7e;
+    --tier-a: #ffbf7f;
+    --tier-b: #ffdf80;
+    --tier-c: #feff7f;
+    --tier-d: #beff7f;
+    --tier-e: #7eff80;
+    --tier-f: #7fffff;
+    
+    /* Spacing */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    
+    /* Border radius */
+    --radius-sm: 2px;
+    --radius-md: 4px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

@@ -1,0 +1,9 @@
+- [x] Always make sure to abbreiviate the map "sword-fights-on-the-heights" to "sfoth" so it says -> "medieval_sfoth".
+- [x] Add Unusual Tierlist based on https://typicalcolors2.fandom.com/wiki/Item_Qualities/Unusual (Should add GIF support if not supported in the mean time along with it.)
+- [x] Clean up the files for useless files we dont use anymore from before the port like the `convert_to_webp.ps1`, `gen_manifest.py` etc.
+- [x] Fix name cleanup in for the maps so as to when generating labels "vsb-santa-s-workshop-87b4fc394d.webp" doesn't generate as "vsb_santa_s_workshop" label but the "vsb_santas_workshop" as it should.
+- [x] Add Github Actions automation scripts to let us deploy the site as needed.
+- [x] Add a small `README.md` as appropraite to the repo.
+- [x] Sort maps, items, cosmetics, etc. on the tierlist alphabetically according to their actual name.
+- [x] If a maps gamemode is `none` then it should not be put on the label.
+- [x] Prefer using the actual map icon instead of the first found image of the map on the page as that usually isn't the correct and is just a general image of the map. Fallback to that one when needed but log it as we need to.
