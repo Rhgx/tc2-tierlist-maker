@@ -7,7 +7,7 @@ import { scrapeMapsFromWiki } from "./maps.mjs";
 import { scrapeTauntsFromWiki } from "./taunts.mjs";
 import { scrapeUnusualsFromWiki } from "./unusuals.mjs";
 import { scrapeWeaponsFromWiki } from "./weapons.mjs";
-import { addMapLabelToAsset, downloadAssets, formatBytes, summarizeAssetDirectory } from "./shared/assets.mjs";
+import { addDisguiseKitLabelToAsset, addMapLabelToAsset, downloadAssets, formatBytes, summarizeAssetDirectory } from "./shared/assets.mjs";
 import { cleanText } from "./shared/text.mjs";
 import { renderManifestGeneratedFile, renderRawGeneratedFile, renderTierlistsGeneratedFile } from "./shared/render.mjs";
 
@@ -61,12 +61,21 @@ await writeManifest(data);
 async function scrapeWeapons() {
   const weapons = await scrapeWeaponsFromWiki();
   const paths = await downloadAssets(
-    weapons.map((weapon) => ({ name: weapon.name, url: weapon.iconUrl })),
+    weapons.map((weapon) => ({
+      name: weapon.name,
+      url: weapon.iconUrl,
+      dedupeKey: weaponAssetKey(weapon),
+      namePrefix: isDisguiseKit(weapon) ? "disguise-kit" : undefined,
+    })),
     assetPaths.weapons,
     "tc2-assets/weapons",
     projectRoot,
   );
-  const local = weapons.map((weapon) => ({ ...weapon, iconUrl: paths.get(weapon.iconUrl) || "" }));
+  const local = weapons.map((weapon) => ({ ...weapon, iconUrl: paths.get(weaponAssetKey(weapon)) || "" }));
+  const disguiseKit = local.find(isDisguiseKit);
+  if (disguiseKit?.iconUrl) {
+    await addDisguiseKitLabelToAsset(path.join(projectRoot, "public", disguiseKit.iconUrl));
+  }
   await writeFile(outputPaths.weapons, renderRawGeneratedFile("weapons", local), "utf8");
   await logSummary("Weapons", local.length, assetPaths.weapons);
   return local;
@@ -228,6 +237,14 @@ function sortClassNames(a, b) {
 function classIndex(name) {
   const index = CLASS_ORDER.indexOf(name);
   return index >= 0 ? index : CLASS_ORDER.length;
+}
+
+function isDisguiseKit(weapon) {
+  return cleanText(weapon.name).toLowerCase() === "disguise kit";
+}
+
+function weaponAssetKey(weapon) {
+  return isDisguiseKit(weapon) ? weapon.name : weapon.iconUrl;
 }
 
 function mapAssetName(map) {

@@ -1,6 +1,6 @@
 import type { TierlistEntry } from "../../types";
 
-export const tierlistsGeneratedAt = "2026-05-17T07:24:58.087Z";
+export const tierlistsGeneratedAt = "2026-05-17T15:09:58.810Z";
 export const tierlists: TierlistEntry[] = [
   {
     "type": "folder",
@@ -5701,7 +5701,7 @@ export const tierlists: TierlistEntry[] = [
       {
         "id": "weapon-disguise-kit",
         "name": "Disguise Kit",
-        "src": "tc2-assets/weapons/sapper-7bee1a187e.webp",
+        "src": "tc2-assets/weapons/disguise-kit-7bee1a187e.webp",
         "sourceKind": "weapon",
         "sourceId": "weapon-disguise-kit"
       },

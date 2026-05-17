@@ -1,9 +1,9 @@
 export const generatedManifest = {
-  "generatedAt": "2026-05-17T07:24:58.089Z",
+  "generatedAt": "2026-05-17T15:09:58.812Z",
   "weapons": {
     "count": 244,
-    "assetCount": 243,
-    "assetBytes": 2701108
+    "assetCount": 244,
+    "assetBytes": 2713862
   },
   "maps": {
     "count": 117,

@@ -1,4 +1,4 @@
-export const weaponsGeneratedAt = "2026-05-17T06:41:03.436Z";
+export const weaponsGeneratedAt = "2026-05-17T15:09:58.788Z";
 export const weapons = [
   {
     "name": "50-AE",
@@ -2513,7 +2513,7 @@ export const weapons = [
         "text": "Allows the Agent to disguise herself as an enemy or a friendly player."
       }
     ],
-    "iconUrl": "tc2-assets/weapons/sapper-7bee1a187e.webp"
+    "iconUrl": "tc2-assets/weapons/disguise-kit-7bee1a187e.webp"
   },
   {
     "name": "Doll Maker",

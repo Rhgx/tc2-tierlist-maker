@@ -194,3 +194,10 @@ export async function addMapLabelToAsset(filePath, label) {
     maxBuffer: 1024 * 1024,
   });
 }
+
+export async function addDisguiseKitLabelToAsset(filePath) {
+  await execFileAsync("python", [labelMapIconScriptPath, filePath, "DISGUISE\nKIT", schluberFontPath, "center-yellow"], {
+    windowsHide: true,
+    maxBuffer: 1024 * 1024,
+  });
+}
