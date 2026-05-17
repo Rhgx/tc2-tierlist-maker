@@ -1,4 +1,4 @@
-import { Check, ClipboardCopy, Download } from "lucide-react";
+import { Check, ClipboardCopy, Download, X } from "lucide-react";
 import { Modal } from "./Modal";
 import type { ModalName } from "../appTypes";
 import type { TierConfig } from "../types";
@@ -50,7 +50,9 @@ export function TierlistModals({ modal, tierConfig, screenshotUrl, copyState, on
                   placeholder="Label"
                   onChange={(event) => onTierLabelChange(tier.id, event.target.value || tier.id)}
                 />
-                <button className="edit-tier-delete" title="Delete tier" onClick={() => onDeleteTier(tier.id)}>x</button>
+                <button className="edit-tier-delete" title="Delete tier" aria-label={`Delete ${tier.label} tier`} onClick={() => onDeleteTier(tier.id)}>
+                  <X />
+                </button>
               </div>
             ))}
           </div>
