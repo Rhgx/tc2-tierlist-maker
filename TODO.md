@@ -7,3 +7,5 @@
 - [x] Sort maps, items, cosmetics, etc. on the tierlist alphabetically according to their actual name.
 - [x] If a maps gamemode is `none` then it should not be put on the label.
 - [x] Prefer using the actual map icon instead of the first found image of the map on the page as that usually isn't the correct and is just a general image of the map. Fallback to that one when needed but log it as we need to.
+---
+- [ ] Decrease the resolution of the screenshot file a bit from what it is right now. Currently we are outputting a 11520 x 4995 px tierlist screenshot file even whilst nothing is in the tierlist.
