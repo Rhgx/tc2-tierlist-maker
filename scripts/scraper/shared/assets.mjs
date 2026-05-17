@@ -9,7 +9,7 @@ import { cleanText } from "./text.mjs";
 
 const scraperRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const schluberFontPath = path.join(scraperRoot, "assets", "Schluber.ttf");
-const labelMapIconScriptPath = path.join(scraperRoot, "label-map-icon.py");
+const labelAssetScriptPath = path.join(scraperRoot, "label-asset.py");
 const execFileAsync = promisify(execFile);
 
 export function normalizeImageUrl(url) {
@@ -189,14 +189,14 @@ export function formatBytes(bytes) {
 }
 
 export async function addMapLabelToAsset(filePath, label) {
-  await execFileAsync("python", [labelMapIconScriptPath, filePath, label, schluberFontPath], {
+  await execFileAsync("python", [labelAssetScriptPath, filePath, label, schluberFontPath], {
     windowsHide: true,
     maxBuffer: 1024 * 1024,
   });
 }
 
 export async function addDisguiseKitLabelToAsset(filePath) {
-  await execFileAsync("python", [labelMapIconScriptPath, filePath, "DISGUISE\nKIT", schluberFontPath, "center-yellow"], {
+  await execFileAsync("python", [labelAssetScriptPath, filePath, "DISGUISE\nKIT", schluberFontPath, "center-yellow"], {
     windowsHide: true,
     maxBuffer: 1024 * 1024,
   });

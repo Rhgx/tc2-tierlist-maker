@@ -105,7 +105,7 @@ def label_centered_yellow_image(image_path, text, font_path):
 
 def main():
     if len(sys.argv) not in (4, 5):
-        raise SystemExit("Usage: label-map-icon.py <image_path> <label> <font_path> [mode]")
+        raise SystemExit("Usage: label-asset.py <image_path> <label> <font_path> [mode]")
     mode = sys.argv[4] if len(sys.argv) == 5 else "map"
     if mode == "center-yellow":
         label_centered_yellow_image(sys.argv[1], sys.argv[2], sys.argv[3])
