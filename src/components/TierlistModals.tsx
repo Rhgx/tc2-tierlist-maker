@@ -1,4 +1,4 @@
-import { Check, ClipboardCopy, Download, X } from "lucide-react";
+import { Check, ClipboardCopy, Download, GripVertical, X } from "lucide-react";
 import { Modal } from "./Modal";
 import type { ModalName } from "../appTypes";
 import type { TierConfig } from "../types";
@@ -34,6 +34,9 @@ export function TierlistModals({ modal, tierConfig, screenshotUrl, copyState, on
           <div className="edit-tiers-list">
             {tierConfig.map((tier) => (
               <div className="edit-tier-row" data-tier-id={tier.id} key={tier.id}>
+                <button className="edit-tier-drag" type="button" title="Drag tier" aria-label={`Drag ${tier.label} tier`}>
+                  <GripVertical />
+                </button>
                 <input
                   type="text"
                   className="edit-tier-color"

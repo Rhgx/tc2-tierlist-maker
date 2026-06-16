@@ -221,6 +221,7 @@
 .header__actions {
     display: flex;
     gap: var(--spacing-sm);
+    align-items: center;
 }
 
 .btn--edit {
@@ -338,6 +339,47 @@
     background: var(--metal-darker);
     border: 1px solid var(--highlight);
     border-radius: var(--radius-sm);
+}
+
+.edit-tier-row--chosen {
+    border-color: #7fbfff;
+}
+
+.edit-tier-row--ghost {
+    opacity: 0.45;
+}
+
+.edit-tier-row--dragging {
+    cursor: grabbing;
+}
+
+.edit-tier-drag {
+    width: 28px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: transparent;
+    color: var(--text-secondary);
+    border: 0;
+    cursor: grab;
+    flex-shrink: 0;
+    touch-action: none;
+}
+
+.edit-tier-drag:active {
+    cursor: grabbing;
+}
+
+.edit-tier-drag svg {
+    width: 18px;
+    height: 18px;
+    stroke-width: 2.5;
+}
+
+.edit-tier-drag:hover {
+    color: var(--text-primary);
 }
 
 .edit-tier-color {

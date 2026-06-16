@@ -39,6 +39,7 @@ export default function App() {
   const shaderRef = useRef<GridShader | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const sortableRef = useRef<Sortable[]>([]);
+  const editTierSortableRef = useRef<Sortable | null>(null);
   const rankingsRef = useRef<Rankings>(rankings);
   const screenshotFontCssRef = useRef<string | null>(null);
   const saveTimeoutRef = useRef<number | null>(null);
@@ -299,7 +300,43 @@ export default function App() {
       cancelled = true;
       document.removeEventListener("coloris:pick", handleColorPick);
     };
-  }, [modal, tierConfig]);
+  }, [modal, tierConfig.length]);
+
+  useEffect(() => {
+    editTierSortableRef.current?.destroy();
+    editTierSortableRef.current = null;
+    if (modal !== "edit") return;
+
+    const list = document.querySelector<HTMLElement>(".edit-tiers-list");
+    if (!list) return;
+
+    editTierSortableRef.current = new Sortable(list, {
+      animation: 150,
+      draggable: ".edit-tier-row",
+      handle: ".edit-tier-drag",
+      ghostClass: "edit-tier-row--ghost",
+      chosenClass: "edit-tier-row--chosen",
+      dragClass: "edit-tier-row--dragging",
+      onEnd: (event) => {
+        const oldIndex = event.oldIndex;
+        const newIndex = event.newIndex;
+        if (oldIndex === undefined || newIndex === undefined || oldIndex === newIndex) return;
+
+        setTierConfig((tiers) => {
+          const next = [...tiers];
+          const [movedTier] = next.splice(oldIndex, 1);
+          if (!movedTier) return tiers;
+          next.splice(newIndex, 0, movedTier);
+          return next;
+        });
+      },
+    });
+
+    return () => {
+      editTierSortableRef.current?.destroy();
+      editTierSortableRef.current = null;
+    };
+  }, [modal, tierConfig.length]);
 
   const loadTierlistView = useCallback((tierlist: TierlistDefinition) => {
     const startedAt = performance.now();

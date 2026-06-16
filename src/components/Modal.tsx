@@ -10,7 +10,7 @@ export function Modal({ title, size = "medium", showClose = true, onClose, child
 }) {
   return (
     <div className="modal active">
-      <div className={`modal__content modal__content--${size}`}>
+      <div className={`modal__content modal__content--${size}`} onMouseDown={(event) => event.stopPropagation()}>
         <div className="modal__header">
           <h2 className="modal__title">{title}</h2>
           {showClose && <button className="modal__close btn btn--back btn--square" onClick={onClose}><X /></button>}
