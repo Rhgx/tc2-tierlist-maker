@@ -269,6 +269,17 @@ export default function App() {
 
   useEffect(() => {
     if (modal !== "edit") return;
+    const handleColorPick = (event: Event) => {
+      const { color, currentEl } = (event as CustomEvent<{ color?: string; currentEl?: Element | null }>).detail || {};
+      if (!color || !(currentEl instanceof HTMLElement)) return;
+
+      const tierId = currentEl.closest<HTMLElement>("[data-tier-id]")?.dataset.tierId;
+      if (!tierId) return;
+
+      setTierConfig((tiers) => tiers.map((tier) => tier.id === tierId ? { ...tier, color } : tier));
+    };
+
+    document.addEventListener("coloris:pick", handleColorPick);
     let cancelled = false;
     void import("@melloware/coloris").then(({ default: Coloris }) => {
       if (cancelled) return;
@@ -286,6 +297,7 @@ export default function App() {
     });
     return () => {
       cancelled = true;
+      document.removeEventListener("coloris:pick", handleColorPick);
     };
   }, [modal, tierConfig]);
 
