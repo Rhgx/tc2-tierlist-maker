@@ -1,4 +1,4 @@
-export const weaponsGeneratedAt = "2026-05-17T15:09:58.788Z";
+export const weaponsGeneratedAt = "2026-06-23T06:37:18.762Z";
 export const weapons = [
   {
     "name": "50-AE",
@@ -6548,7 +6548,7 @@ export const weapons = [
         "text": "Mirror blast jumps and shield charges of patients."
       }
     ],
-    "iconUrl": "tc2-assets/weapons/rejuvenator-65d1f0a6a6.webp"
+    "iconUrl": "tc2-assets/weapons/rejuvenator-bbc115d833.webp"
   },
   {
     "name": "Rescue Ranger",
@@ -6804,7 +6804,7 @@ export const weapons = [
     "capacity": 4,
     "ammo": 20,
     "attributes": [],
-    "iconUrl": "tc2-assets/weapons/rocket-launcher-3021d5e700.webp"
+    "iconUrl": "tc2-assets/weapons/rocket-launcher-7a7bd08fc9.webp"
   },
   {
     "name": "Rubber Chicken",
@@ -8786,7 +8786,7 @@ export const weapons = [
         "text": "-50% clip size."
       }
     ],
-    "iconUrl": "tc2-assets/weapons/winger-51c7125b2b.webp"
+    "iconUrl": "tc2-assets/weapons/winger-7fdd48c81d.webp"
   },
   {
     "name": "Witches Brew",
@@ -8843,6 +8843,44 @@ export const weapons = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/wooden-sword-aa3f23adf4.webp"
+  },
+  {
+    "name": "World Champion",
+    "classNames": [
+      "Brute"
+    ],
+    "slot": "Melee",
+    "source": "Shop",
+    "capacity": null,
+    "ammo": null,
+    "attributes": [
+      {
+        "kind": "positive",
+        "label": "Positive trait",
+        "text": "'Alt-Fire' to initiate pairing mode"
+      },
+      {
+        "kind": "positive",
+        "label": "Positive trait",
+        "text": "'Fire' to throw carried teammates"
+      },
+      {
+        "kind": "negative",
+        "label": "Negative trait",
+        "text": "-30% damage penalty"
+      },
+      {
+        "kind": "negative",
+        "label": "Negative trait",
+        "text": "-20% slower holster speed"
+      },
+      {
+        "kind": "negative",
+        "label": "Negative trait",
+        "text": "-20% slower firing speed (Unlisted)"
+      }
+    ],
+    "iconUrl": "tc2-assets/weapons/world-champion-cb0deae94d.webp"
   },
   {
     "name": "Wraith",

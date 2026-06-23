@@ -1,6 +1,6 @@
 import type { TierlistEntry } from "../../types";
 
-export const tierlistsGeneratedAt = "2026-05-17T15:53:59.153Z";
+export const tierlistsGeneratedAt = "2026-06-23T06:40:30.909Z";
 export const tierlists: TierlistEntry[] = [
   {
     "type": "folder",
@@ -2671,6 +2671,13 @@ export const tierlists: TierlistEntry[] = [
             "sourceId": "cosmetic-fearsome-force"
           },
           {
+            "id": "cosmetic-feratu",
+            "name": "Feratu",
+            "src": "tc2-assets/cosmetics/feratu-f9cc69709d.webp",
+            "sourceKind": "cosmetic",
+            "sourceId": "cosmetic-feratu"
+          },
+          {
             "id": "cosmetic-gambler-s-gambit",
             "name": "Gambler's Gambit",
             "src": "tc2-assets/cosmetics/gambler-s-gambit-1ea4fa34d0.webp",
@@ -3287,13 +3294,6 @@ export const tierlists: TierlistEntry[] = [
         "sourceId": "map-ad-yellowvalley"
       },
       {
-        "id": "map-arena-well",
-        "name": "arena_well",
-        "src": "tc2-assets/maps/arena-well-4466a11913.webp",
-        "sourceKind": "map",
-        "sourceId": "map-arena-well"
-      },
-      {
         "id": "map-bathroom",
         "name": "bathroom",
         "src": "tc2-assets/maps/bathroom-723f4eed28.webp",
@@ -3306,13 +3306,6 @@ export const tierlists: TierlistEntry[] = [
         "src": "tc2-assets/maps/cp-chillyvalley-3cp-5bbb051857.webp",
         "sourceKind": "map",
         "sourceId": "map-cp-chillyvalley-3cp"
-      },
-      {
-        "id": "map-cp-frost",
-        "name": "cp_frost",
-        "src": "tc2-assets/maps/cp-frost-fd27d1f779.webp",
-        "sourceKind": "map",
-        "sourceId": "map-cp-frost"
       },
       {
         "id": "map-cp-highlands",
@@ -3385,18 +3378,11 @@ export const tierlists: TierlistEntry[] = [
         "sourceId": "map-ctf-doublefort"
       },
       {
-        "id": "map-ctf-mach",
-        "name": "ctf_mach",
-        "src": "tc2-assets/maps/ctf-mach-1e1b301589.webp",
+        "id": "map-ctf-pineway",
+        "name": "ctf_pineway",
+        "src": "tc2-assets/maps/ctf-pineway-26d5da4416.webp",
         "sourceKind": "map",
-        "sourceId": "map-ctf-mach"
-      },
-      {
-        "id": "map-ctf-rig",
-        "name": "ctf_rig",
-        "src": "tc2-assets/maps/ctf-rig-deb37f37e8.webp",
-        "sourceKind": "map",
-        "sourceId": "map-ctf-rig"
+        "sourceId": "map-ctf-pineway"
       },
       {
         "id": "map-ctf-runnel",
@@ -3504,11 +3490,11 @@ export const tierlists: TierlistEntry[] = [
         "sourceId": "map-koth-defrost"
       },
       {
-        "id": "map-koth-harvest",
-        "name": "koth_harvest",
-        "src": "tc2-assets/maps/koth-harvest-2a3d1922f8.webp",
+        "id": "map-koth-dusk",
+        "name": "koth_dusk",
+        "src": "tc2-assets/maps/koth-dusk-b197a0cb98.webp",
         "sourceKind": "map",
-        "sourceId": "map-koth-harvest"
+        "sourceId": "map-koth-dusk"
       },
       {
         "id": "map-koth-harvest-alpine",
@@ -3516,13 +3502,6 @@ export const tierlists: TierlistEntry[] = [
         "src": "tc2-assets/maps/koth-harvest-alpine-7bb2f169bf.webp",
         "sourceKind": "map",
         "sourceId": "map-koth-harvest-alpine"
-      },
-      {
-        "id": "map-koth-harvest-retro",
-        "name": "koth_harvest_retro",
-        "src": "tc2-assets/maps/koth-harvest-retro-ec01479b26.webp",
-        "sourceKind": "map",
-        "sourceId": "map-koth-harvest-retro"
       },
       {
         "id": "map-koth-harvest-winter",
@@ -3553,13 +3532,6 @@ export const tierlists: TierlistEntry[] = [
         "sourceId": "map-koth-power-plant"
       },
       {
-        "id": "map-koth-product",
-        "name": "koth_product",
-        "src": "tc2-assets/maps/koth-product-5c6d90278b.webp",
-        "sourceKind": "map",
-        "sourceId": "map-koth-product"
-      },
-      {
         "id": "map-koth-purgatory",
         "name": "koth_purgatory",
         "src": "tc2-assets/maps/koth-purgatory-28db41cc92.webp",
@@ -3579,13 +3551,6 @@ export const tierlists: TierlistEntry[] = [
         "src": "tc2-assets/maps/koth-risky-ca53ee027c.webp",
         "sourceKind": "map",
         "sourceId": "map-koth-risky"
-      },
-      {
-        "id": "map-koth-rooftop",
-        "name": "koth_rooftop",
-        "src": "tc2-assets/maps/koth-rooftop-57e0c39a16.webp",
-        "sourceKind": "map",
-        "sourceId": "map-koth-rooftop"
       },
       {
         "id": "map-koth-rooftops",
@@ -3649,6 +3614,13 @@ export const tierlists: TierlistEntry[] = [
         "src": "tc2-assets/maps/koth-surf-10a5c15d51.webp",
         "sourceKind": "map",
         "sourceId": "map-koth-surf"
+      },
+      {
+        "id": "map-koth-twilight",
+        "name": "koth_twilight",
+        "src": "tc2-assets/maps/koth-twilight-9071fe2dfa.webp",
+        "sourceKind": "map",
+        "sourceId": "map-koth-twilight"
       },
       {
         "id": "map-koth-warmtic",
@@ -3805,13 +3777,6 @@ export const tierlists: TierlistEntry[] = [
         "sourceId": "map-tdm-cargo"
       },
       {
-        "id": "map-tdm-dam",
-        "name": "tdm_dam",
-        "src": "tc2-assets/maps/tdm-dam-afcb7e8ea9.webp",
-        "sourceKind": "map",
-        "sourceId": "map-tdm-dam"
-      },
-      {
         "id": "map-tdm-hydrovalley",
         "name": "tdm_hydrovalley",
         "src": "tc2-assets/maps/tdm-hydrovalley-f6ad46d14e.webp",
@@ -3824,6 +3789,13 @@ export const tierlists: TierlistEntry[] = [
         "src": "tc2-assets/maps/tdm-orange-cp-402415589d.webp",
         "sourceKind": "map",
         "sourceId": "map-tdm-orange-cp"
+      },
+      {
+        "id": "map-tdm-rig",
+        "name": "tdm_rig",
+        "src": "tc2-assets/maps/tdm-rig-deb37f37e8.webp",
+        "sourceKind": "map",
+        "sourceId": "map-tdm-rig"
       },
       {
         "id": "map-tdm-undertow",
@@ -3917,6 +3889,13 @@ export const tierlists: TierlistEntry[] = [
         "sourceId": "map-vsb-glass-houses"
       },
       {
+        "id": "map-vsb-harvest",
+        "name": "vsb_harvest",
+        "src": "tc2-assets/maps/vsb-harvest-bd358a39dc.webp",
+        "sourceKind": "map",
+        "sourceId": "map-vsb-harvest"
+      },
+      {
         "id": "map-vsb-haunted-mansion",
         "name": "vsb_haunted_mansion",
         "src": "tc2-assets/maps/vsb-haunted-mansion-834edccbdf.webp",
@@ -3964,6 +3943,13 @@ export const tierlists: TierlistEntry[] = [
         "src": "tc2-assets/maps/vsb-roblox-hq-14770582dc.webp",
         "sourceKind": "map",
         "sourceId": "map-vsb-roblox-hq"
+      },
+      {
+        "id": "map-vsb-rooftop",
+        "name": "vsb_rooftop",
+        "src": "tc2-assets/maps/vsb-rooftop-686671f499.webp",
+        "sourceKind": "map",
+        "sourceId": "map-vsb-rooftop"
       },
       {
         "id": "map-vsb-rust",
@@ -6464,7 +6450,7 @@ export const tierlists: TierlistEntry[] = [
       {
         "id": "weapon-rejuvenator",
         "name": "Rejuvenator",
-        "src": "tc2-assets/weapons/rejuvenator-65d1f0a6a6.webp",
+        "src": "tc2-assets/weapons/rejuvenator-bbc115d833.webp",
         "sourceKind": "weapon",
         "sourceId": "weapon-rejuvenator"
       },
@@ -6513,7 +6499,7 @@ export const tierlists: TierlistEntry[] = [
       {
         "id": "weapon-rocket-launcher",
         "name": "Rocket Launcher",
-        "src": "tc2-assets/weapons/rocket-launcher-3021d5e700.webp",
+        "src": "tc2-assets/weapons/rocket-launcher-7a7bd08fc9.webp",
         "sourceKind": "weapon",
         "sourceId": "weapon-rocket-launcher"
       },
@@ -6898,7 +6884,7 @@ export const tierlists: TierlistEntry[] = [
       {
         "id": "weapon-winger",
         "name": "Winger",
-        "src": "tc2-assets/weapons/winger-51c7125b2b.webp",
+        "src": "tc2-assets/weapons/winger-7fdd48c81d.webp",
         "sourceKind": "weapon",
         "sourceId": "weapon-winger"
       },
@@ -6915,6 +6901,13 @@ export const tierlists: TierlistEntry[] = [
         "src": "tc2-assets/weapons/wooden-sword-aa3f23adf4.webp",
         "sourceKind": "weapon",
         "sourceId": "weapon-wooden-sword"
+      },
+      {
+        "id": "weapon-world-champion",
+        "name": "World Champion",
+        "src": "tc2-assets/weapons/world-champion-cb0deae94d.webp",
+        "sourceKind": "weapon",
+        "sourceId": "weapon-world-champion"
       },
       {
         "id": "weapon-wraith",

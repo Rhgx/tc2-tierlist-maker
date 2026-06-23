@@ -1,4 +1,4 @@
-export const cosmeticsGeneratedAt = "2026-05-17T06:41:22.549Z";
+export const cosmeticsGeneratedAt = "2026-06-23T06:37:39.939Z";
 export const cosmetics = [
   {
     "name": "ABH4",
@@ -1288,6 +1288,18 @@ export const cosmetics = [
       "Head"
     ],
     "imageUrl": "tc2-assets/cosmetics/fending-farmhand-2dc2a3dbbd.webp"
+  },
+  {
+    "name": "Feratu",
+    "usedBy": [
+      "Agent"
+    ],
+    "slots": [
+      "Body",
+      "Head",
+      "Misc"
+    ],
+    "imageUrl": "tc2-assets/cosmetics/feratu-f9cc69709d.webp"
   },
   {
     "name": "Field Fighter",

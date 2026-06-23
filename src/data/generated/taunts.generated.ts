@@ -1,4 +1,4 @@
-export const tauntsGeneratedAt = "2026-05-17T06:41:41.814Z";
+export const tauntsGeneratedAt = "2026-06-23T06:40:30.890Z";
 export const taunts = [
   {
     "name": "Blood Money",

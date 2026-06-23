@@ -1,4 +1,4 @@
-export const mapsGeneratedAt = "2026-05-17T07:24:58.069Z";
+export const mapsGeneratedAt = "2026-06-23T06:37:38.844Z";
 export const maps = [
   {
     "name": "1979 Effect",
@@ -176,7 +176,7 @@ export const maps = [
     "pageUrl": "https://typicalcolors2.fandom.com/wiki/Cargo",
     "gameMode": "Team Deathmatch",
     "group": "Special / Standard",
-    "status": "Active / Active (Rare)",
+    "status": "Active",
     "imageUrl": "tc2-assets/maps/tdm-cargo-4cdbcd347d.webp",
     "label": "tdm_cargo"
   },
@@ -281,16 +281,6 @@ export const maps = [
     "label": "pl_cruciatus"
   },
   {
-    "name": "Dam",
-    "page": "Dam",
-    "pageUrl": "https://typicalcolors2.fandom.com/wiki/Dam",
-    "gameMode": "Team Deathmatch",
-    "group": "Standard",
-    "status": "Active (Rare)",
-    "imageUrl": "tc2-assets/maps/tdm-dam-afcb7e8ea9.webp",
-    "label": "tdm_dam"
-  },
-  {
     "name": "Datamass",
     "page": "Datamass",
     "pageUrl": "https://typicalcolors2.fandom.com/wiki/Datamass",
@@ -361,6 +351,16 @@ export const maps = [
     "label": "ad_drainage"
   },
   {
+    "name": "Dusk",
+    "page": "Dusk",
+    "pageUrl": "https://typicalcolors2.fandom.com/wiki/Dusk",
+    "gameMode": "King of the Hill",
+    "group": "Standard",
+    "status": "Active",
+    "imageUrl": "tc2-assets/maps/koth-dusk-b197a0cb98.webp",
+    "label": "koth_dusk"
+  },
+  {
     "name": "Financial",
     "page": "Financial",
     "pageUrl": "https://typicalcolors2.fandom.com/wiki/Financial",
@@ -379,16 +379,6 @@ export const maps = [
     "status": "Active",
     "imageUrl": "tc2-assets/maps/vsb-fitten-co-fef59aed34.webp",
     "label": "vsb_fitten_co"
-  },
-  {
-    "name": "Frost",
-    "page": "Frost",
-    "pageUrl": "https://typicalcolors2.fandom.com/wiki/Frost",
-    "gameMode": "Control Points",
-    "group": "Standard",
-    "status": "Active (Rare)",
-    "imageUrl": "tc2-assets/maps/cp-frost-fd27d1f779.webp",
-    "label": "cp_frost"
   },
   {
     "name": "Glass Houses",
@@ -424,11 +414,11 @@ export const maps = [
     "name": "Harvest",
     "page": "Harvest",
     "pageUrl": "https://typicalcolors2.fandom.com/wiki/Harvest",
-    "gameMode": "King of the Hill",
-    "group": "Standard",
+    "gameMode": "Vs. Bosses",
+    "group": "Special",
     "status": "Active",
-    "imageUrl": "tc2-assets/maps/koth-harvest-2a3d1922f8.webp",
-    "label": "koth_harvest"
+    "imageUrl": "tc2-assets/maps/vsb-harvest-bd358a39dc.webp",
+    "label": "vsb_harvest"
   },
   {
     "name": "Harvest Alpine",
@@ -439,16 +429,6 @@ export const maps = [
     "status": "Seasonal",
     "imageUrl": "tc2-assets/maps/koth-harvest-alpine-7bb2f169bf.webp",
     "label": "koth_harvest_alpine"
-  },
-  {
-    "name": "Harvest Retro",
-    "page": "Harvest_Retro",
-    "pageUrl": "https://typicalcolors2.fandom.com/wiki/Harvest_Retro",
-    "gameMode": "King of the Hill",
-    "group": "Standard",
-    "status": "Active (Rare)",
-    "imageUrl": "tc2-assets/maps/koth-harvest-retro-ec01479b26.webp",
-    "label": "koth_harvest_retro"
   },
   {
     "name": "Harvest Winter",
@@ -506,7 +486,7 @@ export const maps = [
     "pageUrl": "https://typicalcolors2.fandom.com/wiki/Hydrovalley",
     "gameMode": "Team Deathmatch",
     "group": "Special / Standard",
-    "status": "Active / Active (Rare)",
+    "status": "Active",
     "imageUrl": "tc2-assets/maps/tdm-hydrovalley-f6ad46d14e.webp",
     "label": "tdm_hydrovalley"
   },
@@ -559,16 +539,6 @@ export const maps = [
     "status": "Active",
     "imageUrl": "tc2-assets/maps/cp-lumber-2c3b20d886.webp",
     "label": "cp_lumber"
-  },
-  {
-    "name": "Mach",
-    "page": "Mach",
-    "pageUrl": "https://typicalcolors2.fandom.com/wiki/Mach",
-    "gameMode": "Capture the Flag",
-    "group": "Standard",
-    "status": "Active (Rare)",
-    "imageUrl": "tc2-assets/maps/ctf-mach-1e1b301589.webp",
-    "label": "ctf_mach"
   },
   {
     "name": "Manufacturing",
@@ -661,6 +631,16 @@ export const maps = [
     "label": "pl_pervade"
   },
   {
+    "name": "Pineway",
+    "page": "Pineway",
+    "pageUrl": "https://typicalcolors2.fandom.com/wiki/Pineway",
+    "gameMode": "Capture the Flag",
+    "group": "Standard",
+    "status": "Active",
+    "imageUrl": "tc2-assets/maps/ctf-pineway-26d5da4416.webp",
+    "label": "ctf_pineway"
+  },
+  {
     "name": "Pineyard",
     "page": "Pineyard",
     "pageUrl": "https://typicalcolors2.fandom.com/wiki/Pineyard",
@@ -679,16 +659,6 @@ export const maps = [
     "status": "Active",
     "imageUrl": "tc2-assets/maps/koth-power-plant-34ed9164d6.webp",
     "label": "koth_power_plant"
-  },
-  {
-    "name": "Product",
-    "page": "Product",
-    "pageUrl": "https://typicalcolors2.fandom.com/wiki/Product",
-    "gameMode": "King of the Hill",
-    "group": "Standard",
-    "status": "Active",
-    "imageUrl": "tc2-assets/maps/koth-product-5c6d90278b.webp",
-    "label": "koth_product"
   },
   {
     "name": "Purgatory",
@@ -714,11 +684,11 @@ export const maps = [
     "name": "Rig",
     "page": "Rig",
     "pageUrl": "https://typicalcolors2.fandom.com/wiki/Rig",
-    "gameMode": "Capture the Flag",
-    "group": "Standard",
-    "status": "Active (Rare)",
-    "imageUrl": "tc2-assets/maps/ctf-rig-deb37f37e8.webp",
-    "label": "ctf_rig"
+    "gameMode": "Team Deathmatch",
+    "group": "Special",
+    "status": "Active",
+    "imageUrl": "tc2-assets/maps/tdm-rig-deb37f37e8.webp",
+    "label": "tdm_rig"
   },
   {
     "name": "Risky",
@@ -754,11 +724,11 @@ export const maps = [
     "name": "Rooftop",
     "page": "Rooftop",
     "pageUrl": "https://typicalcolors2.fandom.com/wiki/Rooftop",
-    "gameMode": "King of the Hill",
-    "group": "Standard",
-    "status": "Active (Rare)",
-    "imageUrl": "tc2-assets/maps/koth-rooftop-57e0c39a16.webp",
-    "label": "koth_rooftop"
+    "gameMode": "Vs. Bosses",
+    "group": "Special",
+    "status": "Active",
+    "imageUrl": "tc2-assets/maps/vsb-rooftop-686671f499.webp",
+    "label": "vsb_rooftop"
   },
   {
     "name": "Rooftops",
@@ -1031,6 +1001,16 @@ export const maps = [
     "label": "ctf_turbine_pro"
   },
   {
+    "name": "Twilight",
+    "page": "Twilight",
+    "pageUrl": "https://typicalcolors2.fandom.com/wiki/Twilight",
+    "gameMode": "King of the Hill",
+    "group": "Standard",
+    "status": "Active",
+    "imageUrl": "tc2-assets/maps/koth-twilight-9071fe2dfa.webp",
+    "label": "koth_twilight"
+  },
+  {
     "name": "Undergrove",
     "page": "Undergrove",
     "pageUrl": "https://typicalcolors2.fandom.com/wiki/Undergrove",
@@ -1119,16 +1099,6 @@ export const maps = [
     "status": "Active",
     "imageUrl": "tc2-assets/maps/tdm-waterbog-f7a4c0662b.webp",
     "label": "tdm_waterbog"
-  },
-  {
-    "name": "Well",
-    "page": "Well",
-    "pageUrl": "https://typicalcolors2.fandom.com/wiki/Well",
-    "gameMode": "Arena",
-    "group": "Standard",
-    "status": "Active (Rare)",
-    "imageUrl": "tc2-assets/maps/arena-well-4466a11913.webp",
-    "label": "arena_well"
   },
   {
     "name": "Whitelane",
