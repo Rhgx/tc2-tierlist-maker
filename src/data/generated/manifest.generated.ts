@@ -1,5 +1,5 @@
 export const generatedManifest = {
-  "generatedAt": "2026-06-23T06:40:30.911Z",
+  "generatedAt": "2026-06-27T15:33:53.213Z",
   "weapons": {
     "count": 245,
     "assetCount": 245,
@@ -16,9 +16,9 @@ export const generatedManifest = {
     "assetBytes": 4585722
   },
   "taunts": {
-    "count": 29,
-    "assetCount": 29,
-    "assetBytes": 157188
+    "count": 33,
+    "assetCount": 33,
+    "assetBytes": 174100
   },
   "unusuals": {
     "count": 148,

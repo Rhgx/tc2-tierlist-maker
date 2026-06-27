@@ -1,5 +1,10 @@
-export const tauntsGeneratedAt = "2026-06-23T06:40:30.890Z";
+export const tauntsGeneratedAt = "2026-06-27T15:33:53.202Z";
 export const taunts = [
+  {
+    "name": "Blastrophysics",
+    "pageUrl": "https://typicalcolors2.fandom.com/wiki/Blastrophysics",
+    "imageUrl": "tc2-assets/taunts/blastrophysics-f42c2515b9.webp"
+  },
   {
     "name": "Blood Money",
     "pageUrl": "https://typicalcolors2.fandom.com/wiki/Blood_Money",
@@ -66,6 +71,11 @@ export const taunts = [
     "imageUrl": "tc2-assets/taunts/flippin-finish-518b5baa52.webp"
   },
   {
+    "name": "Grave Reminder",
+    "pageUrl": "https://typicalcolors2.fandom.com/wiki/Grave_Reminder",
+    "imageUrl": "tc2-assets/taunts/grave-reminder-3a6685e44e.webp"
+  },
+  {
     "name": "Hissy Fit",
     "pageUrl": "https://typicalcolors2.fandom.com/wiki/Hissy_Fit",
     "imageUrl": "tc2-assets/taunts/hissy-fit-7b7c71fe7d.webp"
@@ -111,6 +121,11 @@ export const taunts = [
     "imageUrl": "tc2-assets/taunts/neener-neener-285ad53fd7.webp"
   },
   {
+    "name": "Observant Photography",
+    "pageUrl": "https://typicalcolors2.fandom.com/wiki/Observant_Photography",
+    "imageUrl": "tc2-assets/taunts/observant-photography-e8728881f4.webp"
+  },
+  {
     "name": "Perfect Pitch",
     "pageUrl": "https://typicalcolors2.fandom.com/wiki/Perfect_Pitch",
     "imageUrl": "tc2-assets/taunts/perfect-pitch-8ec0f0b647.webp"
@@ -119,6 +134,11 @@ export const taunts = [
     "name": "Rickety Rocker",
     "pageUrl": "https://typicalcolors2.fandom.com/wiki/Rickety_Rocker",
     "imageUrl": "tc2-assets/taunts/rickety-rocker-4fe099a297.webp"
+  },
+  {
+    "name": "Seeking Stars",
+    "pageUrl": "https://typicalcolors2.fandom.com/wiki/Seeking_Stars",
+    "imageUrl": "tc2-assets/taunts/seeking-stars-c89e6797b9.webp"
   },
   {
     "name": "Snowbro",

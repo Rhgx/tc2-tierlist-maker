@@ -1,6 +1,6 @@
 import type { TierlistEntry } from "../../types";
 
-export const tierlistsGeneratedAt = "2026-06-23T06:40:30.909Z";
+export const tierlistsGeneratedAt = "2026-06-27T15:33:53.211Z";
 export const tierlists: TierlistEntry[] = [
   {
     "type": "folder",
@@ -3986,6 +3986,13 @@ export const tierlists: TierlistEntry[] = [
     "name": "Taunt Tierlist",
     "images": [
       {
+        "id": "taunt-blastrophysics",
+        "name": "Blastrophysics",
+        "src": "tc2-assets/taunts/blastrophysics-f42c2515b9.webp",
+        "sourceKind": "taunt",
+        "sourceId": "taunt-blastrophysics"
+      },
+      {
         "id": "taunt-blood-money",
         "name": "Blood Money",
         "src": "tc2-assets/taunts/blood-money-7cb7755acc.webp",
@@ -4077,6 +4084,13 @@ export const tierlists: TierlistEntry[] = [
         "sourceId": "taunt-flippin-finish"
       },
       {
+        "id": "taunt-grave-reminder",
+        "name": "Grave Reminder",
+        "src": "tc2-assets/taunts/grave-reminder-3a6685e44e.webp",
+        "sourceKind": "taunt",
+        "sourceId": "taunt-grave-reminder"
+      },
+      {
         "id": "taunt-hissy-fit",
         "name": "Hissy Fit",
         "src": "tc2-assets/taunts/hissy-fit-7b7c71fe7d.webp",
@@ -4140,6 +4154,13 @@ export const tierlists: TierlistEntry[] = [
         "sourceId": "taunt-neener-neener"
       },
       {
+        "id": "taunt-observant-photography",
+        "name": "Observant Photography",
+        "src": "tc2-assets/taunts/observant-photography-e8728881f4.webp",
+        "sourceKind": "taunt",
+        "sourceId": "taunt-observant-photography"
+      },
+      {
         "id": "taunt-perfect-pitch",
         "name": "Perfect Pitch",
         "src": "tc2-assets/taunts/perfect-pitch-8ec0f0b647.webp",
@@ -4152,6 +4173,13 @@ export const tierlists: TierlistEntry[] = [
         "src": "tc2-assets/taunts/rickety-rocker-4fe099a297.webp",
         "sourceKind": "taunt",
         "sourceId": "taunt-rickety-rocker"
+      },
+      {
+        "id": "taunt-seeking-stars",
+        "name": "Seeking Stars",
+        "src": "tc2-assets/taunts/seeking-stars-c89e6797b9.webp",
+        "sourceKind": "taunt",
+        "sourceId": "taunt-seeking-stars"
       },
       {
         "id": "taunt-snowbro",
