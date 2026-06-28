@@ -438,7 +438,10 @@ export default function App() {
       duration: 0.25,
       ease: "power1.in",
       onComplete: () => {
-        setRankings(buildInitialRankings(tierConfig, currentTierlist.images));
+        const defaultTiers = cloneDefaultTiers();
+        setTierConfig(defaultTiers);
+        setTierIdCounter(0);
+        setRankings(buildInitialRankings(defaultTiers, currentTierlist.images));
         setModal("none");
         window.setTimeout(() => {
           gsap.fromTo(".tier-row", { opacity: 0, x: 30 }, { opacity: 1, x: 0, duration: 0.4, stagger: 0.06, ease: "power2.out" });

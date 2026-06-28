@@ -21,7 +21,7 @@ export function TierlistModals({ modal, tierConfig, screenshotUrl, copyState, on
     <>
       {modal === "reset" && (
         <Modal title="Reset Tierlist" size="small" showClose={false} onClose={onClose}>
-          <p style={{ textAlign: "center", margin: 0 }}>Are you sure you want to reset?<br />All items will return to the pool.</p>
+          <p style={{ textAlign: "center", margin: 0 }}>Are you sure you want to reset?<br />All items will return to the pool and tiers will return to default.</p>
           <div className="modal__actions">
             <button className="btn" onClick={onClose}>Cancel</button>
             <button className="btn btn--back" onClick={onReset}>Reset</button>
