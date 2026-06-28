@@ -77,6 +77,18 @@ button {
     outline: none;
 }
 
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+    outline: 3px solid #7fbfff;
+    outline-offset: 3px;
+}
+
 ul, ol {
     list-style: none;
 }
@@ -84,4 +96,15 @@ ul, ol {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
 }

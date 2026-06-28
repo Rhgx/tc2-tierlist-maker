@@ -405,7 +405,6 @@
 }
 
 .edit-tier-label:focus {
-    outline: none;
     border-color: #7fbfff;
 }
 
@@ -466,7 +465,8 @@
     );
     border: 1px solid var(--highlight);
     border-radius: var(--radius-sm);
-    overflow: hidden;
+    overflow: visible;
+    position: relative;
 }
 
 .tier-label {
@@ -512,6 +512,7 @@
     border: 1px solid var(--highlight);
     border-radius: var(--radius-sm);
     padding: var(--spacing-md);
+    position: relative;
 }
 
 .pool-header {

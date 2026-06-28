@@ -23,8 +23,8 @@ export function TierlistModals({ modal, tierConfig, screenshotUrl, copyState, on
         <Modal title="Reset Tierlist" size="small" showClose={false} onClose={onClose}>
           <p style={{ textAlign: "center", margin: 0 }}>Are you sure you want to reset?<br />All items will return to the pool and tiers will return to default.</p>
           <div className="modal__actions">
-            <button className="btn" onClick={onClose}>Cancel</button>
-            <button className="btn btn--back" onClick={onReset}>Reset</button>
+            <button className="btn" type="button" onClick={onClose}>Cancel</button>
+            <button className="btn btn--back" type="button" onClick={onReset}>Reset</button>
           </div>
         </Modal>
       )}
@@ -34,13 +34,14 @@ export function TierlistModals({ modal, tierConfig, screenshotUrl, copyState, on
           <div className="edit-tiers-list">
             {tierConfig.map((tier) => (
               <div className="edit-tier-row" data-tier-id={tier.id} key={tier.id}>
-                <button className="edit-tier-drag" type="button" title="Drag tier" aria-label={`Drag ${tier.label} tier`}>
-                  <GripVertical />
+                <button className="edit-tier-drag" type="button" title="Drag tier" aria-label={`Reorder ${tier.label} tier`}>
+                  <GripVertical aria-hidden="true" />
                 </button>
                 <input
                   type="text"
                   className="edit-tier-color"
                   value={tier.color}
+                  aria-label={`${tier.label} tier color`}
                   data-coloris
                   style={{ background: tier.color, color: "transparent", cursor: "pointer" }}
                   onChange={(event) => onTierColorChange(tier.id, event.target.value)}
@@ -51,15 +52,16 @@ export function TierlistModals({ modal, tierConfig, screenshotUrl, copyState, on
                   value={tier.label}
                   maxLength={25}
                   placeholder="Label"
+                  aria-label={`${tier.label} tier label`}
                   onChange={(event) => onTierLabelChange(tier.id, event.target.value || tier.id)}
                 />
-                <button className="edit-tier-delete" title="Delete tier" aria-label={`Delete ${tier.label} tier`} onClick={() => onDeleteTier(tier.id)}>
-                  <X />
+                <button className="edit-tier-delete" type="button" title="Delete tier" aria-label={`Delete ${tier.label} tier`} onClick={() => onDeleteTier(tier.id)}>
+                  <X aria-hidden="true" />
                 </button>
               </div>
             ))}
           </div>
-          <button className="btn btn--add-tier" onClick={onAddTier}>+ Add Tier</button>
+          <button className="btn btn--add-tier" type="button" onClick={onAddTier}>+ Add Tier</button>
         </Modal>
       )}
 
@@ -69,13 +71,13 @@ export function TierlistModals({ modal, tierConfig, screenshotUrl, copyState, on
             <img src={screenshotUrl} alt="Screenshot Preview" />
           </div>
           <div className="modal__actions">
-            <button className="btn" onClick={onCopyScreenshot}>
-              {copyState === "copied" ? <Check /> : <ClipboardCopy />}
-              {copyState === "copied" ? "Copied!" : "Copy to Clipboard"}
+            <button className="btn" type="button" onClick={onCopyScreenshot} aria-live="polite">
+              {copyState === "copied" ? <Check aria-hidden="true" /> : <ClipboardCopy aria-hidden="true" />}
+              <span>{copyState === "copied" ? "Copied!" : "Copy to Clipboard"}</span>
             </button>
-            <button className="btn" onClick={onDownloadScreenshot}>
-              <Download />
-              Download Image
+            <button className="btn" type="button" onClick={onDownloadScreenshot}>
+              <Download aria-hidden="true" />
+              <span>Download Image</span>
             </button>
           </div>
         </Modal>

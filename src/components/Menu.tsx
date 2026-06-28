@@ -11,7 +11,7 @@ export function Menu({ title, entries, onFolder, onTierlist }: {
   return (
     <div className="menu">
       <h1 className="menu__title">{title}</h1>
-      <div className="menu__subtitle">Select a tierlist</div>
+      <p className="menu__subtitle">Select a tierlist</p>
       <div className="menu__buttons">
         {entries.map((entry) => <MenuButton key={entry.id} entry={entry} onFolder={onFolder} onTierlist={onTierlist} />)}
       </div>
@@ -26,11 +26,11 @@ export function MenuButton({ entry, onFolder, onTierlist }: {
 }) {
   if (isFolder(entry)) {
     return (
-      <button className="menu__btn menu__btn--folder" onClick={() => onFolder(entry)}>
+      <button className="menu__btn menu__btn--folder" type="button" onClick={() => onFolder(entry)}>
         {entry.name}
-        <ChevronRight />
+        <ChevronRight aria-hidden="true" />
       </button>
     );
   }
-  return <button className="menu__btn" onClick={() => onTierlist(entry.id)}>{entry.name}</button>;
+  return <button className="menu__btn" type="button" onClick={() => onTierlist(entry.id)}>{entry.name}</button>;
 }

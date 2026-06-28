@@ -120,7 +120,6 @@
 }
 
 .tier-label-input:focus {
-    outline: none;
     background: rgba(0,0,0,0.2);
 }
 
@@ -190,7 +189,6 @@
 }
 
 .select:focus {
-    outline: none;
     border-color: var(--highlight);
     box-shadow: 0 0 0 2px rgba(142, 138, 117, 0.3);
 }
@@ -213,12 +211,12 @@
     background: var(--metal-darker);
     border: 1px solid var(--highlight);
     border-radius: var(--radius-sm);
-    overflow: hidden;
+    overflow: visible;
     cursor: grab;
     position: relative;
     opacity: 1;
     transform: scale(1);
-    contain: layout paint;
+    contain: layout;
     touch-action: none;
     -webkit-tap-highlight-color: transparent;
 }
@@ -231,6 +229,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: var(--radius-sm);
 }
 
 .tier-item--dragging {
@@ -300,30 +299,56 @@
 }
 
 /* Tooltip */
-.tier-item[data-name]::after {
-    content: attr(data-name);
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: var(--spacing-xs) var(--spacing-sm);
-    background: var(--metal-darker);
-    color: var(--text-primary);
-    font-size: 0.75rem;
-    font-weight: 500;
-    white-space: nowrap;
-    border: 1px solid var(--highlight);
-    border-radius: var(--radius-sm);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.15s ease, visibility 0.15s ease;
-    z-index: 100;
-    pointer-events: none;
+.tooltip {
+    position: relative;
 }
 
-.tier-item:hover[data-name]::after {
+.tooltip__content {
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 8px);
+    z-index: 2500;
+    max-width: min(260px, 80vw);
+    width: max-content;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: linear-gradient(to bottom, #1d2031 0%, #26283a 54%, #303044 100%);
+    color: var(--text-primary);
+    border: 1px solid var(--highlight);
+    border-radius: var(--radius-sm);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translate(-50%, 4px);
+    transition: opacity 0.14s ease, transform 0.14s ease, visibility 0.14s ease;
+}
+
+.tooltip__content::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    width: 8px;
+    height: 8px;
+    background: #303044;
+    border-right: 1px solid var(--highlight);
+    border-bottom: 1px solid var(--highlight);
+    transform: translate(-50%, -4px) rotate(45deg);
+}
+
+.tooltip:hover .tooltip__content,
+.tooltip:focus-visible .tooltip__content,
+.tooltip:focus-within .tooltip__content {
     opacity: 1;
     visibility: visible;
+    transform: translate(-50%, 0);
 }
 
 /* Button Utilities */
@@ -348,12 +373,12 @@
     background: var(--metal-darker);
     border: 1px solid var(--highlight);
     border-radius: var(--radius-sm);
-    overflow: hidden;
+    overflow: visible;
     cursor: grab;
     position: relative;
     opacity: 1;
     transform: scale(1);
-    contain: layout paint;
+    contain: layout;
     touch-action: none;
     -webkit-tap-highlight-color: transparent;
     /* Prevent selection and dragging ghosts */
@@ -365,6 +390,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: var(--radius-sm);
     /* Prevent dragging the image itself */
     pointer-events: none;
 }
@@ -379,7 +405,7 @@
         animation: none;
     }
 
-    .tier-item[data-name]::after {
+    .tooltip__content {
         display: none;
     }
 }
