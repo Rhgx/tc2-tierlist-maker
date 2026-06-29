@@ -44,15 +44,13 @@ export function FolderView({ view, folder, onBack, onFolder, onTierlist }: {
   );
 }
 
-export function TierlistView({ view, tierlist, tierConfig, rankings, imagesById, poolItems, poolItemCount, totalPoolItemCount, weaponClassFilter, weaponClassOptions, showWeaponClassFilter, screenshotGenerating, onBack, onReset, onEdit, onScreenshot, onWeaponClassFilterChange }: {
+export function TierlistView({ view, tierlist, tierConfig, rankings, imagesById, poolItems, weaponClassFilter, weaponClassOptions, showWeaponClassFilter, screenshotGenerating, onBack, onReset, onEdit, onScreenshot, onWeaponClassFilterChange }: {
   view: ViewName;
   tierlist: TierlistDefinition | null;
   tierConfig: TierConfig[];
   rankings: Rankings;
   imagesById: Map<string, TierlistImage>;
   poolItems: ReactNode;
-  poolItemCount: number;
-  totalPoolItemCount: number;
   weaponClassFilter: string;
   weaponClassOptions: string[];
   showWeaponClassFilter: boolean;
@@ -63,8 +61,6 @@ export function TierlistView({ view, tierlist, tierConfig, rankings, imagesById,
   onScreenshot: () => void;
   onWeaponClassFilterChange: (className: string) => void;
 }) {
-  const poolCountLabel = weaponClassFilter === "all" ? `${totalPoolItemCount} items` : `${poolItemCount} of ${totalPoolItemCount} items`;
-
   return (
     <div id="tierlist-view" className={`view ${view === "tierlist" ? "view--active" : ""}`} aria-hidden={view !== "tierlist"}>
       <header className="header">
@@ -95,12 +91,7 @@ export function TierlistView({ view, tierlist, tierConfig, rankings, imagesById,
           ))}
         </div>
         <section className="pool-container" aria-labelledby="pool-heading">
-          <div className="pool-header">
-            <div>
-              <div id="pool-heading">Available Items</div>
-              <div className="pool-header__meta">{poolCountLabel}</div>
-            </div>
-          </div>
+          <div className="pool-header" id="pool-heading">Available Items</div>
           {showWeaponClassFilter && (
             <div className="class-filter" aria-label="Filter available weapons by class">
               <div className="class-filter__label">Class</div>

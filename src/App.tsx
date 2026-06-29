@@ -581,8 +581,6 @@ export default function App() {
         rankings={rankings}
         imagesById={currentImagesById}
         poolItems={poolItems}
-        poolItemCount={filteredPoolIds.length}
-        totalPoolItemCount={rankings.pool?.length || 0}
         weaponClassFilter={weaponClassFilter}
         weaponClassOptions={weaponClassOptions}
         showWeaponClassFilter={hasWeaponClassFilter}
