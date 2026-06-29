@@ -1,4 +1,4 @@
-export const mapsGeneratedAt = "2026-06-23T06:37:38.844Z";
+export const mapsGeneratedAt = "2026-06-29T16:55:08.367Z";
 export const maps = [
   {
     "name": "1979 Effect",
@@ -414,11 +414,11 @@ export const maps = [
     "name": "Harvest",
     "page": "Harvest",
     "pageUrl": "https://typicalcolors2.fandom.com/wiki/Harvest",
-    "gameMode": "Vs. Bosses",
+    "gameMode": "Team Deathmatch",
     "group": "Special",
     "status": "Active",
-    "imageUrl": "tc2-assets/maps/vsb-harvest-bd358a39dc.webp",
-    "label": "vsb_harvest"
+    "imageUrl": "tc2-assets/maps/tdm-harvest-2a3d1922f8.webp",
+    "label": "tdm_harvest"
   },
   {
     "name": "Harvest Alpine",

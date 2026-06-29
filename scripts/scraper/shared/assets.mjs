@@ -61,8 +61,15 @@ export async function downloadAssets(items, directoryPath, publicPrefix, project
 
   const uniqueItems = [...new Map(items.filter((item) => item.url).map((item) => [item.dedupeKey || item.url, item])).values()];
   const pathByUrl = new Map();
+  const progressLabel = options.progressLabel || "";
+  const progressEvery = Math.max(1, options.progressEvery || Math.ceil(uniqueItems.length / 5));
   let cursor = 0;
+  let completed = 0;
   const workerCount = 8;
+
+  if (progressLabel) {
+    console.log(`[assets] ${progressLabel}: ${uniqueItems.length} unique asset${uniqueItems.length === 1 ? "" : "s"} queued.`);
+  }
 
   async function worker() {
     while (cursor < uniqueItems.length) {
@@ -73,7 +80,14 @@ export async function downloadAssets(items, directoryPath, publicPrefix, project
       const fileName = item.fileName || `${baseName}-${hashValue(item.url)}${assetExtension(item, options)}`;
       const outputPath = path.join(directoryPath, fileName);
       await writeAsset(item.url, outputPath, directoryPath, path.parse(fileName).name, { ...options, item });
+      if (options.afterWrite) {
+        await options.afterWrite(outputPath, item);
+      }
       pathByUrl.set(item.dedupeKey || item.url, `${publicPrefix}/${fileName}`);
+      completed += 1;
+      if (progressLabel && (completed === uniqueItems.length || completed % progressEvery === 0)) {
+        console.log(`[assets] ${progressLabel}: ${completed}/${uniqueItems.length} ready.`);
+      }
     }
   }
 

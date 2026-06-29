@@ -39,6 +39,7 @@ if (!validTargets.has(target)) {
 }
 
 await mkdir(generatedDataPath, { recursive: true });
+logProgress(`Starting "${target}" scrape.`);
 
 const existing = await readExistingGenerated();
 const data = {
@@ -57,9 +58,12 @@ if (target === "all" || target === "unusuals") data.unusuals = await scrapeUnusu
 
 await writeFile(outputPaths.tierlists, renderTierlistsGeneratedFile(buildTierlists(data)), "utf8");
 await writeManifest(data);
+logProgress("Generated tierlists and manifest.");
 
 async function scrapeWeapons() {
+  logProgress("Weapons: fetching wiki data.");
   const weapons = await scrapeWeaponsFromWiki();
+  logProgress(`Weapons: found ${weapons.length} entries; downloading assets.`);
   const paths = await downloadAssets(
     weapons.map((weapon) => ({
       name: weapon.name,
@@ -70,81 +74,99 @@ async function scrapeWeapons() {
     assetPaths.weapons,
     "tc2-assets/weapons",
     projectRoot,
+    { progressLabel: "weapons" },
   );
   const local = weapons.map((weapon) => ({ ...weapon, iconUrl: paths.get(weaponAssetKey(weapon)) || "" }));
   const disguiseKit = local.find(isDisguiseKit);
   if (disguiseKit?.iconUrl) {
+    logProgress("Weapons: labeling Disguise Kit asset.");
     await addDisguiseKitLabelToAsset(path.join(projectRoot, "public", disguiseKit.iconUrl));
   }
+  logProgress("Weapons: writing generated data.");
   await writeFile(outputPaths.weapons, renderRawGeneratedFile("weapons", local), "utf8");
   await logSummary("Weapons", local.length, assetPaths.weapons);
   return local;
 }
 
 async function scrapeMaps() {
+  logProgress("Maps: fetching wiki data and resolving map icons.");
   const maps = await scrapeMapsFromWiki();
   const labeledMaps = maps.map((map) => ({ ...map, label: mapLabel(map, maps) }));
+  logProgress(`Maps: found ${labeledMaps.length} entries; downloading and labeling assets.`);
   const paths = await downloadAssets(
-    labeledMaps.map((map) => ({ name: mapAssetName(map), dedupeKey: mapAssetName(map), url: map.imageUrl })),
+    labeledMaps.map((map) => ({ name: mapAssetName(map), dedupeKey: mapAssetName(map), url: map.imageUrl, label: map.label })),
     assetPaths.maps,
     "tc2-assets/maps",
     projectRoot,
-    { force: true, resize: { width: 256, height: 256 } },
+    {
+      force: true,
+      resize: { width: 256, height: 256 },
+      afterWrite: (filePath, map) => addMapLabelToAsset(filePath, map.label),
+      progressLabel: "maps",
+    },
   );
   const local = labeledMaps.map((map) => ({ ...map, imageUrl: paths.get(mapAssetName(map)) || "" }));
 
-  await Promise.all(local.map(async (map) => {
-    if (!map.imageUrl) return;
-    await addMapLabelToAsset(path.join(projectRoot, "public", map.imageUrl), map.label);
-  }));
-
+  logProgress("Maps: writing generated data.");
   await writeFile(outputPaths.maps, renderRawGeneratedFile("maps", local), "utf8");
   await logSummary("Maps", local.length, assetPaths.maps);
   return local;
 }
 
 async function scrapeCosmetics() {
+  logProgress("Cosmetics: fetching wiki data.");
   const cosmetics = await scrapeCosmeticsFromWiki();
+  logProgress(`Cosmetics: found ${cosmetics.length} entries; normalizing classes.`);
   const normalized = cosmetics.map((cosmetic) => ({
     ...cosmetic,
     usedBy: cosmetic.usedBy.map(normalizeClassName).sort(sortClassNames),
   }));
+  logProgress("Cosmetics: downloading assets.");
   const paths = await downloadAssets(
     normalized.map((cosmetic) => ({ name: cosmetic.name, url: cosmetic.imageUrl })),
     assetPaths.cosmetics,
     "tc2-assets/cosmetics",
     projectRoot,
+    { progressLabel: "cosmetics" },
   );
   const local = normalized.map((cosmetic) => ({ ...cosmetic, imageUrl: paths.get(cosmetic.imageUrl) || "" }));
+  logProgress("Cosmetics: writing generated data.");
   await writeFile(outputPaths.cosmetics, renderRawGeneratedFile("cosmetics", local), "utf8");
   await logSummary("Cosmetics", local.length, assetPaths.cosmetics);
   return local;
 }
 
 async function scrapeTaunts() {
+  logProgress("Taunts: fetching wiki data.");
   const taunts = await scrapeTauntsFromWiki();
+  logProgress(`Taunts: found ${taunts.length} entries; downloading assets.`);
   const paths = await downloadAssets(
     taunts.map((taunt) => ({ name: taunt.name, url: taunt.imageUrl })),
     assetPaths.taunts,
     "tc2-assets/taunts",
     projectRoot,
+    { progressLabel: "taunts" },
   );
   const local = taunts.map((taunt) => ({ ...taunt, imageUrl: paths.get(taunt.imageUrl) || "" }));
+  logProgress("Taunts: writing generated data.");
   await writeFile(outputPaths.taunts, renderRawGeneratedFile("taunts", local), "utf8");
   await logSummary("Taunts", local.length, assetPaths.taunts);
   return local;
 }
 
 async function scrapeUnusuals() {
+  logProgress("Unusuals: fetching wiki data.");
   const unusuals = await scrapeUnusualsFromWiki();
+  logProgress(`Unusuals: found ${unusuals.length} entries; downloading assets.`);
   const paths = await downloadAssets(
     unusuals.map((unusual) => ({ name: unusual.name, url: unusual.imageUrl })),
     assetPaths.unusuals,
     "tc2-assets/unusuals",
     projectRoot,
-    { force: true, preserveGif: true },
+    { force: true, preserveGif: true, progressLabel: "unusuals" },
   );
   const local = unusuals.map((unusual) => ({ ...unusual, imageUrl: paths.get(unusual.imageUrl) || "" }));
+  logProgress("Unusuals: writing generated data.");
   await writeFile(outputPaths.unusuals, renderRawGeneratedFile("unusuals", local), "utf8");
   await logSummary("Unusuals", local.length, assetPaths.unusuals);
   return local;
@@ -203,6 +225,10 @@ async function manifestSection(items, assetsPath) {
 async function logSummary(label, count, assetsPath) {
   const summary = await summarizeAssetDirectory(assetsPath);
   console.log(`${label}: ${count} items, ${summary.count} asset files, ${formatBytes(summary.bytes)}.`);
+}
+
+function logProgress(message) {
+  console.log(`[scrape] ${message}`);
 }
 
 async function readExistingGenerated() {

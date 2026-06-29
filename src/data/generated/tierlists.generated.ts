@@ -1,6 +1,6 @@
 import type { TierlistEntry } from "../../types";
 
-export const tierlistsGeneratedAt = "2026-06-27T15:33:53.211Z";
+export const tierlistsGeneratedAt = "2026-06-29T16:59:37.394Z";
 export const tierlists: TierlistEntry[] = [
   {
     "type": "folder",
@@ -3777,6 +3777,13 @@ export const tierlists: TierlistEntry[] = [
         "sourceId": "map-tdm-cargo"
       },
       {
+        "id": "map-tdm-harvest",
+        "name": "tdm_harvest",
+        "src": "tc2-assets/maps/tdm-harvest-2a3d1922f8.webp",
+        "sourceKind": "map",
+        "sourceId": "map-tdm-harvest"
+      },
+      {
         "id": "map-tdm-hydrovalley",
         "name": "tdm_hydrovalley",
         "src": "tc2-assets/maps/tdm-hydrovalley-f6ad46d14e.webp",
@@ -3887,13 +3894,6 @@ export const tierlists: TierlistEntry[] = [
         "src": "tc2-assets/maps/vsb-glass-houses-05c522e7da.webp",
         "sourceKind": "map",
         "sourceId": "map-vsb-glass-houses"
-      },
-      {
-        "id": "map-vsb-harvest",
-        "name": "vsb_harvest",
-        "src": "tc2-assets/maps/vsb-harvest-bd358a39dc.webp",
-        "sourceKind": "map",
-        "sourceId": "map-vsb-harvest"
       },
       {
         "id": "map-vsb-haunted-mansion",
@@ -4363,11 +4363,11 @@ export const tierlists: TierlistEntry[] = [
         "sourceId": "unusual-colorful-confetti"
       },
       {
-        "id": "unusual-community-sparkle",
-        "name": "Community Sparkle",
-        "src": "tc2-assets/unusuals/community-sparkle-65a32dfc62.gif",
+        "id": "unusual-cosmetic",
+        "name": "Cosmetic",
+        "src": "tc2-assets/unusuals/cosmetic-65a32dfc62.gif",
         "sourceKind": "unusual",
-        "sourceId": "unusual-community-sparkle"
+        "sourceId": "unusual-cosmetic"
       },
       {
         "id": "unusual-crabulous-flash",
@@ -5243,6 +5243,13 @@ export const tierlists: TierlistEntry[] = [
         "src": "tc2-assets/unusuals/vivid-plasma-ac8f4674de.gif",
         "sourceKind": "unusual",
         "sourceId": "unusual-vivid-plasma"
+      },
+      {
+        "id": "unusual-weapon",
+        "name": "Weapon",
+        "src": "tc2-assets/unusuals/weapon-208aee259c.gif",
+        "sourceKind": "unusual",
+        "sourceId": "unusual-weapon"
       },
       {
         "id": "unusual-winter-s-wrath",

@@ -1,4 +1,4 @@
-export const weaponsGeneratedAt = "2026-06-23T06:37:18.762Z";
+export const weaponsGeneratedAt = "2026-06-29T16:59:37.383Z";
 export const weapons = [
   {
     "name": "50-AE",

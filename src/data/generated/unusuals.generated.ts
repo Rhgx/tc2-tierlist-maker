@@ -1,4 +1,4 @@
-export const unusualsGeneratedAt = "2026-05-17T15:53:59.132Z";
+export const unusualsGeneratedAt = "2026-06-29T16:56:28.494Z";
 export const unusuals = [
   {
     "name": "Anarchy Flash",
@@ -141,11 +141,11 @@ export const unusuals = [
     "imageUrl": "tc2-assets/unusuals/colorful-confetti-09da974dd8.gif"
   },
   {
-    "name": "Community Sparkle",
+    "name": "Cosmetic",
     "section": "Miscellaneous effects",
     "series": "Community Sparkle",
-    "pageUrl": "https://typicalcolors2.fandom.com/wiki/Item_Qualities/Unusual#Community_Sparkle",
-    "imageUrl": "tc2-assets/unusuals/community-sparkle-65a32dfc62.gif"
+    "pageUrl": "https://typicalcolors2.fandom.com/wiki/Item_Qualities/Unusual#Cosmetic",
+    "imageUrl": "tc2-assets/unusuals/cosmetic-65a32dfc62.gif"
   },
   {
     "name": "Crabulous Flash",
@@ -1021,6 +1021,13 @@ export const unusuals = [
     "series": "Series 1",
     "pageUrl": "https://typicalcolors2.fandom.com/wiki/Item_Qualities/Unusual#Vivid_Plasma",
     "imageUrl": "tc2-assets/unusuals/vivid-plasma-ac8f4674de.gif"
+  },
+  {
+    "name": "Weapon",
+    "section": "Miscellaneous effects",
+    "series": "Community Sparkle",
+    "pageUrl": "https://typicalcolors2.fandom.com/wiki/Item_Qualities/Unusual#Weapon",
+    "imageUrl": "tc2-assets/unusuals/weapon-208aee259c.gif"
   },
   {
     "name": "Winter's Wrath",

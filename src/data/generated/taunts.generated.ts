@@ -1,4 +1,4 @@
-export const tauntsGeneratedAt = "2026-06-27T15:33:53.202Z";
+export const tauntsGeneratedAt = "2026-06-29T16:57:09.657Z";
 export const taunts = [
   {
     "name": "Blastrophysics",
