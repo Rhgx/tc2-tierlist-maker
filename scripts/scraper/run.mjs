@@ -190,11 +190,11 @@ function buildTierlists({ weapons, maps, cosmetics, taunts, unusuals }) {
     { id: "maps-tierlist", name: "Maps Tierlist", images: [...maps].sort(sortMapsByLabel).map((map) => tierlistImage("map", map.label || map.name, map.imageUrl)) },
     { id: "taunt-tierlist", name: "Taunt Tierlist", images: [...taunts].sort(sortByName).map((taunt) => tierlistImage("taunt", taunt.name, taunt.imageUrl)) },
     { id: "unusual-tierlist", name: "Unusual Tierlist", images: [...unusuals].sort(sortByName).map((unusual) => tierlistImage("unusual", unusual.name, unusual.imageUrl)) },
-    { id: "weapons-tierlist", name: "Weapons Tierlist", images: [...weapons].sort(sortByName).map((weapon) => tierlistImage("weapon", weapon.name, weapon.iconUrl)) },
+    { id: "weapons-tierlist", name: "Weapons Tierlist", images: [...weapons].sort(sortByName).map((weapon) => tierlistImage("weapon", weapon.name, weapon.iconUrl, { classNames: weapon.classNames, slot: weapon.slot })) },
   ];
 }
 
-function tierlistImage(kind, name, src) {
+function tierlistImage(kind, name, src, metadata = {}) {
   const id = `${kind}-${slugify(name)}`;
   return {
     id,
@@ -202,6 +202,7 @@ function tierlistImage(kind, name, src) {
     src,
     sourceKind: kind,
     sourceId: id,
+    ...metadata,
   };
 }
 

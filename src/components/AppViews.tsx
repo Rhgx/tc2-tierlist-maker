@@ -44,19 +44,27 @@ export function FolderView({ view, folder, onBack, onFolder, onTierlist }: {
   );
 }
 
-export function TierlistView({ view, tierlist, tierConfig, rankings, imagesById, poolItems, screenshotGenerating, onBack, onReset, onEdit, onScreenshot }: {
+export function TierlistView({ view, tierlist, tierConfig, rankings, imagesById, poolItems, poolItemCount, totalPoolItemCount, weaponClassFilter, weaponClassOptions, showWeaponClassFilter, screenshotGenerating, onBack, onReset, onEdit, onScreenshot, onWeaponClassFilterChange }: {
   view: ViewName;
   tierlist: TierlistDefinition | null;
   tierConfig: TierConfig[];
   rankings: Rankings;
   imagesById: Map<string, TierlistImage>;
   poolItems: ReactNode;
+  poolItemCount: number;
+  totalPoolItemCount: number;
+  weaponClassFilter: string;
+  weaponClassOptions: string[];
+  showWeaponClassFilter: boolean;
   screenshotGenerating: boolean;
   onBack: () => void;
   onReset: () => void;
   onEdit: () => void;
   onScreenshot: () => void;
+  onWeaponClassFilterChange: (className: string) => void;
 }) {
+  const poolCountLabel = weaponClassFilter === "all" ? `${totalPoolItemCount} items` : `${poolItemCount} of ${totalPoolItemCount} items`;
+
   return (
     <div id="tierlist-view" className={`view ${view === "tierlist" ? "view--active" : ""}`} aria-hidden={view !== "tierlist"}>
       <header className="header">
@@ -87,7 +95,35 @@ export function TierlistView({ view, tierlist, tierConfig, rankings, imagesById,
           ))}
         </div>
         <section className="pool-container" aria-labelledby="pool-heading">
-          <div className="pool-header" id="pool-heading">Available Items</div>
+          <div className="pool-header">
+            <div>
+              <div id="pool-heading">Available Items</div>
+              <div className="pool-header__meta">{poolCountLabel}</div>
+            </div>
+          </div>
+          {showWeaponClassFilter && (
+            <div className="class-filter" aria-label="Filter available weapons by class">
+              <div className="class-filter__label">Class</div>
+              <div className="class-filter__chips" role="group" aria-label="Weapon class">
+                <button className={`class-filter__chip ${weaponClassFilter === "all" ? "class-filter__chip--active" : ""}`} type="button" onClick={() => onWeaponClassFilterChange("all")}>
+                  All
+                </button>
+                {weaponClassOptions.map((className) => (
+                  <button key={className} className={`class-filter__chip ${weaponClassFilter === className ? "class-filter__chip--active" : ""}`} type="button" onClick={() => onWeaponClassFilterChange(className)}>
+                    {className}
+                  </button>
+                ))}
+              </div>
+              <div className="class-filter__select select-wrapper">
+                <select className="select" value={weaponClassFilter} aria-label="Weapon class" onChange={(event) => onWeaponClassFilterChange(event.target.value)}>
+                  <option value="all">All</option>
+                  {weaponClassOptions.map((className) => (
+                    <option key={className} value={className}>{className}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          )}
           <div className="pool-items">{poolItems}</div>
         </section>
       </main>

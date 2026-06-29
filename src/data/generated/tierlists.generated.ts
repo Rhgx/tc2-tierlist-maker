@@ -5276,1715 +5276,2737 @@ export const tierlists: TierlistEntry[] = [
         "name": "50-AE",
         "src": "tc2-assets/weapons/50-ae-dbf003d959.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-50-ae"
+        "sourceId": "weapon-50-ae",
+        "classNames": [
+          "Marksman"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-acid-trader",
         "name": "Acid Trader",
         "src": "tc2-assets/weapons/acid-trader-54696cbcec.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-acid-trader"
+        "sourceId": "weapon-acid-trader",
+        "classNames": [
+          "Annihilator"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-afterimage",
         "name": "Afterimage",
         "src": "tc2-assets/weapons/afterimage-21de5f27a0.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-afterimage"
+        "sourceId": "weapon-afterimage",
+        "classNames": [
+          "Agent"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-amputator",
         "name": "Amputator",
         "src": "tc2-assets/weapons/amputator-d0a066b7ac.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-amputator"
+        "sourceId": "weapon-amputator",
+        "classNames": [
+          "Doctor"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-apollo",
         "name": "Apollo",
         "src": "tc2-assets/weapons/apollo-3eb5a35a62.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-apollo"
+        "sourceId": "weapon-apollo",
+        "classNames": [
+          "Doctor"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-armington",
         "name": "Armington",
         "src": "tc2-assets/weapons/armington-bddfb17831.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-armington"
+        "sourceId": "weapon-armington",
+        "classNames": [
+          "Trooper",
+          "Arsonist",
+          "Brute",
+          "Mechanic"
+        ],
+        "slot": "Secondary / Primary"
       },
       {
         "id": "weapon-atomizer",
         "name": "Atomizer",
         "src": "tc2-assets/weapons/atomizer-08cb3ae724.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-atomizer"
+        "sourceId": "weapon-atomizer",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-avengeance",
         "name": "Avengeance",
         "src": "tc2-assets/weapons/avengeance-f415a753d0.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-avengeance"
+        "sourceId": "weapon-avengeance",
+        "classNames": [
+          "Mechanic"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-awsm-sce",
         "name": "AWSM-SCE",
         "src": "tc2-assets/weapons/awsm-sce-98ce5d3ab0.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-awsm-sce"
+        "sourceId": "weapon-awsm-sce",
+        "classNames": [
+          "Marksman"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-baby-face-s-blaster",
         "name": "Baby Face's Blaster",
         "src": "tc2-assets/weapons/baby-face-s-blaster-715777317f.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-baby-face-s-blaster"
+        "sourceId": "weapon-baby-face-s-blaster",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-bat",
         "name": "Bat",
         "src": "tc2-assets/weapons/bat-9703426a92.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-bat"
+        "sourceId": "weapon-bat",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-batarang",
         "name": "Batarang",
         "src": "tc2-assets/weapons/batarang-1c003a5de6.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-batarang"
+        "sourceId": "weapon-batarang",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-battalion-s-backup",
         "name": "Battalion's Backup",
         "src": "tc2-assets/weapons/battalion-s-backup-e40679e83f.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-battalion-s-backup"
+        "sourceId": "weapon-battalion-s-backup",
+        "classNames": [
+          "Trooper"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-battle-axe",
         "name": "Battle Axe",
         "src": "tc2-assets/weapons/battle-axe-064f68e589.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-battle-axe"
+        "sourceId": "weapon-battle-axe",
+        "classNames": [
+          "Annihilator"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-battle-burrito",
         "name": "Battle Burrito",
         "src": "tc2-assets/weapons/battle-burrito-0d2733b66f.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-battle-burrito"
+        "sourceId": "weapon-battle-burrito",
+        "classNames": [
+          "Brute"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-big-bite",
         "name": "Big Bite",
         "src": "tc2-assets/weapons/big-bite-9269d4a446.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-big-bite"
+        "sourceId": "weapon-big-bite",
+        "classNames": [
+          "Trooper"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-biker-s-blitz",
         "name": "Biker's Blitz",
         "src": "tc2-assets/weapons/biker-s-blitz-fa62c11276.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-biker-s-blitz"
+        "sourceId": "weapon-biker-s-blitz",
+        "classNames": [
+          "Brute"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-black-death",
         "name": "Black Death",
         "src": "tc2-assets/weapons/black-death-c94898e9a3.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-black-death"
+        "sourceId": "weapon-black-death",
+        "classNames": [
+          "Annihilator"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-block-17",
         "name": "Block-17",
         "src": "tc2-assets/weapons/block-17-5c35d4247e.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-block-17"
+        "sourceId": "weapon-block-17",
+        "classNames": [
+          "Agent"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-blood-doctor",
         "name": "Blood Doctor",
         "src": "tc2-assets/weapons/blood-doctor-b6dba9a03c.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-blood-doctor"
+        "sourceId": "weapon-blood-doctor",
+        "classNames": [
+          "Doctor"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-bloody-blossom",
         "name": "Bloody Blossom",
         "src": "tc2-assets/weapons/bloody-blossom-64e4a446c3.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-bloody-blossom"
+        "sourceId": "weapon-bloody-blossom",
+        "classNames": [
+          "Annihilator"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-bloxaide",
         "name": "Bloxaide",
         "src": "tc2-assets/weapons/bloxaide-32601f7c94.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-bloxaide"
+        "sourceId": "weapon-bloxaide",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-bloxy-award",
         "name": "Bloxy Award",
         "src": "tc2-assets/weapons/bloxy-award-a525216f52.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-bloxy-award"
+        "sourceId": "weapon-bloxy-award",
+        "classNames": [
+          "All Classes"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-bloxy-cola",
         "name": "Bloxy Cola",
         "src": "tc2-assets/weapons/bloxy-cola-d91a082560.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-bloxy-cola"
+        "sourceId": "weapon-bloxy-cola",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-blunderbrass",
         "name": "BlunderBrass",
         "src": "tc2-assets/weapons/blunderbrass-eac99683f3.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-blunderbrass"
+        "sourceId": "weapon-blunderbrass",
+        "classNames": [
+          "Annihilator"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-boonie-blaster",
         "name": "Boonie Blaster",
         "src": "tc2-assets/weapons/boonie-blaster-2ac4048681.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-boonie-blaster"
+        "sourceId": "weapon-boonie-blaster",
+        "classNames": [
+          "Trooper"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-bottled-lemonade",
         "name": "Bottled Lemonade",
         "src": "tc2-assets/weapons/bottled-lemonade-c129c79457.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-bottled-lemonade"
+        "sourceId": "weapon-bottled-lemonade",
+        "classNames": [
+          "Marksman"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-boxing-gloves",
         "name": "Boxing Gloves",
         "src": "tc2-assets/weapons/boxing-gloves-281c05f89a.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-boxing-gloves"
+        "sourceId": "weapon-boxing-gloves",
+        "classNames": [
+          "Brute"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-brash-burger",
         "name": "Brash Burger",
         "src": "tc2-assets/weapons/brash-burger-5278ca034a.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-brash-burger"
+        "sourceId": "weapon-brash-burger",
+        "classNames": [
+          "Brute"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-broken-sword",
         "name": "Broken Sword",
         "src": "tc2-assets/weapons/broken-sword-c54ed33948.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-broken-sword"
+        "sourceId": "weapon-broken-sword",
+        "classNames": [
+          "Annihilator"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-brooklyn-basher",
         "name": "Brooklyn Basher",
         "src": "tc2-assets/weapons/brooklyn-basher-84b20c1121.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-brooklyn-basher"
+        "sourceId": "weapon-brooklyn-basher",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-buff-banner",
         "name": "Buff Banner",
         "src": "tc2-assets/weapons/buff-banner-2eb9ff384e.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-buff-banner"
+        "sourceId": "weapon-buff-banner",
+        "classNames": [
+          "Trooper"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-buffin-blitz",
         "name": "Buffin' Blitz",
         "src": "tc2-assets/weapons/buffin-blitz-dba25e1141.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-buffin-blitz"
+        "sourceId": "weapon-buffin-blitz",
+        "classNames": [
+          "Trooper"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-bullet-stormer",
         "name": "Bullet-stormer",
         "src": "tc2-assets/weapons/bullet-stormer-15d17c7654.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-bullet-stormer"
+        "sourceId": "weapon-bullet-stormer",
+        "classNames": [
+          "Trooper",
+          "Arsonist",
+          "Brute",
+          "Mechanic"
+        ],
+        "slot": "Secondary / Primary"
       },
       {
         "id": "weapon-camper-s-climber",
         "name": "Camper's Climber",
         "src": "tc2-assets/weapons/camper-s-climber-1cb47fc194.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-camper-s-climber"
+        "sourceId": "weapon-camper-s-climber",
+        "classNames": [
+          "Marksman"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-candy-cane",
         "name": "Candy Cane",
         "src": "tc2-assets/weapons/candy-cane-8eda076994.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-candy-cane"
+        "sourceId": "weapon-candy-cane",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-chargin-targe",
         "name": "Chargin' Targe",
         "src": "tc2-assets/weapons/chargin-targe-c7fb68e0d0.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-chargin-targe"
+        "sourceId": "weapon-chargin-targe",
+        "classNames": [
+          "Annihilator"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-citric-reaction",
         "name": "Citric Reaction",
         "src": "tc2-assets/weapons/citric-reaction-7e48de89ce.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-citric-reaction"
+        "sourceId": "weapon-citric-reaction",
+        "classNames": [
+          "Marksman"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-classic",
         "name": "Classic",
         "src": "tc2-assets/weapons/classic-71e88f3d5f.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-classic"
+        "sourceId": "weapon-classic",
+        "classNames": [
+          "Marksman"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-cloak-and-dagger",
         "name": "Cloak and Dagger",
         "src": "tc2-assets/weapons/cloak-and-dagger-13eb4e7877.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-cloak-and-dagger"
+        "sourceId": "weapon-cloak-and-dagger",
+        "classNames": [
+          "Agent"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-cloak-revolver",
         "name": "Cloak Revolver",
         "src": "tc2-assets/weapons/cloak-revolver-4d5d8bf41f.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-cloak-revolver"
+        "sourceId": "weapon-cloak-revolver",
+        "classNames": [
+          "Agent"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-colbat",
         "name": "Colbat",
         "src": "tc2-assets/weapons/colbat-3313734a60.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-colbat"
+        "sourceId": "weapon-colbat",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-cold-shoulder",
         "name": "Cold Shoulder",
         "src": "tc2-assets/weapons/cold-shoulder-bc82567dc0.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-cold-shoulder"
+        "sourceId": "weapon-cold-shoulder",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-concealed-carry",
         "name": "Concealed Carry",
         "src": "tc2-assets/weapons/concealed-carry-3e4910a8b5.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-concealed-carry"
+        "sourceId": "weapon-concealed-carry",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-concheror",
         "name": "Concheror",
         "src": "tc2-assets/weapons/concheror-7d7a5d1d2f.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-concheror"
+        "sourceId": "weapon-concheror",
+        "classNames": [
+          "Trooper"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-conniver-s-kunai",
         "name": "Conniver's Kunai",
         "src": "tc2-assets/weapons/conniver-s-kunai-0f92167c44.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-conniver-s-kunai"
+        "sourceId": "weapon-conniver-s-kunai",
+        "classNames": [
+          "Agent"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-construct",
         "name": "Construct",
         "src": "tc2-assets/weapons/construct-85b1d7ca58.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-construct"
+        "sourceId": "weapon-construct",
+        "classNames": [
+          "Mechanic"
+        ],
+        "slot": "PDA"
       },
       {
         "id": "weapon-conventional",
         "name": "Conventional",
         "src": "tc2-assets/weapons/conventional-9fceae7814.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-conventional"
+        "sourceId": "weapon-conventional",
+        "classNames": [
+          "Flanker",
+          "Mechanic"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-counter-service",
         "name": "Counter-Service",
         "src": "tc2-assets/weapons/counter-service-c8c5a0e4a2.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-counter-service"
+        "sourceId": "weapon-counter-service",
+        "classNames": [
+          "Marksman"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-crankenstein",
         "name": "Crankenstein",
         "src": "tc2-assets/weapons/crankenstein-e0f0f2cd38.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-crankenstein"
+        "sourceId": "weapon-crankenstein",
+        "classNames": [
+          "Trooper",
+          "Arsonist",
+          "Brute",
+          "Mechanic"
+        ],
+        "slot": "Secondary / Primary"
       },
       {
         "id": "weapon-crowbar",
         "name": "Crowbar",
         "src": "tc2-assets/weapons/crowbar-929f7cce41.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-crowbar"
+        "sourceId": "weapon-crowbar",
+        "classNames": [
+          "Trooper"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-cuteness-overload",
         "name": "Cuteness Overload",
         "src": "tc2-assets/weapons/cuteness-overload-381f591353.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-cuteness-overload"
+        "sourceId": "weapon-cuteness-overload",
+        "classNames": [
+          "Annihilator"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-dairy-douser",
         "name": "Dairy Douser",
         "src": "tc2-assets/weapons/dairy-douser-30e36d84c3.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-dairy-douser"
+        "sourceId": "weapon-dairy-douser",
+        "classNames": [
+          "Doctor"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-darkness",
         "name": "Darkness",
         "src": "tc2-assets/weapons/darkness-cc701682a3.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-darkness"
+        "sourceId": "weapon-darkness",
+        "classNames": [
+          "Annihilator"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-dead-ringer",
         "name": "Dead Ringer",
         "src": "tc2-assets/weapons/dead-ringer-84ac7122a9.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-dead-ringer"
+        "sourceId": "weapon-dead-ringer",
+        "classNames": [
+          "Agent"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-deathblow",
         "name": "Deathblow",
         "src": "tc2-assets/weapons/deathblow-1d91af520b.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-deathblow"
+        "sourceId": "weapon-deathblow",
+        "classNames": [
+          "Trooper",
+          "Arsonist",
+          "Brute"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-degreaser",
         "name": "Degreaser",
         "src": "tc2-assets/weapons/degreaser-1c65161c28.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-degreaser"
+        "sourceId": "weapon-degreaser",
+        "classNames": [
+          "Arsonist"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-demolish",
         "name": "Demolish",
         "src": "tc2-assets/weapons/demolish-568207f5f3.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-demolish"
+        "sourceId": "weapon-demolish",
+        "classNames": [
+          "Mechanic"
+        ],
+        "slot": "PDA"
       },
       {
         "id": "weapon-dentist-s-delight",
         "name": "Dentist's Delight",
         "src": "tc2-assets/weapons/dentist-s-delight-92f528ace4.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-dentist-s-delight"
+        "sourceId": "weapon-dentist-s-delight",
+        "classNames": [
+          "Doctor"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-detonator",
         "name": "Detonator",
         "src": "tc2-assets/weapons/detonator-2ce7f9fb40.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-detonator"
+        "sourceId": "weapon-detonator",
+        "classNames": [
+          "Arsonist"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-diavolo",
         "name": "Diavolo",
         "src": "tc2-assets/weapons/diavolo-c6786acf60.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-diavolo"
+        "sourceId": "weapon-diavolo",
+        "classNames": [
+          "Agent"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-diggity-dog",
         "name": "Diggity Dog",
         "src": "tc2-assets/weapons/diggity-dog-c1b7425fac.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-diggity-dog"
+        "sourceId": "weapon-diggity-dog",
+        "classNames": [
+          "Brute"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-dire-donut",
         "name": "Dire Donut",
         "src": "tc2-assets/weapons/dire-donut-7601572365.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-dire-donut"
+        "sourceId": "weapon-dire-donut",
+        "classNames": [
+          "Brute"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-direct-hit",
         "name": "Direct Hit",
         "src": "tc2-assets/weapons/direct-hit-9e5c2e8cde.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-direct-hit"
+        "sourceId": "weapon-direct-hit",
+        "classNames": [
+          "Trooper"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-disguise-kit",
         "name": "Disguise Kit",
         "src": "tc2-assets/weapons/disguise-kit-7bee1a187e.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-disguise-kit"
+        "sourceId": "weapon-disguise-kit",
+        "classNames": [
+          "Agent"
+        ],
+        "slot": "PDA"
       },
       {
         "id": "weapon-doll-maker",
         "name": "Doll Maker",
         "src": "tc2-assets/weapons/doll-maker-ae910c76a7.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-doll-maker"
+        "sourceId": "weapon-doll-maker",
+        "classNames": [
+          "Mechanic"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-double-trouble",
         "name": "Double Trouble",
         "src": "tc2-assets/weapons/double-trouble-ee69b6dfe4.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-double-trouble"
+        "sourceId": "weapon-double-trouble",
+        "classNames": [
+          "Trooper"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-efficient-eliminator",
         "name": "Efficient Eliminator",
         "src": "tc2-assets/weapons/efficient-eliminator-6b2dc01166.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-efficient-eliminator"
+        "sourceId": "weapon-efficient-eliminator",
+        "classNames": [
+          "Marksman"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-einsteinium",
         "name": "Einsteinium",
         "src": "tc2-assets/weapons/einsteinium-caa13db0d7.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-einsteinium"
+        "sourceId": "weapon-einsteinium",
+        "classNames": [
+          "Mechanic"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-elegant-blade",
         "name": "Elegant Blade",
         "src": "tc2-assets/weapons/elegant-blade-5c8680c314.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-elegant-blade"
+        "sourceId": "weapon-elegant-blade",
+        "classNames": [
+          "Annihilator"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-equalizer",
         "name": "Equalizer",
         "src": "tc2-assets/weapons/equalizer-43e149c3c5.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-equalizer"
+        "sourceId": "weapon-equalizer",
+        "classNames": [
+          "Trooper"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-escape-plan",
         "name": "Escape Plan",
         "src": "tc2-assets/weapons/escape-plan-d226405d86.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-escape-plan"
+        "sourceId": "weapon-escape-plan",
+        "classNames": [
+          "Trooper"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-escapist-s-escapade",
         "name": "Escapist's Escapade",
         "src": "tc2-assets/weapons/escapist-s-escapade-9bc1477c36.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-escapist-s-escapade"
+        "sourceId": "weapon-escapist-s-escapade",
+        "classNames": [
+          "Arsonist"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-eureka-effect",
         "name": "Eureka Effect",
         "src": "tc2-assets/weapons/eureka-effect-aba1ba6fbd.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-eureka-effect"
+        "sourceId": "weapon-eureka-effect",
+        "classNames": [
+          "Mechanic"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-eviction-notice",
         "name": "Eviction Notice",
         "src": "tc2-assets/weapons/eviction-notice-82d88dea1e.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-eviction-notice"
+        "sourceId": "weapon-eviction-notice",
+        "classNames": [
+          "Brute"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-eyes-of-bermuda",
         "name": "Eyes of Bermuda",
         "src": "tc2-assets/weapons/eyes-of-bermuda-3760a1cffb.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-eyes-of-bermuda"
+        "sourceId": "weapon-eyes-of-bermuda",
+        "classNames": [
+          "Trooper",
+          "Arsonist",
+          "Brute",
+          "Mechanic"
+        ],
+        "slot": "Secondary / Primary"
       },
       {
         "id": "weapon-family-business",
         "name": "Family Business",
         "src": "tc2-assets/weapons/family-business-71585564d4.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-family-business"
+        "sourceId": "weapon-family-business",
+        "classNames": [
+          "Trooper",
+          "Arsonist",
+          "Brute",
+          "Mechanic"
+        ],
+        "slot": "Secondary / Primary"
       },
       {
         "id": "weapon-fire-extinguisher",
         "name": "Fire Extinguisher",
         "src": "tc2-assets/weapons/fire-extinguisher-eb1c2ebf4b.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-fire-extinguisher"
+        "sourceId": "weapon-fire-extinguisher",
+        "classNames": [
+          "Arsonist"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-first-responder",
         "name": "First Responder",
         "src": "tc2-assets/weapons/first-responder-848719cc94.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-first-responder"
+        "sourceId": "weapon-first-responder",
+        "classNames": [
+          "Brute"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-fists",
         "name": "Fists",
         "src": "tc2-assets/weapons/fists-c34773b98f.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-fists"
+        "sourceId": "weapon-fists",
+        "classNames": [
+          "Brute"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-fists-of-steel",
         "name": "Fists of Steel",
         "src": "tc2-assets/weapons/fists-of-steel-5208062763.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-fists-of-steel"
+        "sourceId": "weapon-fists-of-steel",
+        "classNames": [
+          "Brute"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-flamethrower",
         "name": "Flamethrower",
         "src": "tc2-assets/weapons/flamethrower-d027385023.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-flamethrower"
+        "sourceId": "weapon-flamethrower",
+        "classNames": [
+          "Arsonist"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-flare-gun",
         "name": "Flare Gun",
         "src": "tc2-assets/weapons/flare-gun-e42c63d30a.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-flare-gun"
+        "sourceId": "weapon-flare-gun",
+        "classNames": [
+          "Arsonist"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-friendly-fire-foiler",
         "name": "Friendly Fire Foiler",
         "src": "tc2-assets/weapons/friendly-fire-foiler-1c90e020a3.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-friendly-fire-foiler"
+        "sourceId": "weapon-friendly-fire-foiler",
+        "classNames": [
+          "Trooper"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-frying-pan",
         "name": "Frying Pan",
         "src": "tc2-assets/weapons/frying-pan-89d60215fa.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-frying-pan"
+        "sourceId": "weapon-frying-pan",
+        "classNames": [
+          "Flanker",
+          "Trooper",
+          "Arsonist",
+          "Annihilator",
+          "Brute",
+          "Doctor",
+          "Marksman"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-furious-flagxe",
         "name": "Furious Flagxe",
         "src": "tc2-assets/weapons/furious-flagxe-e45cf151ce.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-furious-flagxe"
+        "sourceId": "weapon-furious-flagxe",
+        "classNames": [
+          "Trooper",
+          "Annihilator"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-g-bomb",
         "name": "G-Bomb",
         "src": "tc2-assets/weapons/g-bomb-9b96d759a2.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-g-bomb"
+        "sourceId": "weapon-g-bomb",
+        "classNames": [
+          "Trooper"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-galway-greaves",
         "name": "Galway Greaves",
         "src": "tc2-assets/weapons/galway-greaves-d2596d1ee5.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-galway-greaves"
+        "sourceId": "weapon-galway-greaves",
+        "classNames": [
+          "Annihilator"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-gladiator-s-guard",
         "name": "Gladiator's Guard",
         "src": "tc2-assets/weapons/gladiator-s-guard-ccb5cd9dc6.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-gladiator-s-guard"
+        "sourceId": "weapon-gladiator-s-guard",
+        "classNames": [
+          "Annihilator"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-goala-cola",
         "name": "Goala Cola",
         "src": "tc2-assets/weapons/goala-cola-63a1229777.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-goala-cola"
+        "sourceId": "weapon-goala-cola",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-golden-frying-pan",
         "name": "Golden Frying Pan",
         "src": "tc2-assets/weapons/golden-frying-pan-e4f3f49920.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-golden-frying-pan"
+        "sourceId": "weapon-golden-frying-pan",
+        "classNames": [
+          "All Classes"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-golden-knife",
         "name": "Golden Knife",
         "src": "tc2-assets/weapons/golden-knife-eb888e3124.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-golden-knife"
+        "sourceId": "weapon-golden-knife",
+        "classNames": [
+          "Agent"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-golden-wrench",
         "name": "Golden Wrench",
         "src": "tc2-assets/weapons/golden-wrench-97e0a7f961.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-golden-wrench"
+        "sourceId": "weapon-golden-wrench",
+        "classNames": [
+          "Mechanic"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-golf-club",
         "name": "Golf Club",
         "src": "tc2-assets/weapons/golf-club-c6c61b33ff.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-golf-club"
+        "sourceId": "weapon-golf-club",
+        "classNames": [
+          "Annihilator"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-gravity-coil",
         "name": "Gravity Coil",
         "src": "tc2-assets/weapons/gravity-coil-f1bdc203bd.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-gravity-coil"
+        "sourceId": "weapon-gravity-coil",
+        "classNames": [
+          "Brute"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-great-unifier",
         "name": "Great Unifier",
         "src": "tc2-assets/weapons/great-unifier-a8d894a525.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-great-unifier"
+        "sourceId": "weapon-great-unifier",
+        "classNames": [
+          "Trooper"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-grenade-launcher",
         "name": "Grenade Launcher",
         "src": "tc2-assets/weapons/grenade-launcher-357783074b.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-grenade-launcher"
+        "sourceId": "weapon-grenade-launcher",
+        "classNames": [
+          "Annihilator"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-grill-scout",
         "name": "Grill Scout",
         "src": "tc2-assets/weapons/grill-scout-0803e48991.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-grill-scout"
+        "sourceId": "weapon-grill-scout",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-grin-reaper",
         "name": "Grin Reaper",
         "src": "tc2-assets/weapons/grin-reaper-7c67953848.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-grin-reaper"
+        "sourceId": "weapon-grin-reaper",
+        "classNames": [
+          "Agent"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-groovy-grinder",
         "name": "Groovy Grinder",
         "src": "tc2-assets/weapons/groovy-grinder-2d2e9f2a1d.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-groovy-grinder"
+        "sourceId": "weapon-groovy-grinder",
+        "classNames": [
+          "Brute"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-guardian-s-oath",
         "name": "Guardian's Oath",
         "src": "tc2-assets/weapons/guardian-s-oath-f85a24c86a.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-guardian-s-oath"
+        "sourceId": "weapon-guardian-s-oath",
+        "classNames": [
+          "Marksman"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-gunboats",
         "name": "Gunboats",
         "src": "tc2-assets/weapons/gunboats-f09fb95b80.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-gunboats"
+        "sourceId": "weapon-gunboats",
+        "classNames": [
+          "Trooper",
+          "Annihilator"
+        ],
+        "slot": "Secondary / Primary"
       },
       {
         "id": "weapon-gunslinger",
         "name": "Gunslinger",
         "src": "tc2-assets/weapons/gunslinger-525934b6c3.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-gunslinger"
+        "sourceId": "weapon-gunslinger",
+        "classNames": [
+          "Mechanic"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-gustabe",
         "name": "Gustabe",
         "src": "tc2-assets/weapons/gustabe-a4aae70075.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-gustabe"
+        "sourceId": "weapon-gustabe",
+        "classNames": [
+          "Marksman"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-gutbuster",
         "name": "Gutbuster",
         "src": "tc2-assets/weapons/gutbuster-08d9e392e1.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-gutbuster"
+        "sourceId": "weapon-gutbuster",
+        "classNames": [
+          "Mechanic"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-handyman",
         "name": "Handyman",
         "src": "tc2-assets/weapons/handyman-1d29b51812.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-handyman"
+        "sourceId": "weapon-handyman",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-heavy-metal",
         "name": "Heavy Metal",
         "src": "tc2-assets/weapons/heavy-metal-60459181cf.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-heavy-metal"
+        "sourceId": "weapon-heavy-metal",
+        "classNames": [
+          "Mechanic"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-hermits-haversack",
         "name": "Hermits' Haversack",
         "src": "tc2-assets/weapons/hermits-haversack-2afcb4caaf.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-hermits-haversack"
+        "sourceId": "weapon-hermits-haversack",
+        "classNames": [
+          "Marksman"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-holy-mackerel",
         "name": "Holy Mackerel",
         "src": "tc2-assets/weapons/holy-mackerel-9b7ae79e75.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-holy-mackerel"
+        "sourceId": "weapon-holy-mackerel",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-hot-coco-blast",
         "name": "Hot Coco Blast",
         "src": "tc2-assets/weapons/hot-coco-blast-94064f394b.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-hot-coco-blast"
+        "sourceId": "weapon-hot-coco-blast",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-hotwire",
         "name": "Hotwire",
         "src": "tc2-assets/weapons/hotwire-b33160a582.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-hotwire"
+        "sourceId": "weapon-hotwire",
+        "classNames": [
+          "Arsonist"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-huanglong-s-wrath",
         "name": "HuangLong's Wrath",
         "src": "tc2-assets/weapons/huanglong-s-wrath-3221b56325.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-huanglong-s-wrath"
+        "sourceId": "weapon-huanglong-s-wrath",
+        "classNames": [
+          "Arsonist"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-huntsman",
         "name": "Huntsman",
         "src": "tc2-assets/weapons/huntsman-d943e8ec92.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-huntsman"
+        "sourceId": "weapon-huntsman",
+        "classNames": [
+          "Marksman"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-icicle",
         "name": "Icicle",
         "src": "tc2-assets/weapons/icicle-1e7baf79d8.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-icicle"
+        "sourceId": "weapon-icicle",
+        "classNames": [
+          "Agent"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-improvised-innovator",
         "name": "Improvised Innovator",
         "src": "tc2-assets/weapons/improvised-innovator-6a99f208ca.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-improvised-innovator"
+        "sourceId": "weapon-improvised-innovator",
+        "classNames": [
+          "Arsonist"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-interceptor",
         "name": "Interceptor",
         "src": "tc2-assets/weapons/interceptor-e91aea920f.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-interceptor"
+        "sourceId": "weapon-interceptor",
+        "classNames": [
+          "Arsonist"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-invis-watch",
         "name": "Invis-Watch",
         "src": "tc2-assets/weapons/invis-watch-cda54b6786.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-invis-watch"
+        "sourceId": "weapon-invis-watch",
+        "classNames": [
+          "Agent"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-irish-guard",
         "name": "Irish Guard",
         "src": "tc2-assets/weapons/irish-guard-f3c3d680f4.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-irish-guard"
+        "sourceId": "weapon-irish-guard",
+        "classNames": [
+          "Annihilator"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-iron-force",
         "name": "Iron Force",
         "src": "tc2-assets/weapons/iron-force-796db5037f.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-iron-force"
+        "sourceId": "weapon-iron-force",
+        "classNames": [
+          "Annihilator"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-jack-o-roger",
         "name": "Jack-O Roger",
         "src": "tc2-assets/weapons/jack-o-roger-7a91d7c120.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-jack-o-roger"
+        "sourceId": "weapon-jack-o-roger",
+        "classNames": [
+          "Annihilator"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-jolly-gingerbread",
         "name": "Jolly Gingerbread",
         "src": "tc2-assets/weapons/jolly-gingerbread-4eeb8b9b37.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-jolly-gingerbread"
+        "sourceId": "weapon-jolly-gingerbread",
+        "classNames": [
+          "Brute"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-katana",
         "name": "Katana",
         "src": "tc2-assets/weapons/katana-3d8f9b5fd1.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-katana"
+        "sourceId": "weapon-katana",
+        "classNames": [
+          "Trooper",
+          "Annihilator"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-knife",
         "name": "Knife",
         "src": "tc2-assets/weapons/knife-9a8b461c25.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-knife"
+        "sourceId": "weapon-knife",
+        "classNames": [
+          "Agent"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-kritzkrieg",
         "name": "Kritzkrieg",
         "src": "tc2-assets/weapons/kritzkrieg-7546e6a027.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-kritzkrieg"
+        "sourceId": "weapon-kritzkrieg",
+        "classNames": [
+          "Doctor"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-last-rite",
         "name": "Last Rite",
         "src": "tc2-assets/weapons/last-rite-b4378c5a5d.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-last-rite"
+        "sourceId": "weapon-last-rite",
+        "classNames": [
+          "Arsonist"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-lemoblade",
         "name": "Lemoblade",
         "src": "tc2-assets/weapons/lemoblade-3d8d9ec4bd.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-lemoblade"
+        "sourceId": "weapon-lemoblade",
+        "classNames": [
+          "Marksman"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-lemonade",
         "name": "Lemonade",
         "src": "tc2-assets/weapons/lemonade-af447948bb.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-lemonade"
+        "sourceId": "weapon-lemonade",
+        "classNames": [
+          "Marksman"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-lever-shotgun",
         "name": "Lever Shotgun",
         "src": "tc2-assets/weapons/lever-shotgun-f0cf0ee6de.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-lever-shotgun"
+        "sourceId": "weapon-lever-shotgun",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-liberty-launcher",
         "name": "Liberty Launcher",
         "src": "tc2-assets/weapons/liberty-launcher-7fbd51a336.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-liberty-launcher"
+        "sourceId": "weapon-liberty-launcher",
+        "classNames": [
+          "Trooper"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-lupara-db",
         "name": "Lupara DB",
         "src": "tc2-assets/weapons/lupara-db-6f1182ec87.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-lupara-db"
+        "sourceId": "weapon-lupara-db",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-m1-garandier",
         "name": "M1 Garandier",
         "src": "tc2-assets/weapons/m1-garandier-5ba7d65b5b.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-m1-garandier"
+        "sourceId": "weapon-m1-garandier",
+        "classNames": [
+          "Annihilator"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-m249",
         "name": "M249",
         "src": "tc2-assets/weapons/m249-3f56b628a1.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-m249"
+        "sourceId": "weapon-m249",
+        "classNames": [
+          "Brute"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-mac-10",
         "name": "MAC-10",
         "src": "tc2-assets/weapons/mac-10-727e4a4e92.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-mac-10"
+        "sourceId": "weapon-mac-10",
+        "classNames": [
+          "Marksman"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-mach-coach",
         "name": "Mach-Coach",
         "src": "tc2-assets/weapons/mach-coach-3fa991a962.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-mach-coach"
+        "sourceId": "weapon-mach-coach",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-machete",
         "name": "Machete",
         "src": "tc2-assets/weapons/machete-0242556cca.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-machete"
+        "sourceId": "weapon-machete",
+        "classNames": [
+          "Marksman"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-mad-milk",
         "name": "Mad Milk",
         "src": "tc2-assets/weapons/mad-milk-9f7b50465a.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-mad-milk"
+        "sourceId": "weapon-mad-milk",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-malpractitioner",
         "name": "Malpractitioner",
         "src": "tc2-assets/weapons/malpractitioner-423d002edc.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-malpractitioner"
+        "sourceId": "weapon-malpractitioner",
+        "classNames": [
+          "Doctor"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-mantreads",
         "name": "Mantreads",
         "src": "tc2-assets/weapons/mantreads-b38d607278.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-mantreads"
+        "sourceId": "weapon-mantreads",
+        "classNames": [
+          "Trooper"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-market-gardener",
         "name": "Market Gardener",
         "src": "tc2-assets/weapons/market-gardener-149b131246.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-market-gardener"
+        "sourceId": "weapon-market-gardener",
+        "classNames": [
+          "Trooper"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-maverick",
         "name": "Maverick",
         "src": "tc2-assets/weapons/maverick-c3522f2772.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-maverick"
+        "sourceId": "weapon-maverick",
+        "classNames": [
+          "Trooper"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-maxine",
         "name": "Maxine",
         "src": "tc2-assets/weapons/maxine-cbf08f69b0.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-maxine"
+        "sourceId": "weapon-maxine",
+        "classNames": [
+          "Brute"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-medigun",
         "name": "Medigun",
         "src": "tc2-assets/weapons/medigun-03eda18f71.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-medigun"
+        "sourceId": "weapon-medigun",
+        "classNames": [
+          "Doctor"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-mending-mallet",
         "name": "Mending Mallet",
         "src": "tc2-assets/weapons/mending-mallet-063f4340da.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-mending-mallet"
+        "sourceId": "weapon-mending-mallet",
+        "classNames": [
+          "Arsonist"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-mercy-kill",
         "name": "Mercy Kill",
         "src": "tc2-assets/weapons/mercy-kill-6d80331d6a.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-mercy-kill"
+        "sourceId": "weapon-mercy-kill",
+        "classNames": [
+          "Doctor"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-minigun",
         "name": "Minigun",
         "src": "tc2-assets/weapons/minigun-17112b997c.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-minigun"
+        "sourceId": "weapon-minigun",
+        "classNames": [
+          "Brute"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-mischievous-machete",
         "name": "Mischievous Machete",
         "src": "tc2-assets/weapons/mischievous-machete-bcaade1211.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-mischievous-machete"
+        "sourceId": "weapon-mischievous-machete",
+        "classNames": [
+          "Marksman"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-mod-max",
         "name": "Mod Max",
         "src": "tc2-assets/weapons/mod-max-94cf45caec.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-mod-max"
+        "sourceId": "weapon-mod-max",
+        "classNames": [
+          "All Classes"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-model-iv",
         "name": "Model IV",
         "src": "tc2-assets/weapons/model-iv-330a95c2e5.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-model-iv"
+        "sourceId": "weapon-model-iv",
+        "classNames": [
+          "Marksman"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-monitor-of-duty",
         "name": "Monitor of Duty",
         "src": "tc2-assets/weapons/monitor-of-duty-5224726bc4.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-monitor-of-duty"
+        "sourceId": "weapon-monitor-of-duty",
+        "classNames": [
+          "Brute"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-mule-mauler-600",
         "name": "Mule Mauler 600",
         "src": "tc2-assets/weapons/mule-mauler-600-d75a9dc2ca.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-mule-mauler-600"
+        "sourceId": "weapon-mule-mauler-600",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-mummy-khopesh",
         "name": "Mummy Khopesh",
         "src": "tc2-assets/weapons/mummy-khopesh-bc1a933d54.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-mummy-khopesh"
+        "sourceId": "weapon-mummy-khopesh",
+        "classNames": [
+          "Trooper",
+          "Arsonist",
+          "Annihilator",
+          "Marksman"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-night-sky-ignitor",
         "name": "Night Sky Ignitor",
         "src": "tc2-assets/weapons/night-sky-ignitor-4ad3901b64.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-night-sky-ignitor"
+        "sourceId": "weapon-night-sky-ignitor",
+        "classNames": [
+          "Trooper"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-noisy-cricket",
         "name": "Noisy Cricket",
         "src": "tc2-assets/weapons/noisy-cricket-1bcf23dd32.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-noisy-cricket"
+        "sourceId": "weapon-noisy-cricket",
+        "classNames": [
+          "Mechanic"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-objector",
         "name": "Objector",
         "src": "tc2-assets/weapons/objector-e46ca228b4.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-objector"
+        "sourceId": "weapon-objector",
+        "classNames": [
+          "Flanker",
+          "Trooper",
+          "Arsonist",
+          "Annihilator",
+          "Brute",
+          "Doctor",
+          "Marksman"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-original",
         "name": "Original",
         "src": "tc2-assets/weapons/original-d11ca15af4.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-original"
+        "sourceId": "weapon-original",
+        "classNames": [
+          "Trooper"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-overdrive",
         "name": "Overdrive",
         "src": "tc2-assets/weapons/overdrive-dca99e04c8.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-overdrive"
+        "sourceId": "weapon-overdrive",
+        "classNames": [
+          "Doctor"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-p-d-q",
         "name": "P.D.Q",
         "src": "tc2-assets/weapons/p-d-q-3df3066f2e.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-p-d-q"
+        "sourceId": "weapon-p-d-q",
+        "classNames": [
+          "Mechanic"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-parabomber",
         "name": "Parabomber",
         "src": "tc2-assets/weapons/parabomber-0c628f3a46.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-parabomber"
+        "sourceId": "weapon-parabomber",
+        "classNames": [
+          "Trooper",
+          "Annihilator"
+        ],
+        "slot": "Secondary / Primary"
       },
       {
         "id": "weapon-perceptionist",
         "name": "Perceptionist",
         "src": "tc2-assets/weapons/perceptionist-86b097c394.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-perceptionist"
+        "sourceId": "weapon-perceptionist",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-personal-death-ray",
         "name": "Personal Death Ray",
         "src": "tc2-assets/weapons/personal-death-ray-61122fff98.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-personal-death-ray"
+        "sourceId": "weapon-personal-death-ray",
+        "classNames": [
+          "Trooper"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-pestilence-poker",
         "name": "Pestilence Poker",
         "src": "tc2-assets/weapons/pestilence-poker-23af86ff2d.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-pestilence-poker"
+        "sourceId": "weapon-pestilence-poker",
+        "classNames": [
+          "Doctor"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-phlogistinator",
         "name": "Phlogistinator",
         "src": "tc2-assets/weapons/phlogistinator-1d976238fd.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-phlogistinator"
+        "sourceId": "weapon-phlogistinator",
+        "classNames": [
+          "Arsonist"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-pirate-cutlass",
         "name": "Pirate Cutlass",
         "src": "tc2-assets/weapons/pirate-cutlass-19468f5a17.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-pirate-cutlass"
+        "sourceId": "weapon-pirate-cutlass",
+        "classNames": [
+          "Annihilator"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-pistol",
         "name": "Pistol",
         "src": "tc2-assets/weapons/pistol-5fd04c6a5a.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-pistol"
+        "sourceId": "weapon-pistol",
+        "classNames": [
+          "Flanker",
+          "Mechanic"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-poacher-s-pride",
         "name": "Poacher's Pride",
         "src": "tc2-assets/weapons/poacher-s-pride-dc73f7a848.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-poacher-s-pride"
+        "sourceId": "weapon-poacher-s-pride",
+        "classNames": [
+          "Marksman"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-quick-draw",
         "name": "Quick Draw",
         "src": "tc2-assets/weapons/quick-draw-0bbb038ef1.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-quick-draw"
+        "sourceId": "weapon-quick-draw",
+        "classNames": [
+          "Agent"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-quickiebomb-launcher",
         "name": "Quickiebomb Launcher",
         "src": "tc2-assets/weapons/quickiebomb-launcher-c89840ff1b.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-quickiebomb-launcher"
+        "sourceId": "weapon-quickiebomb-launcher",
+        "classNames": [
+          "Annihilator"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-radius-scanner",
         "name": "Radius Scanner",
         "src": "tc2-assets/weapons/radius-scanner-0886fd62e5.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-radius-scanner"
+        "sourceId": "weapon-radius-scanner",
+        "classNames": [
+          "Agent"
+        ],
+        "slot": "PDA"
       },
       {
         "id": "weapon-ragin-bull",
         "name": "Ragin' Bull",
         "src": "tc2-assets/weapons/ragin-bull-734e46b48e.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-ragin-bull"
+        "sourceId": "weapon-ragin-bull",
+        "classNames": [
+          "Annihilator"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-rally-racket",
         "name": "Rally Racket",
         "src": "tc2-assets/weapons/rally-racket-cd72dc0a7c.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-rally-racket"
+        "sourceId": "weapon-rally-racket",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-raven",
         "name": "Raven",
         "src": "tc2-assets/weapons/raven-c94c13eed0.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-raven"
+        "sourceId": "weapon-raven",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-razorback",
         "name": "Razorback",
         "src": "tc2-assets/weapons/razorback-9e765feb03.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-razorback"
+        "sourceId": "weapon-razorback",
+        "classNames": [
+          "Marksman"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-re-coil",
         "name": "RE:COIL",
         "src": "tc2-assets/weapons/re-coil-467a445013.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-re-coil"
+        "sourceId": "weapon-re-coil",
+        "classNames": [
+          "Trooper"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-rejuvenator",
         "name": "Rejuvenator",
         "src": "tc2-assets/weapons/rejuvenator-bbc115d833.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-rejuvenator"
+        "sourceId": "weapon-rejuvenator",
+        "classNames": [
+          "Doctor"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-rescue-ranger",
         "name": "Rescue Ranger",
         "src": "tc2-assets/weapons/rescue-ranger-b7adad2e48.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-rescue-ranger"
+        "sourceId": "weapon-rescue-ranger",
+        "classNames": [
+          "Mechanic"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-reserve-shooter",
         "name": "Reserve Shooter",
         "src": "tc2-assets/weapons/reserve-shooter-35580f02ad.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-reserve-shooter"
+        "sourceId": "weapon-reserve-shooter",
+        "classNames": [
+          "Trooper"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-revolver",
         "name": "Revolver",
         "src": "tc2-assets/weapons/revolver-d20819e855.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-revolver"
+        "sourceId": "weapon-revolver",
+        "classNames": [
+          "Agent"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-rising-sun-katana",
         "name": "Rising Sun Katana",
         "src": "tc2-assets/weapons/rising-sun-katana-e43fa6c751.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-rising-sun-katana"
+        "sourceId": "weapon-rising-sun-katana",
+        "classNames": [
+          "Trooper",
+          "Annihilator"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-robar",
         "name": "ROBAR",
         "src": "tc2-assets/weapons/robar-15dff559e4.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-robar"
+        "sourceId": "weapon-robar",
+        "classNames": [
+          "Brute"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-rocket-jumper",
         "name": "Rocket Jumper",
         "src": "tc2-assets/weapons/rocket-jumper-2338917fd2.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-rocket-jumper"
+        "sourceId": "weapon-rocket-jumper",
+        "classNames": [
+          "Trooper"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-rocket-launcher",
         "name": "Rocket Launcher",
         "src": "tc2-assets/weapons/rocket-launcher-7a7bd08fc9.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-rocket-launcher"
+        "sourceId": "weapon-rocket-launcher",
+        "classNames": [
+          "Trooper"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-rubber-chicken",
         "name": "Rubber Chicken",
         "src": "tc2-assets/weapons/rubber-chicken-fefd9916d9.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-rubber-chicken"
+        "sourceId": "weapon-rubber-chicken",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-sandman",
         "name": "Sandman",
         "src": "tc2-assets/weapons/sandman-12a14df774.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-sandman"
+        "sourceId": "weapon-sandman",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-sapper",
         "name": "Sapper",
         "src": "tc2-assets/weapons/sapper-7bee1a187e.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-sapper"
+        "sourceId": "weapon-sapper",
+        "classNames": [
+          "Agent"
+        ],
+        "slot": "PDA"
       },
       {
         "id": "weapon-saw",
         "name": "Saw",
         "src": "tc2-assets/weapons/saw-385e5cd6a3.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-saw"
+        "sourceId": "weapon-saw",
+        "classNames": [
+          "Doctor"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-scythe-for-sore-eyes",
         "name": "Scythe for Sore Eyes",
         "src": "tc2-assets/weapons/scythe-for-sore-eyes-dd681ac61e.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-scythe-for-sore-eyes"
+        "sourceId": "weapon-scythe-for-sore-eyes",
+        "classNames": [
+          "Marksman"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-second-banana",
         "name": "Second Banana",
         "src": "tc2-assets/weapons/second-banana-d80b631b7f.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-second-banana"
+        "sourceId": "weapon-second-banana",
+        "classNames": [
+          "Brute"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-shadow-blessing",
         "name": "Shadow Blessing",
         "src": "tc2-assets/weapons/shadow-blessing-abc15ecaba.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-shadow-blessing"
+        "sourceId": "weapon-shadow-blessing",
+        "classNames": [
+          "Agent"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-shock-and-awe",
         "name": "Shock and Awe",
         "src": "tc2-assets/weapons/shock-and-awe-b1f1244c0c.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-shock-and-awe"
+        "sourceId": "weapon-shock-and-awe",
+        "classNames": [
+          "Annihilator"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-short-circuit",
         "name": "Short Circuit",
         "src": "tc2-assets/weapons/short-circuit-8434996ba1.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-short-circuit"
+        "sourceId": "weapon-short-circuit",
+        "classNames": [
+          "Mechanic"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-shotgun",
         "name": "Shotgun",
         "src": "tc2-assets/weapons/shotgun-b45a3ef676.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-shotgun"
+        "sourceId": "weapon-shotgun",
+        "classNames": [
+          "Trooper",
+          "Arsonist",
+          "Brute",
+          "Mechanic"
+        ],
+        "slot": "Secondary / Primary"
       },
       {
         "id": "weapon-shotgun-cannon",
         "name": "Shotgun Cannon",
         "src": "tc2-assets/weapons/shotgun-cannon-bbdae2a1db.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-shotgun-cannon"
+        "sourceId": "weapon-shotgun-cannon",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-silenced-pistol",
         "name": "Silenced Pistol",
         "src": "tc2-assets/weapons/silenced-pistol-27a749fbaa.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-silenced-pistol"
+        "sourceId": "weapon-silenced-pistol",
+        "classNames": [
+          "Agent"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-sinister-suit",
         "name": "Sinister Suit",
         "src": "tc2-assets/weapons/sinister-suit-c8aa2884fd.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-sinister-suit"
+        "sourceId": "weapon-sinister-suit",
+        "classNames": [
+          "Agent"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-skullbuster",
         "name": "Skullbuster",
         "src": "tc2-assets/weapons/skullbuster-e4a991c63d.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-skullbuster"
+        "sourceId": "weapon-skullbuster",
+        "classNames": [
+          "Marksman"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-slapjock",
         "name": "SlapJock!",
         "src": "tc2-assets/weapons/slapjock-4e4f3b1f15.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-slapjock"
+        "sourceId": "weapon-slapjock",
+        "classNames": [
+          "Trooper"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-slow-burn",
         "name": "Slow Burn",
         "src": "tc2-assets/weapons/slow-burn-28ca082f4b.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-slow-burn"
+        "sourceId": "weapon-slow-burn",
+        "classNames": [
+          "Agent"
+        ],
+        "slot": "PDA"
       },
       {
         "id": "weapon-sniper-rifle",
         "name": "Sniper Rifle",
         "src": "tc2-assets/weapons/sniper-rifle-3e56c4adc6.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-sniper-rifle"
+        "sourceId": "weapon-sniper-rifle",
+        "classNames": [
+          "Marksman"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-soda-popper",
         "name": "Soda Popper",
         "src": "tc2-assets/weapons/soda-popper-1ee5e361c4.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-soda-popper"
+        "sourceId": "weapon-soda-popper",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-sour-shots",
         "name": "Sour Shots",
         "src": "tc2-assets/weapons/sour-shots-749fee25b5.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-sour-shots"
+        "sourceId": "weapon-sour-shots",
+        "classNames": [
+          "Marksman"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-southern-hospitality",
         "name": "Southern Hospitality",
         "src": "tc2-assets/weapons/southern-hospitality-09ad170fe2.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-southern-hospitality"
+        "sourceId": "weapon-southern-hospitality",
+        "classNames": [
+          "Mechanic"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-spare-hand",
         "name": "Spare Hand",
         "src": "tc2-assets/weapons/spare-hand-b71b336c5d.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-spare-hand"
+        "sourceId": "weapon-spare-hand",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-spartan-savior",
         "name": "Spartan Savior",
         "src": "tc2-assets/weapons/spartan-savior-f09ddc9da3.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-spartan-savior"
+        "sourceId": "weapon-spartan-savior",
+        "classNames": [
+          "Annihilator"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-special-ops-sushi",
         "name": "Special-Ops Sushi",
         "src": "tc2-assets/weapons/special-ops-sushi-4337329d1e.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-special-ops-sushi"
+        "sourceId": "weapon-special-ops-sushi",
+        "classNames": [
+          "Brute"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-specialist",
         "name": "Specialist",
         "src": "tc2-assets/weapons/specialist-1eea41d971.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-specialist"
+        "sourceId": "weapon-specialist",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-speed-coil",
         "name": "Speed Coil",
         "src": "tc2-assets/weapons/speed-coil-a4a1327c98.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-speed-coil"
+        "sourceId": "weapon-speed-coil",
+        "classNames": [
+          "Brute"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-spider-bite",
         "name": "Spider Bite",
         "src": "tc2-assets/weapons/spider-bite-f28970dbec.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-spider-bite"
+        "sourceId": "weapon-spider-bite",
+        "classNames": [
+          "Marksman"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-spy-camera",
         "name": "Spy Camera",
         "src": "tc2-assets/weapons/spy-camera-c711cd42a1.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-spy-camera"
+        "sourceId": "weapon-spy-camera",
+        "classNames": [
+          "Agent"
+        ],
+        "slot": "PDA"
       },
       {
         "id": "weapon-squid-coil",
         "name": "Squid Coil",
         "src": "tc2-assets/weapons/squid-coil-67f4b4cfca.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-squid-coil"
+        "sourceId": "weapon-squid-coil",
+        "classNames": [
+          "Brute"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-squire-boots",
         "name": "Squire Boots",
         "src": "tc2-assets/weapons/squire-boots-5490c9b90b.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-squire-boots"
+        "sourceId": "weapon-squire-boots",
+        "classNames": [
+          "Annihilator"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-stellar-carpet",
         "name": "Stellar Carpet",
         "src": "tc2-assets/weapons/stellar-carpet-41f570c150.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-stellar-carpet"
+        "sourceId": "weapon-stellar-carpet",
+        "classNames": [
+          "Trooper"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-sticky-jumper",
         "name": "Sticky Jumper",
         "src": "tc2-assets/weapons/sticky-jumper-61e71a1768.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-sticky-jumper"
+        "sourceId": "weapon-sticky-jumper",
+        "classNames": [
+          "Annihilator"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-stickybomb-launcher",
         "name": "Stickybomb Launcher",
         "src": "tc2-assets/weapons/stickybomb-launcher-98f763be8b.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-stickybomb-launcher"
+        "sourceId": "weapon-stickybomb-launcher",
+        "classNames": [
+          "Annihilator"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-stray-reflex",
         "name": "Stray Reflex",
         "src": "tc2-assets/weapons/stray-reflex-a22b972020.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-stray-reflex"
+        "sourceId": "weapon-stray-reflex",
+        "classNames": [
+          "Agent"
+        ],
+        "slot": "PDA"
       },
       {
         "id": "weapon-sub-shotgun",
         "name": "Sub Shotgun",
         "src": "tc2-assets/weapons/sub-shotgun-b97ea9a0ba.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-sub-shotgun"
+        "sourceId": "weapon-sub-shotgun",
+        "classNames": [
+          "Brute"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-super-sneakers",
         "name": "Super Sneakers",
         "src": "tc2-assets/weapons/super-sneakers-d2baee8a24.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-super-sneakers"
+        "sourceId": "weapon-super-sneakers",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-supersaw",
         "name": "Supersaw",
         "src": "tc2-assets/weapons/supersaw-f02d50d3de.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-supersaw"
+        "sourceId": "weapon-supersaw",
+        "classNames": [
+          "Doctor"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-suppressed-solution",
         "name": "Suppressed Solution",
         "src": "tc2-assets/weapons/suppressed-solution-de85b56ce1.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-suppressed-solution"
+        "sourceId": "weapon-suppressed-solution",
+        "classNames": [
+          "Marksman"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-swift-stiletto",
         "name": "Swift Stiletto",
         "src": "tc2-assets/weapons/swift-stiletto-d40fa56129.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-swift-stiletto"
+        "sourceId": "weapon-swift-stiletto",
+        "classNames": [
+          "Agent"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-syringe-crossbow",
         "name": "Syringe Crossbow",
         "src": "tc2-assets/weapons/syringe-crossbow-2375533d17.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-syringe-crossbow"
+        "sourceId": "weapon-syringe-crossbow",
+        "classNames": [
+          "Doctor"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-syringe-smg",
         "name": "Syringe SMG",
         "src": "tc2-assets/weapons/syringe-smg-508e6f3583.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-syringe-smg"
+        "sourceId": "weapon-syringe-smg",
+        "classNames": [
+          "Doctor"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-tenacious-turkey",
         "name": "Tenacious Turkey",
         "src": "tc2-assets/weapons/tenacious-turkey-108d29111e.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-tenacious-turkey"
+        "sourceId": "weapon-tenacious-turkey",
+        "classNames": [
+          "Brute"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-thousand-degree-axe",
         "name": "Thousand Degree Axe",
         "src": "tc2-assets/weapons/thousand-degree-axe-642f011559.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-thousand-degree-axe"
+        "sourceId": "weapon-thousand-degree-axe",
+        "classNames": [
+          "Arsonist"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-three-rune-blade",
         "name": "Three Rune Blade",
         "src": "tc2-assets/weapons/three-rune-blade-1ccc2202a0.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-three-rune-blade"
+        "sourceId": "weapon-three-rune-blade",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-tide-turner",
         "name": "Tide Turner",
         "src": "tc2-assets/weapons/tide-turner-0db67d1e7f.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-tide-turner"
+        "sourceId": "weapon-tide-turner",
+        "classNames": [
+          "Annihilator"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-tomislav",
         "name": "Tomislav",
         "src": "tc2-assets/weapons/tomislav-6dc09fa5d0.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-tomislav"
+        "sourceId": "weapon-tomislav",
+        "classNames": [
+          "Brute"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-tungsten-torus",
         "name": "Tungsten Torus",
         "src": "tc2-assets/weapons/tungsten-torus-a2d72c8d66.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-tungsten-torus"
+        "sourceId": "weapon-tungsten-torus",
+        "classNames": [
+          "Brute"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-tunnel-rat",
         "name": "Tunnel Rat",
         "src": "tc2-assets/weapons/tunnel-rat-2ac61741ed.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-tunnel-rat"
+        "sourceId": "weapon-tunnel-rat",
+        "classNames": [
+          "Trooper"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-turtle-rock",
         "name": "Turtle Rock",
         "src": "tc2-assets/weapons/turtle-rock-8f09236617.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-turtle-rock"
+        "sourceId": "weapon-turtle-rock",
+        "classNames": [
+          "Marksman"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-twin-turbolence",
         "name": "Twin-Turbolence",
         "src": "tc2-assets/weapons/twin-turbolence-3d6dc1b4ae.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-twin-turbolence"
+        "sourceId": "weapon-twin-turbolence",
+        "classNames": [
+          "Annihilator"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-urban-upriser",
         "name": "Urban Upriser",
         "src": "tc2-assets/weapons/urban-upriser-8e0601758a.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-urban-upriser"
+        "sourceId": "weapon-urban-upriser",
+        "classNames": [
+          "Marksman"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-vaccinator",
         "name": "Vaccinator",
         "src": "tc2-assets/weapons/vaccinator-434b1dd374.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-vaccinator"
+        "sourceId": "weapon-vaccinator",
+        "classNames": [
+          "Doctor"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-warrior-s-spirit",
         "name": "Warrior's Spirit",
         "src": "tc2-assets/weapons/warrior-s-spirit-67934f6423.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-warrior-s-spirit"
+        "sourceId": "weapon-warrior-s-spirit",
+        "classNames": [
+          "Brute"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-whirlpool-wraith",
         "name": "Whirlpool Wraith",
         "src": "tc2-assets/weapons/whirlpool-wraith-04156f0e79.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-whirlpool-wraith"
+        "sourceId": "weapon-whirlpool-wraith",
+        "classNames": [
+          "Annihilator"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-widowmaker",
         "name": "Widowmaker",
         "src": "tc2-assets/weapons/widowmaker-920b2309f6.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-widowmaker"
+        "sourceId": "weapon-widowmaker",
+        "classNames": [
+          "Mechanic"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-winger",
         "name": "Winger",
         "src": "tc2-assets/weapons/winger-7fdd48c81d.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-winger"
+        "sourceId": "weapon-winger",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-witches-brew",
         "name": "Witches Brew",
         "src": "tc2-assets/weapons/witches-brew-b8778b186e.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-witches-brew"
+        "sourceId": "weapon-witches-brew",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-wooden-sword",
         "name": "Wooden Sword",
         "src": "tc2-assets/weapons/wooden-sword-aa3f23adf4.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-wooden-sword"
+        "sourceId": "weapon-wooden-sword",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-world-champion",
         "name": "World Champion",
         "src": "tc2-assets/weapons/world-champion-cb0deae94d.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-world-champion"
+        "sourceId": "weapon-world-champion",
+        "classNames": [
+          "Brute"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-wraith",
         "name": "Wraith",
         "src": "tc2-assets/weapons/wraith-7dacadb560.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-wraith"
+        "sourceId": "weapon-wraith",
+        "classNames": [
+          "Agent"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-wrangler",
         "name": "Wrangler",
         "src": "tc2-assets/weapons/wrangler-e2b2d92310.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-wrangler"
+        "sourceId": "weapon-wrangler",
+        "classNames": [
+          "Mechanic"
+        ],
+        "slot": "Secondary"
       },
       {
         "id": "weapon-wrap-assassin",
         "name": "Wrap Assassin",
         "src": "tc2-assets/weapons/wrap-assassin-51d2ccfaef.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-wrap-assassin"
+        "sourceId": "weapon-wrap-assassin",
+        "classNames": [
+          "Flanker"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-wrecker-s-yard",
         "name": "Wrecker's Yard",
         "src": "tc2-assets/weapons/wrecker-s-yard-41c7ad347f.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-wrecker-s-yard"
+        "sourceId": "weapon-wrecker-s-yard",
+        "classNames": [
+          "Trooper"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-wrench",
         "name": "Wrench",
         "src": "tc2-assets/weapons/wrench-43cf0bc890.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-wrench"
+        "sourceId": "weapon-wrench",
+        "classNames": [
+          "Mechanic"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-your-eternal-reward",
         "name": "Your Eternal Reward",
         "src": "tc2-assets/weapons/your-eternal-reward-bc3abc5707.webp",
         "sourceKind": "weapon",
-        "sourceId": "weapon-your-eternal-reward"
+        "sourceId": "weapon-your-eternal-reward",
+        "classNames": [
+          "Agent"
+        ],
+        "slot": "Melee"
       }
     ]
   }

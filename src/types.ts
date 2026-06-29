@@ -14,6 +14,8 @@ export interface TierlistImage {
   src: string;
   sourceKind: SourceKind;
   sourceId: string;
+  classNames?: string[];
+  slot?: string;
 }
 
 export interface TierlistDefinition {

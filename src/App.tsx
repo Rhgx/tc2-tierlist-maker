@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import gsap from "gsap";
 import Sortable from "sortablejs";
-import { COLOR_SWATCHES } from "./constants";
+import { CLASS_ORDER, COLOR_SWATCHES } from "./constants";
 import { FolderView, MenuView, TierlistView } from "./components/AppViews";
 import { LoadingOverlay } from "./components/LoadingOverlay";
 import { ProfileOutput } from "./components/ProfileOutput";
@@ -15,7 +15,7 @@ import { restoreSortableDom } from "./lib/sortableDom";
 import { buildInitialRankings, cloneDefaultTiers, findFolderById, findParentFolderForTierlist, findTierlistById, nextPaint } from "./lib/tierlistHelpers";
 import { loadTierlistState, saveTierlistState } from "./lib/tierlistStorage";
 import type { AppRoute, ModalName, ViewName } from "./appTypes";
-import type { Rankings, TierConfig, TierlistDefinition, TierlistFolder } from "./types";
+import type { Rankings, TierConfig, TierlistDefinition, TierlistFolder, TierlistImage } from "./types";
 
 const INITIAL_POOL_RENDER_COUNT = 160;
 const POOL_RENDER_CHUNK_SIZE = 180;
@@ -35,6 +35,7 @@ export default function App() {
   const [copyState, setCopyState] = useState<"idle" | "copied">("idle");
   const [tierIdCounter, setTierIdCounter] = useState(0);
   const [visiblePoolCount, setVisiblePoolCount] = useState(INITIAL_POOL_RENDER_COUNT);
+  const [weaponClassFilter, setWeaponClassFilter] = useState("all");
 
   const shaderRef = useRef<GridShader | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -55,17 +56,28 @@ export default function App() {
     return new Map((currentTierlist?.images || []).map((image) => [image.id, image]));
   }, [currentTierlist]);
 
+  const weaponClassOptions = useMemo(() => CLASS_ORDER.filter((className) => className !== "All Class"), []);
+
+  const hasWeaponClassFilter = useMemo(() => {
+    return Boolean(currentTierlist?.images.some((image) => image.sourceKind === "weapon" && image.classNames?.length));
+  }, [currentTierlist]);
+
+  const filteredPoolIds = useMemo(() => {
+    const poolIds = rankings.pool || [];
+    if (!hasWeaponClassFilter || weaponClassFilter === "all") return poolIds;
+    return poolIds.filter((id) => imageMatchesWeaponClass(currentImagesById.get(id), weaponClassFilter));
+  }, [rankings.pool, currentImagesById, hasWeaponClassFilter, weaponClassFilter]);
+
   const poolItems = useMemo(() => {
     const startedAt = performance.now();
-    const poolIds = rankings.pool || [];
-    const items = poolIds.slice(0, visiblePoolCount).map((id) => <TierItem key={id} image={currentImagesById.get(id)} />);
+    const items = filteredPoolIds.slice(0, visiblePoolCount).map((id) => <TierItem key={id} image={currentImagesById.get(id)} />);
     profileLog("pool render", {
-      totalPoolItems: poolIds.length,
-      visiblePoolItems: Math.min(visiblePoolCount, poolIds.length),
+      totalPoolItems: filteredPoolIds.length,
+      visiblePoolItems: Math.min(visiblePoolCount, filteredPoolIds.length),
       durationMs: Math.round((performance.now() - startedAt) * 100) / 100,
     });
     return items;
-  }, [rankings.pool, visiblePoolCount, currentImagesById]);
+  }, [filteredPoolIds, visiblePoolCount, currentImagesById]);
 
   useEffect(() => {
     rankingsRef.current = rankings;
@@ -137,18 +149,22 @@ export default function App() {
   useEffect(() => {
     if (view !== "tierlist") return;
     setVisiblePoolCount(INITIAL_POOL_RENDER_COUNT);
-  }, [view, currentTierlist?.id]);
+  }, [view, currentTierlist?.id, weaponClassFilter]);
+
+  useEffect(() => {
+    setWeaponClassFilter("all");
+  }, [currentTierlist?.id]);
 
   useEffect(() => {
     if (view !== "tierlist") return;
-    const poolSize = rankings.pool?.length || 0;
+    const poolSize = filteredPoolIds.length;
     if (visiblePoolCount >= poolSize) return;
 
     const timeoutId = window.setTimeout(() => {
       setVisiblePoolCount((count) => Math.min(poolSize, count + POOL_RENDER_CHUNK_SIZE));
     }, POOL_RENDER_CHUNK_DELAY_MS);
     return () => window.clearTimeout(timeoutId);
-  }, [view, rankings.pool, visiblePoolCount]);
+  }, [view, filteredPoolIds.length, visiblePoolCount]);
 
   useEffect(() => {
     if (!isProfileEnabled() || view !== "tierlist" || !currentTierlist || !routeStartRef.current) return;
@@ -190,8 +206,9 @@ export default function App() {
     const itemId = event.item.dataset.id;
     const fromTier = event.from.closest<HTMLElement>("[data-tier]")?.dataset.tier || "pool";
     const toTier = event.to.closest<HTMLElement>("[data-tier]")?.dataset.tier || "pool";
-    const oldIndex = event.oldIndex ?? 0;
-    const newIndex = event.newIndex ?? 0;
+    const targetVisibleIds = [...event.to.querySelectorAll<HTMLElement>(".tier-item")]
+      .map((node) => node.dataset.id)
+      .filter((id): id is string => Boolean(id));
 
     event.item.classList.remove("tier-item--active");
     event.item.classList.add("tier-item--dropped");
@@ -208,11 +225,12 @@ export default function App() {
       });
 
       const sourceItems = next[fromTier] || [];
-      const [movedItem] = sourceItems.splice(oldIndex, 1);
-      if (!movedItem) return previous;
+      const sourceIndex = sourceItems.indexOf(itemId);
+      if (sourceIndex < 0) return previous;
+      const [movedItem] = sourceItems.splice(sourceIndex, 1);
 
       const targetItems = fromTier === toTier ? sourceItems : [...(next[toTier] || [])];
-      targetItems.splice(newIndex, 0, movedItem);
+      insertItemByVisibleNeighbors(targetItems, movedItem, targetVisibleIds);
       next[fromTier] = sourceItems;
       next[toTier] = targetItems;
       return next;
@@ -563,11 +581,17 @@ export default function App() {
         rankings={rankings}
         imagesById={currentImagesById}
         poolItems={poolItems}
+        poolItemCount={filteredPoolIds.length}
+        totalPoolItemCount={rankings.pool?.length || 0}
+        weaponClassFilter={weaponClassFilter}
+        weaponClassOptions={weaponClassOptions}
+        showWeaponClassFilter={hasWeaponClassFilter}
         screenshotGenerating={screenshotGenerating}
         onBack={goBackFromTierlist}
         onReset={() => setModal("reset")}
         onEdit={() => setModal("edit")}
         onScreenshot={takeScreenshot}
+        onWeaponClassFilterChange={setWeaponClassFilter}
       />
 
       <TierlistModals
@@ -586,4 +610,33 @@ export default function App() {
       />
     </div>
   );
+}
+
+function imageMatchesWeaponClass(image: TierlistImage | undefined, className: string) {
+  const classNames = image?.classNames || [];
+  return classNames.includes(className) || classNames.includes("All Class") || classNames.includes("All Classes");
+}
+
+function insertItemByVisibleNeighbors(items: string[], itemId: string, visibleIds: string[]) {
+  const visibleIndex = visibleIds.indexOf(itemId);
+  const previousVisibleId = visibleIndex > 0 ? visibleIds[visibleIndex - 1] : undefined;
+  const nextVisibleId = visibleIndex >= 0 ? visibleIds[visibleIndex + 1] : undefined;
+
+  if (previousVisibleId) {
+    const previousIndex = items.indexOf(previousVisibleId);
+    if (previousIndex >= 0) {
+      items.splice(previousIndex + 1, 0, itemId);
+      return;
+    }
+  }
+
+  if (nextVisibleId) {
+    const nextIndex = items.indexOf(nextVisibleId);
+    if (nextIndex >= 0) {
+      items.splice(nextIndex, 0, itemId);
+      return;
+    }
+  }
+
+  items.push(itemId);
 }
