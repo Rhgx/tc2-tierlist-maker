@@ -1,5 +1,17 @@
-export const cosmeticsGeneratedAt = "2026-06-29T16:56:14.722Z";
+export const cosmeticsGeneratedAt = "2026-11-08T14:18:30.362Z";
 export const cosmetics = [
+  {
+    "name": "300th",
+    "usedBy": [
+      "Annihilator"
+    ],
+    "slots": [
+      "Body",
+      "Head",
+      "Misc"
+    ],
+    "imageUrl": "tc2-assets/cosmetics/300th-54faf5db22.webp"
+  },
   {
     "name": "ABH4",
     "usedBy": [
@@ -114,7 +126,8 @@ export const cosmetics = [
     ],
     "slots": [
       "Body",
-      "Head"
+      "Head",
+      "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/aramid-operative-7c4effa6ba.webp"
   },
@@ -138,6 +151,18 @@ export const cosmetics = [
       "Head"
     ],
     "imageUrl": "tc2-assets/cosmetics/arsonist-s-beanie-5c2de17bfb.webp"
+  },
+  {
+    "name": "Asphodel Roamer",
+    "usedBy": [
+      "Trooper"
+    ],
+    "slots": [
+      "Body",
+      "Head",
+      "Misc"
+    ],
+    "imageUrl": "tc2-assets/cosmetics/asphodel-roamer-82e20d10b8.webp"
   },
   {
     "name": "Attack Wrap",
@@ -227,6 +252,7 @@ export const cosmetics = [
       "Agent"
     ],
     "slots": [
+      "Head",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/bandito-391aabfaa0.webp"
@@ -289,9 +315,22 @@ export const cosmetics = [
       "Brute"
     ],
     "slots": [
-      "Head"
+      "Head",
+      "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/beard-beanie-7c09f75b5e.webp"
+  },
+  {
+    "name": "Beast Within",
+    "usedBy": [
+      "Brute"
+    ],
+    "slots": [
+      "Body",
+      "Head",
+      "Misc"
+    ],
+    "imageUrl": "tc2-assets/cosmetics/beast-within-68019472f3.webp"
   },
   {
     "name": "Beast's Bonnet",
@@ -320,9 +359,22 @@ export const cosmetics = [
       "All Class"
     ],
     "slots": [
+      "Body",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/beetle-brooch-a5948aae83.webp"
+  },
+  {
+    "name": "Belvedere",
+    "usedBy": [
+      "Doctor"
+    ],
+    "slots": [
+      "Body",
+      "Head",
+      "Misc"
+    ],
+    "imageUrl": "tc2-assets/cosmetics/belvedere-8f4ad21bfb.webp"
   },
   {
     "name": "Big Bruncher",
@@ -374,7 +426,8 @@ export const cosmetics = [
       "Annihilator"
     ],
     "slots": [
-      "Head"
+      "Head",
+      "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/blind-warrior-cbbcc86d3e.webp"
   },
@@ -415,7 +468,8 @@ export const cosmetics = [
     ],
     "slots": [
       "Body",
-      "Head"
+      "Head",
+      "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/brain-jam-f58fbf83ed.webp"
   },
@@ -462,6 +516,17 @@ export const cosmetics = [
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/broken-rank-8fc83dccf2.webp"
+  },
+  {
+    "name": "Bronze Bastion",
+    "usedBy": [
+      "Arsonist"
+    ],
+    "slots": [
+      "Body",
+      "Head"
+    ],
+    "imageUrl": "tc2-assets/cosmetics/bronze-bastion-446bd2f8fa.webp"
   },
   {
     "name": "Brutal Butler",
@@ -599,7 +664,6 @@ export const cosmetics = [
     ],
     "slots": [
       "Body",
-      "Head",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/casual-1eee211b10.webp"
@@ -771,9 +835,21 @@ export const cosmetics = [
     ],
     "slots": [
       "Body",
+      "Head",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/combat-carry-886b4fc5a8.webp"
+  },
+  {
+    "name": "Comfy Cozer",
+    "usedBy": [
+      "Marksman"
+    ],
+    "slots": [
+      "Body",
+      "Misc"
+    ],
+    "imageUrl": "tc2-assets/cosmetics/comfy-cozer-6477836299.webp"
   },
   {
     "name": "Common Warmth",
@@ -853,7 +929,8 @@ export const cosmetics = [
       "Flanker"
     ],
     "slots": [
-      "Body"
+      "Body",
+      "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/cyber-crime-49b14c81c8.webp"
   },
@@ -873,7 +950,7 @@ export const cosmetics = [
       "Marksman"
     ],
     "slots": [
-      "Head"
+      "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/damage-control-dde2709cb9.webp"
   },
@@ -946,6 +1023,7 @@ export const cosmetics = [
       "Flanker"
     ],
     "slots": [
+      "Body",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/designated-runner-74710cb64b.webp"
@@ -1010,7 +1088,8 @@ export const cosmetics = [
       "Mechanic"
     ],
     "slots": [
-      "Head"
+      "Head",
+      "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/diver-goggles-203a14598a.webp"
   },
@@ -1025,11 +1104,24 @@ export const cosmetics = [
     "imageUrl": "tc2-assets/cosmetics/docking-chief-e5cc16b0d5.webp"
   },
   {
+    "name": "Doctor Hoot",
+    "usedBy": [
+      "Doctor"
+    ],
+    "slots": [
+      "Body",
+      "Head",
+      "Misc"
+    ],
+    "imageUrl": "tc2-assets/cosmetics/doctor-hoot-081410736b.webp"
+  },
+  {
     "name": "Dollar Maker",
     "usedBy": [
       "All Class"
     ],
     "slots": [
+      "Body",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/dollar-maker-0ef45e33ae.webp"
@@ -1242,6 +1334,7 @@ export const cosmetics = [
       "Annihilator"
     ],
     "slots": [
+      "Body",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/extra-prep-80da02962f.webp"
@@ -1252,7 +1345,8 @@ export const cosmetics = [
       "Flanker"
     ],
     "slots": [
-      "Body"
+      "Body",
+      "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/fall-fashion-29de27c601.webp"
   },
@@ -1318,7 +1412,8 @@ export const cosmetics = [
       "Brute"
     ],
     "slots": [
-      "Body"
+      "Body",
+      "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/field-ready-f16d0ed031.webp"
   },
@@ -1340,6 +1435,7 @@ export const cosmetics = [
       "Brute"
     ],
     "slots": [
+      "Head",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/filter-feeder-236b9caec0.webp"
@@ -1360,6 +1456,7 @@ export const cosmetics = [
       "Arsonist"
     ],
     "slots": [
+      "Body",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/fire-starter-e1fc074fd0.webp"
@@ -1381,6 +1478,7 @@ export const cosmetics = [
       "Flanker"
     ],
     "slots": [
+      "Head",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/first-impression-1ac8bba74b.webp"
@@ -1396,13 +1494,38 @@ export const cosmetics = [
     "imageUrl": "tc2-assets/cosmetics/fisher-man-521a28f7e1.webp"
   },
   {
+    "name": "Flag Finish",
+    "usedBy": [
+      "Brute"
+    ],
+    "slots": [
+      "Body",
+      "Head",
+      "Misc"
+    ],
+    "imageUrl": "tc2-assets/cosmetics/flag-finish-562f5504f7.webp"
+  },
+  {
+    "name": "Flame Grilled",
+    "usedBy": [
+      "Arsonist"
+    ],
+    "slots": [
+      "Body",
+      "Head",
+      "Misc"
+    ],
+    "imageUrl": "tc2-assets/cosmetics/flame-grilled-43da88d877.webp"
+  },
+  {
     "name": "Flared Furnace",
     "usedBy": [
       "Arsonist"
     ],
     "slots": [
       "Body",
-      "Head"
+      "Head",
+      "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/flared-furnace-921e1c5676.webp"
   },
@@ -1412,6 +1535,7 @@ export const cosmetics = [
       "Mechanic"
     ],
     "slots": [
+      "Body",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/floor-plans-e0358b78c1.webp"
@@ -1472,9 +1596,32 @@ export const cosmetics = [
       "Annihilator"
     ],
     "slots": [
-      "Body"
+      "Body",
+      "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/frozen-knight-6aaccef2db.webp"
+  },
+  {
+    "name": "Fundamentalist",
+    "usedBy": [
+      "Brute"
+    ],
+    "slots": [
+      "Body",
+      "Misc"
+    ],
+    "imageUrl": "tc2-assets/cosmetics/fundamentalist-2f731fc04d.webp"
+  },
+  {
+    "name": "G.O.A.T.",
+    "usedBy": [
+      "Flanker"
+    ],
+    "slots": [
+      "Body",
+      "Head"
+    ],
+    "imageUrl": "tc2-assets/cosmetics/g-o-a-t-b05675810b.webp"
   },
   {
     "name": "Gambler's Gambit",
@@ -1513,6 +1660,7 @@ export const cosmetics = [
       "All Class"
     ],
     "slots": [
+      "Head",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/ghast-mask-3e8045239e.webp"
@@ -1537,6 +1685,18 @@ export const cosmetics = [
       "Head"
     ],
     "imageUrl": "tc2-assets/cosmetics/gi-joseph-46abb3a99e.webp"
+  },
+  {
+    "name": "Godsmith",
+    "usedBy": [
+      "Mechanic"
+    ],
+    "slots": [
+      "Body",
+      "Head",
+      "Misc"
+    ],
+    "imageUrl": "tc2-assets/cosmetics/godsmith-4f6f481e1e.webp"
   },
   {
     "name": "Golf Champ",
@@ -1565,6 +1725,7 @@ export const cosmetics = [
       "Annihilator"
     ],
     "slots": [
+      "Head",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/googly-guy-23843cebdb.webp"
@@ -1599,6 +1760,7 @@ export const cosmetics = [
       "Trooper"
     ],
     "slots": [
+      "Head",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/greek-b43d2d16b7.webp"
@@ -1642,7 +1804,7 @@ export const cosmetics = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/hard-news-e2cd100fe1.webp"
+    "imageUrl": "tc2-assets/cosmetics/hard-news-c82bf70186.webp"
   },
   {
     "name": "Hare Guise",
@@ -1705,6 +1867,7 @@ export const cosmetics = [
       "Brute"
     ],
     "slots": [
+      "Head",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/healthy-handlebar-41d82d3e0a.webp"
@@ -1728,7 +1891,8 @@ export const cosmetics = [
     ],
     "slots": [
       "Body",
-      "Head"
+      "Head",
+      "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/high-heater-3ac4c7ba12.webp"
   },
@@ -1791,6 +1955,7 @@ export const cosmetics = [
       "Brute"
     ],
     "slots": [
+      "Head",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/horrible-hector-6d5e5eeb74.webp"
@@ -1815,6 +1980,16 @@ export const cosmetics = [
       "Head"
     ],
     "imageUrl": "tc2-assets/cosmetics/hotshot-lawyer-27b3f7463f.webp"
+  },
+  {
+    "name": "Humble Hunter",
+    "usedBy": [
+      "Marksman"
+    ],
+    "slots": [
+      "Head"
+    ],
+    "imageUrl": "tc2-assets/cosmetics/humble-hunter-4be52e62e7.webp"
   },
   {
     "name": "Humid Helper",
@@ -1851,6 +2026,17 @@ export const cosmetics = [
     "imageUrl": "tc2-assets/cosmetics/hunter-s-slouch-771220104c.webp"
   },
   {
+    "name": "Hypnus Somnus",
+    "usedBy": [
+      "Doctor"
+    ],
+    "slots": [
+      "Body",
+      "Head"
+    ],
+    "imageUrl": "tc2-assets/cosmetics/hypnus-somnus-beda779f98.webp"
+  },
+  {
     "name": "Ice Queen",
     "usedBy": [
       "Agent"
@@ -1866,6 +2052,7 @@ export const cosmetics = [
       "Arsonist"
     ],
     "slots": [
+      "Body",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/ifrit-s-shroud-9cfa4c4dc4.webp"
@@ -1876,6 +2063,7 @@ export const cosmetics = [
       "Agent"
     ],
     "slots": [
+      "Head",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/incognito-a622356980.webp"
@@ -1910,6 +2098,7 @@ export const cosmetics = [
       "Marksman"
     ],
     "slots": [
+      "Head",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/iron-maw-4535208e29.webp"
@@ -2049,6 +2238,18 @@ export const cosmetics = [
       "Head"
     ],
     "imageUrl": "tc2-assets/cosmetics/lakeside-killer-afaabf91f6.webp"
+  },
+  {
+    "name": "Lamplighter",
+    "usedBy": [
+      "Arsonist"
+    ],
+    "slots": [
+      "Body",
+      "Head",
+      "Misc"
+    ],
+    "imageUrl": "tc2-assets/cosmetics/lamplighter-b68df5de55.webp"
   },
   {
     "name": "Last Bastion",
@@ -2212,6 +2413,16 @@ export const cosmetics = [
     "imageUrl": "tc2-assets/cosmetics/mafioso-a89f02e8f0.webp"
   },
   {
+    "name": "Mamba Mori",
+    "usedBy": [
+      "Agent"
+    ],
+    "slots": [
+      "Head"
+    ],
+    "imageUrl": "tc2-assets/cosmetics/mamba-mori-52197fc1b0.webp"
+  },
+  {
     "name": "Marker Mayhem",
     "usedBy": [
       "Arsonist"
@@ -2259,6 +2470,7 @@ export const cosmetics = [
       "Trooper"
     ],
     "slots": [
+      "Head",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/medal-of-war-85e50865d3.webp"
@@ -2432,6 +2644,7 @@ export const cosmetics = [
       "Flanker"
     ],
     "slots": [
+      "Body",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/motivator-1a2ad415ad.webp"
@@ -2442,6 +2655,7 @@ export const cosmetics = [
       "Flanker"
     ],
     "slots": [
+      "Body",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/mountain-man-350991db17.webp"
@@ -2463,6 +2677,7 @@ export const cosmetics = [
     ],
     "slots": [
       "Body",
+      "Head",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/mr-malice-4002b51645.webp"
@@ -2494,7 +2709,8 @@ export const cosmetics = [
       "Agent"
     ],
     "slots": [
-      "Head"
+      "Head",
+      "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/mystic-s-mark-d5d6e4dccd.webp"
   },
@@ -2504,9 +2720,22 @@ export const cosmetics = [
       "Agent"
     ],
     "slots": [
+      "Body",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/mystique-pearls-05937f5df7.webp"
+  },
+  {
+    "name": "Natural Instinct",
+    "usedBy": [
+      "Marksman"
+    ],
+    "slots": [
+      "Body",
+      "Head",
+      "Misc"
+    ],
+    "imageUrl": "tc2-assets/cosmetics/natural-instinct-5336fd6aa9.webp"
   },
   {
     "name": "Neat Knight",
@@ -2529,6 +2758,18 @@ export const cosmetics = [
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/neek-04a5c21205.webp"
+  },
+  {
+    "name": "Night Howl",
+    "usedBy": [
+      "Annihilator"
+    ],
+    "slots": [
+      "Body",
+      "Head",
+      "Misc"
+    ],
+    "imageUrl": "tc2-assets/cosmetics/night-howl-79aee5c426.webp"
   },
   {
     "name": "Night Walker",
@@ -2558,9 +2799,22 @@ export const cosmetics = [
       "Flanker"
     ],
     "slots": [
+      "Head",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/nimble-sash-59944ed8ad.webp"
+  },
+  {
+    "name": "Observer",
+    "usedBy": [
+      "Marksman"
+    ],
+    "slots": [
+      "Body",
+      "Head",
+      "Misc"
+    ],
+    "imageUrl": "tc2-assets/cosmetics/observer-731c3cff35.webp"
   },
   {
     "name": "Occult Classic",
@@ -2581,6 +2835,18 @@ export const cosmetics = [
       "Body"
     ],
     "imageUrl": "tc2-assets/cosmetics/off-the-case-42d419ef3d.webp"
+  },
+  {
+    "name": "Olympian",
+    "usedBy": [
+      "Brute"
+    ],
+    "slots": [
+      "Body",
+      "Head",
+      "Misc"
+    ],
+    "imageUrl": "tc2-assets/cosmetics/olympian-0d7a7de319.webp"
   },
   {
     "name": "Ominous Cone",
@@ -2628,6 +2894,7 @@ export const cosmetics = [
       "Arsonist"
     ],
     "slots": [
+      "Body",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/operational-status-c006ecc47d.webp"
@@ -2672,6 +2939,18 @@ export const cosmetics = [
       "Head"
     ],
     "imageUrl": "tc2-assets/cosmetics/p-h-d-c2bc245896.webp"
+  },
+  {
+    "name": "Pantheon Pacer",
+    "usedBy": [
+      "Flanker"
+    ],
+    "slots": [
+      "Body",
+      "Head",
+      "Misc"
+    ],
+    "imageUrl": "tc2-assets/cosmetics/pantheon-pacer-45277d18fd.webp"
   },
   {
     "name": "Paper Craft",
@@ -2720,6 +2999,7 @@ export const cosmetics = [
       "All Class"
     ],
     "slots": [
+      "Head",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/party-horn-d8c17e0649.webp"
@@ -2764,7 +3044,8 @@ export const cosmetics = [
     ],
     "slots": [
       "Body",
-      "Head"
+      "Head",
+      "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/pester-jester-85ee992c7f.webp"
   },
@@ -2867,6 +3148,7 @@ export const cosmetics = [
       "Mechanic"
     ],
     "slots": [
+      "Body",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/power-pauldron-de425cb8eb.webp"
@@ -2915,12 +3197,24 @@ export const cosmetics = [
     "imageUrl": "tc2-assets/cosmetics/professional-promise-0cec5f754b.webp"
   },
   {
+    "name": "Proud Vendetta",
+    "usedBy": [
+      "Agent"
+    ],
+    "slots": [
+      "Body",
+      "Head"
+    ],
+    "imageUrl": "tc2-assets/cosmetics/proud-vendetta-31b0627aa3.webp"
+  },
+  {
     "name": "Provisions",
     "usedBy": [
       "Doctor"
     ],
     "slots": [
-      "Body"
+      "Body",
+      "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/provisions-5ff3201cec.webp"
   },
@@ -2930,7 +3224,8 @@ export const cosmetics = [
       "Annihilator"
     ],
     "slots": [
-      "Body"
+      "Body",
+      "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/psyched-up-2e6cd09c59.webp"
   },
@@ -2940,6 +3235,7 @@ export const cosmetics = [
       "Arsonist"
     ],
     "slots": [
+      "Body",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/puff-piece-154a37d30a.webp"
@@ -3016,6 +3312,7 @@ export const cosmetics = [
       "Trooper"
     ],
     "slots": [
+      "Body",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/response-unit-fdd439eddb.webp"
@@ -3058,7 +3355,8 @@ export const cosmetics = [
     ],
     "slots": [
       "Body",
-      "Head"
+      "Head",
+      "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/road-runner-c6c772d874.webp"
   },
@@ -3069,6 +3367,7 @@ export const cosmetics = [
     ],
     "slots": [
       "Body",
+      "Head",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/roadie-shades-f473835c3a.webp"
@@ -3090,7 +3389,8 @@ export const cosmetics = [
       "Flanker"
     ],
     "slots": [
-      "Body"
+      "Body",
+      "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/rough-patch-e75338f45b.webp"
   },
@@ -3124,7 +3424,8 @@ export const cosmetics = [
       "Brute"
     ],
     "slots": [
-      "Body"
+      "Body",
+      "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/rugged-looks-d2ef04efdd.webp"
   },
@@ -3199,6 +3500,7 @@ export const cosmetics = [
       "All Class"
     ],
     "slots": [
+      "Body",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/savior-s-badge-f4494213cd.webp"
@@ -3296,7 +3598,8 @@ export const cosmetics = [
       "Agent"
     ],
     "slots": [
-      "Head"
+      "Head",
+      "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/senza-vista-0271f46de6.webp"
   },
@@ -3306,9 +3609,22 @@ export const cosmetics = [
       "Marksman"
     ],
     "slots": [
+      "Head",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/service-man-7bd60cfc9c.webp"
+  },
+  {
+    "name": "Shadow of Styx",
+    "usedBy": [
+      "Arsonist"
+    ],
+    "slots": [
+      "Body",
+      "Head",
+      "Misc"
+    ],
+    "imageUrl": "tc2-assets/cosmetics/shadow-of-styx-3d3ec8cd84.webp"
   },
   {
     "name": "Shady Agent",
@@ -3448,6 +3764,7 @@ export const cosmetics = [
     ],
     "slots": [
       "Body",
+      "Head",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/sleep-walker-82dd6b136d.webp"
@@ -3469,6 +3786,7 @@ export const cosmetics = [
       "All Class"
     ],
     "slots": [
+      "Body",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/snow-stompers-fed49c75a1.webp"
@@ -3552,7 +3870,8 @@ export const cosmetics = [
       "Marksman"
     ],
     "slots": [
-      "Body"
+      "Body",
+      "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/spring-casual-54c43c3ccd.webp"
   },
@@ -3575,6 +3894,7 @@ export const cosmetics = [
       "Agent"
     ],
     "slots": [
+      "Head",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/squared-shades-91e147628a.webp"
@@ -3586,7 +3906,8 @@ export const cosmetics = [
     ],
     "slots": [
       "Body",
-      "Head"
+      "Head",
+      "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/squire-helmet-274c039b21.webp"
   },
@@ -3607,7 +3928,8 @@ export const cosmetics = [
       "Agent"
     ],
     "slots": [
-      "Body"
+      "Body",
+      "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/status-quo-a92d7a99b6.webp"
   },
@@ -3644,6 +3966,16 @@ export const cosmetics = [
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/street-brawler-0ff9209bf3.webp"
+  },
+  {
+    "name": "Stupid",
+    "usedBy": [
+      "Flanker"
+    ],
+    "slots": [
+      "Body"
+    ],
+    "imageUrl": "tc2-assets/cosmetics/stupid-f521f40640.webp"
   },
   {
     "name": "Submachine Specialist",
@@ -3696,6 +4028,7 @@ export const cosmetics = [
     ],
     "slots": [
       "Body",
+      "Head",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/summer-sickness-239690c9ed.webp"
@@ -3730,7 +4063,8 @@ export const cosmetics = [
     ],
     "slots": [
       "Body",
-      "Head"
+      "Head",
+      "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/sunset-surfer-ddb1efe43c.webp"
   },
@@ -3774,6 +4108,7 @@ export const cosmetics = [
     ],
     "slots": [
       "Body",
+      "Head",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/sweat-swarm-1dfc40c782.webp"
@@ -3785,7 +4120,8 @@ export const cosmetics = [
     ],
     "slots": [
       "Body",
-      "Head"
+      "Head",
+      "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/sweet-memories-821f466343.webp"
   },
@@ -3807,6 +4143,7 @@ export const cosmetics = [
       "All Class"
     ],
     "slots": [
+      "Head",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/sweet-treat-9eff14c313.webp"
@@ -3818,6 +4155,7 @@ export const cosmetics = [
     ],
     "slots": [
       "Body",
+      "Head",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/sweets-sweeper-8c569c1cb0.webp"
@@ -3860,7 +4198,8 @@ export const cosmetics = [
       "Marksman"
     ],
     "slots": [
-      "Body"
+      "Body",
+      "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/tang-suit-ca84249a75.webp"
   },
@@ -3872,7 +4211,8 @@ export const cosmetics = [
     ],
     "slots": [
       "Body",
-      "Head"
+      "Head",
+      "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/team-beret-e5c89b4d32.webp"
   },
@@ -3893,6 +4233,7 @@ export const cosmetics = [
     ],
     "slots": [
       "Body",
+      "Head",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/terrible-teach-7182ba4545.webp"
@@ -3933,7 +4274,7 @@ export const cosmetics = [
       "All Class"
     ],
     "slots": [
-      "Body Cosmetic",
+      "Body",
       "Head",
       "Misc"
     ],
@@ -3965,6 +4306,7 @@ export const cosmetics = [
       "Brute"
     ],
     "slots": [
+      "Head",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/traditional-cut-8fc44b5c38.webp"
@@ -3987,7 +4329,8 @@ export const cosmetics = [
       "Annihilator"
     ],
     "slots": [
-      "Body"
+      "Body",
+      "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/transylvanian-terror-d28e0cb51d.webp"
   },
@@ -4033,6 +4376,17 @@ export const cosmetics = [
       "Head"
     ],
     "imageUrl": "tc2-assets/cosmetics/truck-month-2b176eb695.webp"
+  },
+  {
+    "name": "Truthseeker",
+    "usedBy": [
+      "Trooper"
+    ],
+    "slots": [
+      "Body",
+      "Head"
+    ],
+    "imageUrl": "tc2-assets/cosmetics/truthseeker-cf9e96a48a.webp"
   },
   {
     "name": "Typical Colors Cap",
@@ -4158,6 +4512,7 @@ export const cosmetics = [
       "Marksman"
     ],
     "slots": [
+      "Head",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/vicious-visor-7c34c084c0.webp"
@@ -4252,7 +4607,8 @@ export const cosmetics = [
     ],
     "slots": [
       "Body",
-      "Head"
+      "Head",
+      "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/water-boy-b8cb738f01.webp"
   },
@@ -4345,7 +4701,8 @@ export const cosmetics = [
       "Marksman"
     ],
     "slots": [
-      "Body"
+      "Body",
+      "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/wind-shield-9864575151.webp"
   },
@@ -4367,7 +4724,8 @@ export const cosmetics = [
       "Marksman"
     ],
     "slots": [
-      "Body"
+      "Body",
+      "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/winter-post-cc6d7b8612.webp"
   },
@@ -4390,6 +4748,7 @@ export const cosmetics = [
     ],
     "slots": [
       "Body",
+      "Head",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/winter-woodsman-a970d691fc.webp"
@@ -4413,6 +4772,8 @@ export const cosmetics = [
       "All Class"
     ],
     "slots": [
+      "Body",
+      "Head",
       "Misc"
     ],
     "imageUrl": "tc2-assets/cosmetics/woolen-wrap-06dd8d7af5.webp"

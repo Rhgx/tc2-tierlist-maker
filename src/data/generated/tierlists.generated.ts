@@ -1,6 +1,6 @@
 import type { TierlistEntry } from "../../types";
 
-export const tierlistsGeneratedAt = "2026-06-29T16:59:37.394Z";
+export const tierlistsGeneratedAt = "2026-11-08T14:48:44.604Z";
 export const tierlists: TierlistEntry[] = [
   {
     "type": "folder",
@@ -117,6 +117,13 @@ export const tierlists: TierlistEntry[] = [
             "sourceId": "cosmetic-fool-s-fandango"
           },
           {
+            "id": "cosmetic-g-o-a-t",
+            "name": "G.O.A.T.",
+            "src": "tc2-assets/cosmetics/g-o-a-t-b05675810b.webp",
+            "sourceKind": "cosmetic",
+            "sourceId": "cosmetic-g-o-a-t"
+          },
+          {
             "id": "cosmetic-greasy-goon",
             "name": "Greasy Goon",
             "src": "tc2-assets/cosmetics/greasy-goon-33338b326f.webp",
@@ -185,6 +192,13 @@ export const tierlists: TierlistEntry[] = [
             "src": "tc2-assets/cosmetics/nimble-sash-59944ed8ad.webp",
             "sourceKind": "cosmetic",
             "sourceId": "cosmetic-nimble-sash"
+          },
+          {
+            "id": "cosmetic-pantheon-pacer",
+            "name": "Pantheon Pacer",
+            "src": "tc2-assets/cosmetics/pantheon-pacer-45277d18fd.webp",
+            "sourceKind": "cosmetic",
+            "sourceId": "cosmetic-pantheon-pacer"
           },
           {
             "id": "cosmetic-paperboy",
@@ -269,6 +283,13 @@ export const tierlists: TierlistEntry[] = [
             "src": "tc2-assets/cosmetics/spring-chicken-7c0a7ab541.webp",
             "sourceKind": "cosmetic",
             "sourceId": "cosmetic-spring-chicken"
+          },
+          {
+            "id": "cosmetic-stupid",
+            "name": "Stupid",
+            "src": "tc2-assets/cosmetics/stupid-f521f40640.webp",
+            "sourceKind": "cosmetic",
+            "sourceId": "cosmetic-stupid"
           },
           {
             "id": "cosmetic-subway-sprayer",
@@ -359,6 +380,13 @@ export const tierlists: TierlistEntry[] = [
             "src": "tc2-assets/cosmetics/american-anomaly-a252bb18d6.webp",
             "sourceKind": "cosmetic",
             "sourceId": "cosmetic-american-anomaly"
+          },
+          {
+            "id": "cosmetic-asphodel-roamer",
+            "name": "Asphodel Roamer",
+            "src": "tc2-assets/cosmetics/asphodel-roamer-82e20d10b8.webp",
+            "sourceKind": "cosmetic",
+            "sourceId": "cosmetic-asphodel-roamer"
           },
           {
             "id": "cosmetic-battle-ready",
@@ -648,6 +676,13 @@ export const tierlists: TierlistEntry[] = [
             "sourceId": "cosmetic-troopceratops"
           },
           {
+            "id": "cosmetic-truthseeker",
+            "name": "Truthseeker",
+            "src": "tc2-assets/cosmetics/truthseeker-cf9e96a48a.webp",
+            "sourceKind": "cosmetic",
+            "sourceId": "cosmetic-truthseeker"
+          },
+          {
             "id": "cosmetic-veteran",
             "name": "Veteran",
             "src": "tc2-assets/cosmetics/veteran-5e6ee333cc.webp",
@@ -731,6 +766,13 @@ export const tierlists: TierlistEntry[] = [
             "sourceId": "cosmetic-beast-s-bonnet"
           },
           {
+            "id": "cosmetic-bronze-bastion",
+            "name": "Bronze Bastion",
+            "src": "tc2-assets/cosmetics/bronze-bastion-446bd2f8fa.webp",
+            "sourceKind": "cosmetic",
+            "sourceId": "cosmetic-bronze-bastion"
+          },
+          {
             "id": "cosmetic-burnaclava",
             "name": "Burnaclava",
             "src": "tc2-assets/cosmetics/burnaclava-d42ea8469a.webp",
@@ -794,6 +836,13 @@ export const tierlists: TierlistEntry[] = [
             "sourceId": "cosmetic-firefighter"
           },
           {
+            "id": "cosmetic-flame-grilled",
+            "name": "Flame Grilled",
+            "src": "tc2-assets/cosmetics/flame-grilled-43da88d877.webp",
+            "sourceKind": "cosmetic",
+            "sourceId": "cosmetic-flame-grilled"
+          },
+          {
             "id": "cosmetic-flared-furnace",
             "name": "Flared Furnace",
             "src": "tc2-assets/cosmetics/flared-furnace-921e1c5676.webp",
@@ -827,6 +876,13 @@ export const tierlists: TierlistEntry[] = [
             "src": "tc2-assets/cosmetics/lakeside-killer-afaabf91f6.webp",
             "sourceKind": "cosmetic",
             "sourceId": "cosmetic-lakeside-killer"
+          },
+          {
+            "id": "cosmetic-lamplighter",
+            "name": "Lamplighter",
+            "src": "tc2-assets/cosmetics/lamplighter-b68df5de55.webp",
+            "sourceKind": "cosmetic",
+            "sourceId": "cosmetic-lamplighter"
           },
           {
             "id": "cosmetic-lil-munchy",
@@ -962,6 +1018,13 @@ export const tierlists: TierlistEntry[] = [
             "sourceId": "cosmetic-sector-protector"
           },
           {
+            "id": "cosmetic-shadow-of-styx",
+            "name": "Shadow of Styx",
+            "src": "tc2-assets/cosmetics/shadow-of-styx-3d3ec8cd84.webp",
+            "sourceKind": "cosmetic",
+            "sourceId": "cosmetic-shadow-of-styx"
+          },
+          {
             "id": "cosmetic-soldier-of-athens",
             "name": "Soldier of Athens",
             "src": "tc2-assets/cosmetics/soldier-of-athens-c09504e281.webp",
@@ -1016,6 +1079,13 @@ export const tierlists: TierlistEntry[] = [
         "id": "cosmetic-tierlists/annihilator-tierlist",
         "name": "Annihilator Tierlist",
         "images": [
+          {
+            "id": "cosmetic-300th",
+            "name": "300th",
+            "src": "tc2-assets/cosmetics/300th-54faf5db22.webp",
+            "sourceKind": "cosmetic",
+            "sourceId": "cosmetic-300th"
+          },
           {
             "id": "cosmetic-blind-warrior",
             "name": "Blind Warrior",
@@ -1227,6 +1297,13 @@ export const tierlists: TierlistEntry[] = [
             "sourceId": "cosmetic-neat-knight"
           },
           {
+            "id": "cosmetic-night-howl",
+            "name": "Night Howl",
+            "src": "tc2-assets/cosmetics/night-howl-79aee5c426.webp",
+            "sourceKind": "cosmetic",
+            "sourceId": "cosmetic-night-howl"
+          },
+          {
             "id": "cosmetic-night-walker",
             "name": "Night Walker",
             "src": "tc2-assets/cosmetics/night-walker-823515594b.webp",
@@ -1345,6 +1422,13 @@ export const tierlists: TierlistEntry[] = [
             "sourceId": "cosmetic-beard-beanie"
           },
           {
+            "id": "cosmetic-beast-within",
+            "name": "Beast Within",
+            "src": "tc2-assets/cosmetics/beast-within-68019472f3.webp",
+            "sourceKind": "cosmetic",
+            "sourceId": "cosmetic-beast-within"
+          },
+          {
             "id": "cosmetic-big-bruncher",
             "name": "Big Bruncher",
             "src": "tc2-assets/cosmetics/big-bruncher-8e4dd061f7.webp",
@@ -1422,6 +1506,13 @@ export const tierlists: TierlistEntry[] = [
             "sourceId": "cosmetic-filter-feeder"
           },
           {
+            "id": "cosmetic-flag-finish",
+            "name": "Flag Finish",
+            "src": "tc2-assets/cosmetics/flag-finish-562f5504f7.webp",
+            "sourceKind": "cosmetic",
+            "sourceId": "cosmetic-flag-finish"
+          },
+          {
             "id": "cosmetic-football-helmet",
             "name": "Football Helmet",
             "src": "tc2-assets/cosmetics/football-helmet-797ece328c.webp",
@@ -1434,6 +1525,13 @@ export const tierlists: TierlistEntry[] = [
             "src": "tc2-assets/cosmetics/friday-night-6e06fc1fc3.webp",
             "sourceKind": "cosmetic",
             "sourceId": "cosmetic-friday-night"
+          },
+          {
+            "id": "cosmetic-fundamentalist",
+            "name": "Fundamentalist",
+            "src": "tc2-assets/cosmetics/fundamentalist-2f731fc04d.webp",
+            "sourceKind": "cosmetic",
+            "sourceId": "cosmetic-fundamentalist"
           },
           {
             "id": "cosmetic-good-willed-gifter",
@@ -1504,6 +1602,13 @@ export const tierlists: TierlistEntry[] = [
             "src": "tc2-assets/cosmetics/mr-wonderland-77812a0dcd.webp",
             "sourceKind": "cosmetic",
             "sourceId": "cosmetic-mr-wonderland"
+          },
+          {
+            "id": "cosmetic-olympian",
+            "name": "Olympian",
+            "src": "tc2-assets/cosmetics/olympian-0d7a7de319.webp",
+            "sourceKind": "cosmetic",
+            "sourceId": "cosmetic-olympian"
           },
           {
             "id": "cosmetic-phoney-frank",
@@ -1757,6 +1862,13 @@ export const tierlists: TierlistEntry[] = [
             "sourceId": "cosmetic-gear-shifter"
           },
           {
+            "id": "cosmetic-godsmith",
+            "name": "Godsmith",
+            "src": "tc2-assets/cosmetics/godsmith-4f6f481e1e.webp",
+            "sourceKind": "cosmetic",
+            "sourceId": "cosmetic-godsmith"
+          },
+          {
             "id": "cosmetic-grease-worker",
             "name": "Grease Worker",
             "src": "tc2-assets/cosmetics/grease-worker-be7a0ad9d4.webp",
@@ -1966,6 +2078,13 @@ export const tierlists: TierlistEntry[] = [
             "sourceId": "cosmetic-beesy-entomologist"
           },
           {
+            "id": "cosmetic-belvedere",
+            "name": "Belvedere",
+            "src": "tc2-assets/cosmetics/belvedere-8f4ad21bfb.webp",
+            "sourceKind": "cosmetic",
+            "sourceId": "cosmetic-belvedere"
+          },
+          {
             "id": "cosmetic-bowling-bob",
             "name": "Bowling Bob",
             "src": "tc2-assets/cosmetics/bowling-bob-4a5071be1d.webp",
@@ -2013,6 +2132,13 @@ export const tierlists: TierlistEntry[] = [
             "src": "tc2-assets/cosmetics/death-doctor-eca945d3eb.webp",
             "sourceKind": "cosmetic",
             "sourceId": "cosmetic-death-doctor"
+          },
+          {
+            "id": "cosmetic-doctor-hoot",
+            "name": "Doctor Hoot",
+            "src": "tc2-assets/cosmetics/doctor-hoot-081410736b.webp",
+            "sourceKind": "cosmetic",
+            "sourceId": "cosmetic-doctor-hoot"
           },
           {
             "id": "cosmetic-doughboy",
@@ -2076,6 +2202,13 @@ export const tierlists: TierlistEntry[] = [
             "src": "tc2-assets/cosmetics/home-readers-c047a2c1f7.webp",
             "sourceKind": "cosmetic",
             "sourceId": "cosmetic-home-readers"
+          },
+          {
+            "id": "cosmetic-hypnus-somnus",
+            "name": "Hypnus Somnus",
+            "src": "tc2-assets/cosmetics/hypnus-somnus-beda779f98.webp",
+            "sourceKind": "cosmetic",
+            "sourceId": "cosmetic-hypnus-somnus"
           },
           {
             "id": "cosmetic-life-doctor",
@@ -2315,6 +2448,13 @@ export const tierlists: TierlistEntry[] = [
             "sourceId": "cosmetic-camp-sniping"
           },
           {
+            "id": "cosmetic-comfy-cozer",
+            "name": "Comfy Cozer",
+            "src": "tc2-assets/cosmetics/comfy-cozer-6477836299.webp",
+            "sourceKind": "cosmetic",
+            "sourceId": "cosmetic-comfy-cozer"
+          },
+          {
             "id": "cosmetic-damage-control",
             "name": "Damage Control",
             "src": "tc2-assets/cosmetics/damage-control-dde2709cb9.webp",
@@ -2371,6 +2511,13 @@ export const tierlists: TierlistEntry[] = [
             "sourceId": "cosmetic-hatless"
           },
           {
+            "id": "cosmetic-humble-hunter",
+            "name": "Humble Hunter",
+            "src": "tc2-assets/cosmetics/humble-hunter-4be52e62e7.webp",
+            "sourceKind": "cosmetic",
+            "sourceId": "cosmetic-humble-hunter"
+          },
+          {
             "id": "cosmetic-hunter-s-hunch",
             "name": "Hunter's Hunch",
             "src": "tc2-assets/cosmetics/hunter-s-hunch-07c05638d7.webp",
@@ -2411,6 +2558,20 @@ export const tierlists: TierlistEntry[] = [
             "src": "tc2-assets/cosmetics/lumbering-jack-40ea1cf7c3.webp",
             "sourceKind": "cosmetic",
             "sourceId": "cosmetic-lumbering-jack"
+          },
+          {
+            "id": "cosmetic-natural-instinct",
+            "name": "Natural Instinct",
+            "src": "tc2-assets/cosmetics/natural-instinct-5336fd6aa9.webp",
+            "sourceKind": "cosmetic",
+            "sourceId": "cosmetic-natural-instinct"
+          },
+          {
+            "id": "cosmetic-observer",
+            "name": "Observer",
+            "src": "tc2-assets/cosmetics/observer-731c3cff35.webp",
+            "sourceKind": "cosmetic",
+            "sourceId": "cosmetic-observer"
           },
           {
             "id": "cosmetic-omniscient-oculi",
@@ -2687,7 +2848,7 @@ export const tierlists: TierlistEntry[] = [
           {
             "id": "cosmetic-hard-news",
             "name": "Hard News",
-            "src": "tc2-assets/cosmetics/hard-news-e2cd100fe1.webp",
+            "src": "tc2-assets/cosmetics/hard-news-c82bf70186.webp",
             "sourceKind": "cosmetic",
             "sourceId": "cosmetic-hard-news"
           },
@@ -2755,6 +2916,13 @@ export const tierlists: TierlistEntry[] = [
             "sourceId": "cosmetic-mad-hattress"
           },
           {
+            "id": "cosmetic-mamba-mori",
+            "name": "Mamba Mori",
+            "src": "tc2-assets/cosmetics/mamba-mori-52197fc1b0.webp",
+            "sourceKind": "cosmetic",
+            "sourceId": "cosmetic-mamba-mori"
+          },
+          {
             "id": "cosmetic-mighty-mask",
             "name": "Mighty Mask",
             "src": "tc2-assets/cosmetics/mighty-mask-3e5185a7a2.webp",
@@ -2809,6 +2977,13 @@ export const tierlists: TierlistEntry[] = [
             "src": "tc2-assets/cosmetics/prestigious-p-i-874bfedfe8.webp",
             "sourceKind": "cosmetic",
             "sourceId": "cosmetic-prestigious-p-i"
+          },
+          {
+            "id": "cosmetic-proud-vendetta",
+            "name": "Proud Vendetta",
+            "src": "tc2-assets/cosmetics/proud-vendetta-31b0627aa3.webp",
+            "sourceKind": "cosmetic",
+            "sourceId": "cosmetic-proud-vendetta"
           },
           {
             "id": "cosmetic-pure-class",
@@ -3184,7 +3359,7 @@ export const tierlists: TierlistEntry[] = [
       {
         "id": "map-ad-atlantis",
         "name": "ad_atlantis",
-        "src": "tc2-assets/maps/ad-atlantis-35b1ce3db6.webp",
+        "src": "tc2-assets/maps/ad-atlantis-c08b092114.webp",
         "sourceKind": "map",
         "sourceId": "map-ad-atlantis"
       },
@@ -3205,7 +3380,7 @@ export const tierlists: TierlistEntry[] = [
       {
         "id": "map-ad-cliffhanger",
         "name": "ad_cliffhanger",
-        "src": "tc2-assets/maps/ad-cliffhanger-055d6889d1.webp",
+        "src": "tc2-assets/maps/ad-cliffhanger-10e1932651.webp",
         "sourceKind": "map",
         "sourceId": "map-ad-cliffhanger"
       },
@@ -3233,7 +3408,7 @@ export const tierlists: TierlistEntry[] = [
       {
         "id": "map-ad-gorge",
         "name": "ad_gorge",
-        "src": "tc2-assets/maps/ad-gorge-28618ea509.webp",
+        "src": "tc2-assets/maps/ad-gorge-00a420b0c4.webp",
         "sourceKind": "map",
         "sourceId": "map-ad-gorge"
       },
@@ -3306,6 +3481,13 @@ export const tierlists: TierlistEntry[] = [
         "src": "tc2-assets/maps/cp-chillyvalley-3cp-5bbb051857.webp",
         "sourceKind": "map",
         "sourceId": "map-cp-chillyvalley-3cp"
+      },
+      {
+        "id": "map-cp-folly",
+        "name": "cp_folly",
+        "src": "tc2-assets/maps/cp-folly-14b3c5e490.webp",
+        "sourceKind": "map",
+        "sourceId": "map-cp-folly"
       },
       {
         "id": "map-cp-highlands",
@@ -3497,20 +3679,6 @@ export const tierlists: TierlistEntry[] = [
         "sourceId": "map-koth-dusk"
       },
       {
-        "id": "map-koth-harvest-alpine",
-        "name": "koth_harvest_alpine",
-        "src": "tc2-assets/maps/koth-harvest-alpine-7bb2f169bf.webp",
-        "sourceKind": "map",
-        "sourceId": "map-koth-harvest-alpine"
-      },
-      {
-        "id": "map-koth-harvest-winter",
-        "name": "koth_harvest_winter",
-        "src": "tc2-assets/maps/koth-harvest-winter-1e93de726b.webp",
-        "sourceKind": "map",
-        "sourceId": "map-koth-harvest-winter"
-      },
-      {
         "id": "map-koth-himalaya",
         "name": "koth_himalaya",
         "src": "tc2-assets/maps/koth-himalaya-9b0e7123b1.webp",
@@ -3539,13 +3707,6 @@ export const tierlists: TierlistEntry[] = [
         "sourceId": "map-koth-purgatory"
       },
       {
-        "id": "map-koth-reap",
-        "name": "koth_reap",
-        "src": "tc2-assets/maps/koth-reap-a749627e53.webp",
-        "sourceKind": "map",
-        "sourceId": "map-koth-reap"
-      },
-      {
         "id": "map-koth-risky",
         "name": "koth_risky",
         "src": "tc2-assets/maps/koth-risky-ca53ee027c.webp",
@@ -3555,7 +3716,7 @@ export const tierlists: TierlistEntry[] = [
       {
         "id": "map-koth-rooftops",
         "name": "koth_rooftops",
-        "src": "tc2-assets/maps/koth-rooftops-fc05a574a5.webp",
+        "src": "tc2-assets/maps/koth-rooftops-4ac6b39db9.webp",
         "sourceKind": "map",
         "sourceId": "map-koth-rooftops"
       },
@@ -3600,13 +3761,6 @@ export const tierlists: TierlistEntry[] = [
         "src": "tc2-assets/maps/koth-smog-dd19397318.webp",
         "sourceKind": "map",
         "sourceId": "map-koth-smog"
-      },
-      {
-        "id": "map-koth-snoduct",
-        "name": "koth_snoduct",
-        "src": "tc2-assets/maps/koth-snoduct-78fcb83b7c.webp",
-        "sourceKind": "map",
-        "sourceId": "map-koth-snoduct"
       },
       {
         "id": "map-koth-surf",
@@ -3674,7 +3828,7 @@ export const tierlists: TierlistEntry[] = [
       {
         "id": "map-pl-badwater",
         "name": "pl_badwater",
-        "src": "tc2-assets/maps/pl-badwater-09f82c0a52.webp",
+        "src": "tc2-assets/maps/pl-badwater-6d13503b8c.webp",
         "sourceKind": "map",
         "sourceId": "map-pl-badwater"
       },
@@ -3688,7 +3842,7 @@ export const tierlists: TierlistEntry[] = [
       {
         "id": "map-pl-banana-shore",
         "name": "pl_banana_shore",
-        "src": "tc2-assets/maps/pl-banana-shore-2f44a52239.webp",
+        "src": "tc2-assets/maps/pl-banana-shore-4cfcdc2811.webp",
         "sourceKind": "map",
         "sourceId": "map-pl-banana-shore"
       },
@@ -3730,9 +3884,16 @@ export const tierlists: TierlistEntry[] = [
       {
         "id": "map-pl-pervade",
         "name": "pl_pervade",
-        "src": "tc2-assets/maps/pl-pervade-742dfb71f0.webp",
+        "src": "tc2-assets/maps/pl-pervade-3b44a5052d.webp",
         "sourceKind": "map",
         "sourceId": "map-pl-pervade"
+      },
+      {
+        "id": "map-pl-shower-shore",
+        "name": "pl_shower_shore",
+        "src": "tc2-assets/maps/pl-shower-shore-f1658e9af3.webp",
+        "sourceKind": "map",
+        "sourceId": "map-pl-shower-shore"
       },
       {
         "id": "map-pl-taiga",
@@ -3758,7 +3919,7 @@ export const tierlists: TierlistEntry[] = [
       {
         "id": "map-pl-upward",
         "name": "pl_upward",
-        "src": "tc2-assets/maps/pl-upward-e748ce7f9a.webp",
+        "src": "tc2-assets/maps/pl-upward-d0fd64f192.webp",
         "sourceKind": "map",
         "sourceId": "map-pl-upward"
       },
@@ -3814,7 +3975,7 @@ export const tierlists: TierlistEntry[] = [
       {
         "id": "map-tdm-waterbog",
         "name": "tdm_waterbog",
-        "src": "tc2-assets/maps/tdm-waterbog-f7a4c0662b.webp",
+        "src": "tc2-assets/maps/tdm-waterbog-b16be12b4b.webp",
         "sourceKind": "map",
         "sourceId": "map-tdm-waterbog"
       },
@@ -3849,7 +4010,7 @@ export const tierlists: TierlistEntry[] = [
       {
         "id": "map-vsb-clutter",
         "name": "vsb_clutter",
-        "src": "tc2-assets/maps/vsb-clutter-e207e28f86.webp",
+        "src": "tc2-assets/maps/vsb-clutter-be3032a9f5.webp",
         "sourceKind": "map",
         "sourceId": "map-vsb-clutter"
       },
@@ -3978,6 +4139,13 @@ export const tierlists: TierlistEntry[] = [
         "src": "tc2-assets/maps/vsb-wholesale-6975a9bb34.webp",
         "sourceKind": "map",
         "sourceId": "map-vsb-wholesale"
+      },
+      {
+        "id": "map-vsb-winter-clutter",
+        "name": "vsb_winter_clutter",
+        "src": "tc2-assets/maps/vsb-winter-clutter-23eb2b0da7.webp",
+        "sourceKind": "map",
+        "sourceId": "map-vsb-winter-clutter"
       }
     ]
   },
@@ -3988,231 +4156,245 @@ export const tierlists: TierlistEntry[] = [
       {
         "id": "taunt-blastrophysics",
         "name": "Blastrophysics",
-        "src": "tc2-assets/taunts/blastrophysics-f42c2515b9.webp",
+        "src": "tc2-assets/taunts/blastrophysics-bdd0fc7929.webp",
         "sourceKind": "taunt",
         "sourceId": "taunt-blastrophysics"
       },
       {
         "id": "taunt-blood-money",
         "name": "Blood Money",
-        "src": "tc2-assets/taunts/blood-money-7cb7755acc.webp",
+        "src": "tc2-assets/taunts/blood-money-1fa981c4b8.webp",
         "sourceKind": "taunt",
         "sourceId": "taunt-blood-money"
       },
       {
         "id": "taunt-bot-s-bonfire",
         "name": "Bot's Bonfire",
-        "src": "tc2-assets/taunts/bot-s-bonfire-02873d00ed.webp",
+        "src": "tc2-assets/taunts/bot-s-bonfire-b1282cc285.webp",
         "sourceKind": "taunt",
         "sourceId": "taunt-bot-s-bonfire"
       },
       {
         "id": "taunt-brooklyn-breakdown",
         "name": "Brooklyn Breakdown",
-        "src": "tc2-assets/taunts/brooklyn-breakdown-4a8592f7bf.webp",
+        "src": "tc2-assets/taunts/brooklyn-breakdown-6d98dd3a47.webp",
         "sourceKind": "taunt",
         "sourceId": "taunt-brooklyn-breakdown"
       },
       {
         "id": "taunt-calamity-clown",
         "name": "Calamity Clown",
-        "src": "tc2-assets/taunts/calamity-clown-d8121dfba9.webp",
+        "src": "tc2-assets/taunts/calamity-clown-372a94c0b2.webp",
         "sourceKind": "taunt",
         "sourceId": "taunt-calamity-clown"
       },
       {
         "id": "taunt-canslaughter",
         "name": "Canslaughter",
-        "src": "tc2-assets/taunts/canslaughter-b0cda42bfa.webp",
+        "src": "tc2-assets/taunts/canslaughter-27f73fca48.webp",
         "sourceKind": "taunt",
         "sourceId": "taunt-canslaughter"
       },
       {
+        "id": "taunt-caution-sign",
+        "name": "Caution Sign",
+        "src": "tc2-assets/taunts/caution-sign-76a0dfb970.webp",
+        "sourceKind": "taunt",
+        "sourceId": "taunt-caution-sign"
+      },
+      {
         "id": "taunt-comic-relief",
         "name": "Comic Relief",
-        "src": "tc2-assets/taunts/comic-relief-8e6ecaab95.webp",
+        "src": "tc2-assets/taunts/comic-relief-a7147fbd83.webp",
         "sourceKind": "taunt",
         "sourceId": "taunt-comic-relief"
       },
       {
         "id": "taunt-condescending-clipboard",
         "name": "Condescending Clipboard",
-        "src": "tc2-assets/taunts/condescending-clipboard-bb22804175.webp",
+        "src": "tc2-assets/taunts/condescending-clipboard-59f983ca9b.webp",
         "sourceKind": "taunt",
         "sourceId": "taunt-condescending-clipboard"
       },
       {
         "id": "taunt-conga",
         "name": "Conga",
-        "src": "tc2-assets/taunts/conga-e0339c6d2b.webp",
+        "src": "tc2-assets/taunts/conga-79c3f706ef.webp",
         "sourceKind": "taunt",
         "sourceId": "taunt-conga"
       },
       {
         "id": "taunt-death-s-secretary",
         "name": "Death's Secretary",
-        "src": "tc2-assets/taunts/death-s-secretary-100e807243.webp",
+        "src": "tc2-assets/taunts/death-s-secretary-ce10918fc4.webp",
         "sourceKind": "taunt",
         "sourceId": "taunt-death-s-secretary"
       },
       {
         "id": "taunt-eek",
         "name": "Eek!",
-        "src": "tc2-assets/taunts/eek-c8f66b436f.webp",
+        "src": "tc2-assets/taunts/eek-8750a97fa9.webp",
         "sourceKind": "taunt",
         "sourceId": "taunt-eek"
       },
       {
         "id": "taunt-en-garde",
         "name": "En Garde",
-        "src": "tc2-assets/taunts/en-garde-5e6e7672c0.webp",
+        "src": "tc2-assets/taunts/en-garde-237766368b.webp",
         "sourceKind": "taunt",
         "sourceId": "taunt-en-garde"
       },
       {
         "id": "taunt-fake-jukebox",
         "name": "Fake Jukebox",
-        "src": "tc2-assets/taunts/fake-jukebox-6a49dd2a93.webp",
+        "src": "tc2-assets/taunts/fake-jukebox-e0f09a629f.webp",
         "sourceKind": "taunt",
         "sourceId": "taunt-fake-jukebox"
       },
       {
         "id": "taunt-flippin-finish",
         "name": "Flippin' Finish",
-        "src": "tc2-assets/taunts/flippin-finish-518b5baa52.webp",
+        "src": "tc2-assets/taunts/flippin-finish-fbb14ca0a3.webp",
         "sourceKind": "taunt",
         "sourceId": "taunt-flippin-finish"
       },
       {
+        "id": "taunt-glistening-strut",
+        "name": "Glistening Strut",
+        "src": "tc2-assets/taunts/glistening-strut-3582cd4aaf.webp",
+        "sourceKind": "taunt",
+        "sourceId": "taunt-glistening-strut"
+      },
+      {
         "id": "taunt-grave-reminder",
         "name": "Grave Reminder",
-        "src": "tc2-assets/taunts/grave-reminder-3a6685e44e.webp",
+        "src": "tc2-assets/taunts/grave-reminder-54ac596d58.webp",
         "sourceKind": "taunt",
         "sourceId": "taunt-grave-reminder"
       },
       {
         "id": "taunt-hissy-fit",
         "name": "Hissy Fit",
-        "src": "tc2-assets/taunts/hissy-fit-7b7c71fe7d.webp",
+        "src": "tc2-assets/taunts/hissy-fit-dff33d0271.webp",
         "sourceKind": "taunt",
         "sourceId": "taunt-hissy-fit"
       },
       {
         "id": "taunt-intimidation-check",
         "name": "Intimidation Check",
-        "src": "tc2-assets/taunts/intimidation-check-1d10fb4772.webp",
+        "src": "tc2-assets/taunts/intimidation-check-de7bd33eaf.webp",
         "sourceKind": "taunt",
         "sourceId": "taunt-intimidation-check"
       },
       {
         "id": "taunt-jack-o-loser",
         "name": "Jack-o'-Loser",
-        "src": "tc2-assets/taunts/jack-o-loser-c9e7e7389e.webp",
+        "src": "tc2-assets/taunts/jack-o-loser-ecb6213f02.webp",
         "sourceKind": "taunt",
         "sourceId": "taunt-jack-o-loser"
       },
       {
         "id": "taunt-jackpot",
         "name": "Jackpot",
-        "src": "tc2-assets/taunts/jackpot-2d9937d1ab.webp",
+        "src": "tc2-assets/taunts/jackpot-4fa663c084.webp",
         "sourceKind": "taunt",
         "sourceId": "taunt-jackpot"
       },
       {
         "id": "taunt-layin-low",
         "name": "Layin' Low",
-        "src": "tc2-assets/taunts/layin-low-98116d5c78.webp",
+        "src": "tc2-assets/taunts/layin-low-5a04cfeae2.webp",
         "sourceKind": "taunt",
         "sourceId": "taunt-layin-low"
       },
       {
         "id": "taunt-manifest-destiny",
         "name": "Manifest Destiny",
-        "src": "tc2-assets/taunts/manifest-destiny-8df711e13c.webp",
+        "src": "tc2-assets/taunts/manifest-destiny-e1733cfbf2.webp",
         "sourceKind": "taunt",
         "sourceId": "taunt-manifest-destiny"
       },
       {
         "id": "taunt-mini-mech",
         "name": "Mini-Mech",
-        "src": "tc2-assets/taunts/mini-mech-67c1b06343.webp",
+        "src": "tc2-assets/taunts/mini-mech-788339087a.webp",
         "sourceKind": "taunt",
         "sourceId": "taunt-mini-mech"
       },
       {
         "id": "taunt-monster-mash",
         "name": "Monster Mash",
-        "src": "tc2-assets/taunts/monster-mash-f77d85a0f6.webp",
+        "src": "tc2-assets/taunts/monster-mash-62e345c424.webp",
         "sourceKind": "taunt",
         "sourceId": "taunt-monster-mash"
       },
       {
         "id": "taunt-neener-neener",
         "name": "Neener Neener",
-        "src": "tc2-assets/taunts/neener-neener-285ad53fd7.webp",
+        "src": "tc2-assets/taunts/neener-neener-ba7142f118.webp",
         "sourceKind": "taunt",
         "sourceId": "taunt-neener-neener"
       },
       {
         "id": "taunt-observant-photography",
         "name": "Observant Photography",
-        "src": "tc2-assets/taunts/observant-photography-e8728881f4.webp",
+        "src": "tc2-assets/taunts/observant-photography-8648ab2f0e.webp",
         "sourceKind": "taunt",
         "sourceId": "taunt-observant-photography"
       },
       {
         "id": "taunt-perfect-pitch",
         "name": "Perfect Pitch",
-        "src": "tc2-assets/taunts/perfect-pitch-8ec0f0b647.webp",
+        "src": "tc2-assets/taunts/perfect-pitch-670b877d3b.webp",
         "sourceKind": "taunt",
         "sourceId": "taunt-perfect-pitch"
       },
       {
         "id": "taunt-rickety-rocker",
         "name": "Rickety Rocker",
-        "src": "tc2-assets/taunts/rickety-rocker-4fe099a297.webp",
+        "src": "tc2-assets/taunts/rickety-rocker-b5524fcd66.webp",
         "sourceKind": "taunt",
         "sourceId": "taunt-rickety-rocker"
       },
       {
         "id": "taunt-seeking-stars",
         "name": "Seeking Stars",
-        "src": "tc2-assets/taunts/seeking-stars-c89e6797b9.webp",
+        "src": "tc2-assets/taunts/seeking-stars-78474bd061.webp",
         "sourceKind": "taunt",
         "sourceId": "taunt-seeking-stars"
       },
       {
         "id": "taunt-snowbro",
         "name": "Snowbro",
-        "src": "tc2-assets/taunts/snowbro-203965133b.webp",
+        "src": "tc2-assets/taunts/snowbro-4262486706.webp",
         "sourceKind": "taunt",
         "sourceId": "taunt-snowbro"
       },
       {
         "id": "taunt-spell-binder",
         "name": "Spell Binder",
-        "src": "tc2-assets/taunts/spell-binder-02f9ec2695.webp",
+        "src": "tc2-assets/taunts/spell-binder-a400410b13.webp",
         "sourceKind": "taunt",
         "sourceId": "taunt-spell-binder"
       },
       {
         "id": "taunt-stolen-valor",
         "name": "Stolen Valor",
-        "src": "tc2-assets/taunts/stolen-valor-a0bf303358.webp",
+        "src": "tc2-assets/taunts/stolen-valor-de2bdf5fd3.webp",
         "sourceKind": "taunt",
         "sourceId": "taunt-stolen-valor"
       },
       {
         "id": "taunt-tea-break",
         "name": "Tea Break",
-        "src": "tc2-assets/taunts/tea-break-c7392d637c.webp",
+        "src": "tc2-assets/taunts/tea-break-a599e77df3.webp",
         "sourceKind": "taunt",
         "sourceId": "taunt-tea-break"
       },
       {
         "id": "taunt-termination-sequence",
         "name": "Termination Sequence",
-        "src": "tc2-assets/taunts/termination-sequence-23eca6f811.webp",
+        "src": "tc2-assets/taunts/termination-sequence-3fca60258f.webp",
         "sourceKind": "taunt",
         "sourceId": "taunt-termination-sequence"
       }
@@ -6021,6 +6203,17 @@ export const tierlists: TierlistEntry[] = [
         "slot": "Primary"
       },
       {
+        "id": "weapon-dual-dread",
+        "name": "Dual Dread",
+        "src": "tc2-assets/weapons/dual-dread-662bfd4ce4.webp",
+        "sourceKind": "weapon",
+        "sourceId": "weapon-dual-dread",
+        "classNames": [
+          "Trooper"
+        ],
+        "slot": "Primary"
+      },
+      {
         "id": "weapon-efficient-eliminator",
         "name": "Efficient Eliminator",
         "src": "tc2-assets/weapons/efficient-eliminator-6b2dc01166.webp",
@@ -6135,6 +6328,17 @@ export const tierlists: TierlistEntry[] = [
           "Mechanic"
         ],
         "slot": "Secondary / Primary"
+      },
+      {
+        "id": "weapon-favoring-seas",
+        "name": "Favoring Seas",
+        "src": "tc2-assets/weapons/favoring-seas-0df6d8ece0.webp",
+        "sourceKind": "weapon",
+        "sourceId": "weapon-favoring-seas",
+        "classNames": [
+          "Trooper"
+        ],
+        "slot": "Melee"
       },
       {
         "id": "weapon-fire-extinguisher",
@@ -6473,6 +6677,17 @@ export const tierlists: TierlistEntry[] = [
           "Mechanic"
         ],
         "slot": "Secondary"
+      },
+      {
+        "id": "weapon-hellraiser",
+        "name": "Hellraiser",
+        "src": "tc2-assets/weapons/hellraiser-06c788ac5a.webp",
+        "sourceKind": "weapon",
+        "sourceId": "weapon-hellraiser",
+        "classNames": [
+          "Arsonist"
+        ],
+        "slot": "Primary"
       },
       {
         "id": "weapon-hermits-haversack",

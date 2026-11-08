@@ -1,5 +1,5 @@
 import { JSDOM } from "jsdom";
-import { getImageUrl } from "./shared/assets.mjs";
+import { fetchInfoboxImageUrl, getImageUrl } from "./shared/assets.mjs";
 import { cellText, cleanText, getHeadingText, normalizeName, tableToGrid, textWithBreaks } from "./shared/text.mjs";
 
 const WIKI_API_URL =
@@ -50,7 +50,29 @@ export async function scrapeWeaponsFromWiki() {
   if (!html) throw new Error("TC2 wiki API returned no rendered HTML.");
   const weapons = parseWeaponsHtml(html);
   if (weapons.length < 50) throw new Error(`Scrape returned only ${weapons.length} weapons.`);
-  return weapons;
+  return addPendingWikiWeapons(weapons);
+}
+
+// Typical Horrors VI reskins that the wiki's class weapon tables do not list yet.
+// Each one is skipped once the tables include it, so entries can be removed after the wiki catches up.
+const PENDING_WIKI_WEAPONS = [
+  { name: "Dual Dread", classNames: ["Trooper"], slot: "Primary", source: "Crate" },
+  { name: "Favoring Seas", classNames: ["Trooper"], slot: "Melee", source: "Crate" },
+  { name: "Hellraiser", classNames: ["Arsonist"], slot: "Primary", source: "Crate" },
+];
+
+async function addPendingWikiWeapons(weapons) {
+  const listed = new Set(weapons.map((weapon) => weapon.name.toLowerCase()));
+  const pending = [];
+  for (const weapon of PENDING_WIKI_WEAPONS) {
+    if (listed.has(weapon.name.toLowerCase())) {
+      console.log(`[scrape] Weapons: the wiki tables now list ${weapon.name}; remove it from PENDING_WIKI_WEAPONS.`);
+      continue;
+    }
+    // Reskins share their base weapon's stats, so only the infobox icon is needed.
+    pending.push({ ...weapon, capacity: null, ammo: null, attributes: [], iconUrl: await fetchInfoboxImageUrl(weapon.name) });
+  }
+  return [...weapons, ...pending].sort((a, b) => a.name.localeCompare(b.name));
 }
 
 function extractWeaponCell(cell) {
@@ -137,7 +159,11 @@ function headerText(cell) {
 }
 
 function getTableColumnIndexes(grid) {
-  const headerRowIndex = grid.findIndex((row) => row.some((cell) => cell?.tagName === "TH"));
+  // Newer wiki tables put headers in <td><b> cells and mark each weapon cell as a row <th>,
+  // so find the header row by its text before falling back to the first row with a <th>.
+  const weaponHeader = /^weapon$|weapon name|^item$/;
+  let headerRowIndex = grid.findIndex((row) => row.some((cell) => weaponHeader.test(headerText(cell))));
+  if (headerRowIndex < 0) headerRowIndex = grid.findIndex((row) => row.some((cell) => cell?.tagName === "TH"));
   const headerRow = headerRowIndex >= 0 ? grid[headerRowIndex] : grid[0] || [];
   const headers = headerRow.map(headerText);
 

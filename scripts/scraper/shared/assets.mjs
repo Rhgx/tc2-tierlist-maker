@@ -4,12 +4,14 @@ import { access, mkdir, readdir, rm, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { promisify } from "node:util";
 import { fileURLToPath } from "node:url";
+import { JSDOM } from "jsdom";
 import sharp from "sharp";
 import { cleanText } from "./text.mjs";
 
 const scraperRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const schluberFontPath = path.join(scraperRoot, "assets", "Schluber.ttf");
 const labelAssetScriptPath = path.join(scraperRoot, "label-asset.py");
+const tauntFramePath = path.join(scraperRoot, "assets", "taunt-frame.png");
 const execFileAsync = promisify(execFile);
 
 export function normalizeImageUrl(url) {
@@ -36,6 +38,17 @@ export function getImageUrl(img) {
   if (!img) return "";
   const raw = img.getAttribute("data-src") || img.getAttribute("src") || "";
   return normalizeImageUrl(raw);
+}
+
+// Used for new items the wiki's list pages have not caught up with yet: their own page's infobox has the icon.
+export async function fetchInfoboxImageUrl(page) {
+  const url = `https://typicalcolors2.fandom.com/api.php?action=parse&page=${encodeURIComponent(page)}&prop=text&format=json&origin=*`;
+  const response = await fetch(url);
+  if (!response.ok) throw new Error(`TC2 wiki request failed with ${response.status}: ${page}`);
+  const html = (await response.json())?.parse?.text?.["*"];
+  const imageUrl = html ? getImageUrl(new JSDOM(html).window.document.querySelector(".portable-infobox img")) : "";
+  if (!imageUrl) throw new Error(`No infobox image found on the ${page} wiki page.`);
+  return imageUrl;
 }
 
 export function getRawImageUrl(img) {
@@ -133,7 +146,8 @@ async function writeAsset(url, outputPath, directoryPath, outputBaseName, option
     return;
   }
 
-  const response = await fetch(url);
+  // The wiki image CDN serves a Cloudflare challenge to requests without a wiki Referer.
+  const response = await fetch(url, { headers: { Referer: "https://typicalcolors2.fandom.com/" } });
   if (!response.ok) throw new Error(`Asset request failed with ${response.status}: ${url}`);
   const bytes = Buffer.from(await response.arrayBuffer());
   await writeWebpAsset(bytes, outputPath, options);
@@ -207,6 +221,41 @@ export async function addMapLabelToAsset(filePath, label) {
     windowsHide: true,
     maxBuffer: 1024 * 1024,
   });
+}
+
+// The wiki's taunt icons became plain white glyphs in Typical Horrors VI. Rebuild the old card look:
+// the shared film-strip frame from the previous cards, with the glyph recoloured to their purple.
+const TAUNT_CARD_SIZE = 256;
+const TAUNT_CARD_INTERIOR = { left: 28, top: 8, width: 200, height: 240 };
+const TAUNT_CARD_PADDING = 8;
+const TAUNT_CARD_PURPLE = "#B86CF0";
+
+export async function frameTauntAsset(filePath) {
+  const { left, top, width, height } = TAUNT_CARD_INTERIOR;
+  // Trim the icon's own transparent margins so the padding matches the old cards.
+  const trimmed = await sharp(await readExistingAsset(filePath)).trim({ threshold: 1 }).png().toBuffer();
+  const glyph = await sharp(trimmed)
+    .resize(width - TAUNT_CARD_PADDING * 2, height - TAUNT_CARD_PADDING * 2, { fit: "inside" })
+    .png()
+    .toBuffer();
+  const { width: glyphWidth = 0, height: glyphHeight = 0 } = await sharp(glyph).metadata();
+  const purpleGlyph = await sharp({ create: { width: glyphWidth, height: glyphHeight, channels: 4, background: TAUNT_CARD_PURPLE } })
+    .composite([{ input: glyph, blend: "dest-in" }])
+    .png()
+    .toBuffer();
+  const freeWidth = width - TAUNT_CARD_PADDING * 2 - glyphWidth;
+  const freeHeight = height - TAUNT_CARD_PADDING * 2 - glyphHeight;
+  const card = await sharp(tauntFramePath)
+    .resize(TAUNT_CARD_SIZE, TAUNT_CARD_SIZE)
+    .composite([{
+      input: purpleGlyph,
+      left: left + TAUNT_CARD_PADDING + Math.floor(freeWidth / 2),
+      // The old cards sat their art slightly low, so give 60% of the spare height to the top.
+      top: top + TAUNT_CARD_PADDING + Math.round(freeHeight * 0.6),
+    }])
+    .webp({ quality: 82, effort: 5 })
+    .toBuffer();
+  await writeFile(filePath, card);
 }
 
 export async function addDisguiseKitLabelToAsset(filePath) {

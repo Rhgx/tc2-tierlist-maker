@@ -7,7 +7,7 @@ import { scrapeMapsFromWiki } from "./maps.mjs";
 import { scrapeTauntsFromWiki } from "./taunts.mjs";
 import { scrapeUnusualsFromWiki } from "./unusuals.mjs";
 import { scrapeWeaponsFromWiki } from "./weapons.mjs";
-import { addDisguiseKitLabelToAsset, addMapLabelToAsset, downloadAssets, formatBytes, summarizeAssetDirectory } from "./shared/assets.mjs";
+import { addDisguiseKitLabelToAsset, addMapLabelToAsset, downloadAssets, formatBytes, frameTauntAsset, summarizeAssetDirectory } from "./shared/assets.mjs";
 import { cleanText } from "./shared/text.mjs";
 import { renderManifestGeneratedFile, renderRawGeneratedFile, renderTierlistsGeneratedFile } from "./shared/render.mjs";
 
@@ -145,7 +145,8 @@ async function scrapeTaunts() {
     assetPaths.taunts,
     "tc2-assets/taunts",
     projectRoot,
-    { progressLabel: "taunts" },
+    // Force a fresh download so the frame is never applied twice to an already framed card.
+    { force: true, afterWrite: (filePath) => frameTauntAsset(filePath), progressLabel: "taunts" },
   );
   const local = taunts.map((taunt) => ({ ...taunt, imageUrl: paths.get(taunt.imageUrl) || "" }));
   logProgress("Taunts: writing generated data.");

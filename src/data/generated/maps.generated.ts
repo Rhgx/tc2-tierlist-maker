@@ -1,4 +1,4 @@
-export const mapsGeneratedAt = "2026-06-29T16:55:08.367Z";
+export const mapsGeneratedAt = "2026-11-08T14:11:07.523Z";
 export const maps = [
   {
     "name": "1979 Effect",
@@ -46,8 +46,8 @@ export const maps = [
     "pageUrl": "https://typicalcolors2.fandom.com/wiki/Atlantis",
     "gameMode": "Attack/Defense",
     "group": "Standard",
-    "status": "Community Server",
-    "imageUrl": "tc2-assets/maps/ad-atlantis-35b1ce3db6.webp",
+    "status": "Active",
+    "imageUrl": "tc2-assets/maps/ad-atlantis-c08b092114.webp",
     "label": "ad_atlantis"
   },
   {
@@ -57,7 +57,7 @@ export const maps = [
     "gameMode": "Payload",
     "group": "Standard",
     "status": "Active",
-    "imageUrl": "tc2-assets/maps/pl-badwater-09f82c0a52.webp",
+    "imageUrl": "tc2-assets/maps/pl-badwater-6d13503b8c.webp",
     "label": "pl_badwater"
   },
   {
@@ -97,7 +97,7 @@ export const maps = [
     "gameMode": "Payload",
     "group": "Standard",
     "status": "Active",
-    "imageUrl": "tc2-assets/maps/pl-banana-shore-2f44a52239.webp",
+    "imageUrl": "tc2-assets/maps/pl-banana-shore-4cfcdc2811.webp",
     "label": "pl_banana_shore"
   },
   {
@@ -237,7 +237,7 @@ export const maps = [
     "gameMode": "Attack/Defense",
     "group": "Standard",
     "status": "Active",
-    "imageUrl": "tc2-assets/maps/ad-cliffhanger-055d6889d1.webp",
+    "imageUrl": "tc2-assets/maps/ad-cliffhanger-10e1932651.webp",
     "label": "ad_cliffhanger"
   },
   {
@@ -247,7 +247,7 @@ export const maps = [
     "gameMode": "Vs. Bosses",
     "group": "Special",
     "status": "Active",
-    "imageUrl": "tc2-assets/maps/vsb-clutter-e207e28f86.webp",
+    "imageUrl": "tc2-assets/maps/vsb-clutter-be3032a9f5.webp",
     "label": "vsb_clutter"
   },
   {
@@ -381,6 +381,16 @@ export const maps = [
     "label": "vsb_fitten_co"
   },
   {
+    "name": "Folly",
+    "page": "Folly",
+    "pageUrl": "https://typicalcolors2.fandom.com/wiki/Folly",
+    "gameMode": "Control Points",
+    "group": "Standard",
+    "status": "Active",
+    "imageUrl": "tc2-assets/maps/cp-folly-14b3c5e490.webp",
+    "label": "cp_folly"
+  },
+  {
     "name": "Glass Houses",
     "page": "Glass_Houses",
     "pageUrl": "https://typicalcolors2.fandom.com/wiki/Glass_Houses",
@@ -397,7 +407,7 @@ export const maps = [
     "gameMode": "Attack/Defense",
     "group": "Standard",
     "status": "Active",
-    "imageUrl": "tc2-assets/maps/ad-gorge-28618ea509.webp",
+    "imageUrl": "tc2-assets/maps/ad-gorge-00a420b0c4.webp",
     "label": "ad_gorge"
   },
   {
@@ -419,26 +429,6 @@ export const maps = [
     "status": "Active",
     "imageUrl": "tc2-assets/maps/tdm-harvest-2a3d1922f8.webp",
     "label": "tdm_harvest"
-  },
-  {
-    "name": "Harvest Alpine",
-    "page": "Harvest_Alpine",
-    "pageUrl": "https://typicalcolors2.fandom.com/wiki/Harvest_Alpine",
-    "gameMode": "King of the Hill",
-    "group": "Standard",
-    "status": "Seasonal",
-    "imageUrl": "tc2-assets/maps/koth-harvest-alpine-7bb2f169bf.webp",
-    "label": "koth_harvest_alpine"
-  },
-  {
-    "name": "Harvest Winter",
-    "page": "Harvest_Winter",
-    "pageUrl": "https://typicalcolors2.fandom.com/wiki/Harvest_Winter",
-    "gameMode": "King of the Hill",
-    "group": "Standard",
-    "status": "Seasonal",
-    "imageUrl": "tc2-assets/maps/koth-harvest-winter-1e93de726b.webp",
-    "label": "koth_harvest_winter"
   },
   {
     "name": "Haunted Mansion",
@@ -627,7 +617,7 @@ export const maps = [
     "gameMode": "Payload",
     "group": "Standard",
     "status": "Active",
-    "imageUrl": "tc2-assets/maps/pl-pervade-742dfb71f0.webp",
+    "imageUrl": "tc2-assets/maps/pl-pervade-3b44a5052d.webp",
     "label": "pl_pervade"
   },
   {
@@ -669,16 +659,6 @@ export const maps = [
     "status": "Seasonal",
     "imageUrl": "tc2-assets/maps/koth-purgatory-28db41cc92.webp",
     "label": "koth_purgatory"
-  },
-  {
-    "name": "Reap",
-    "page": "Reap",
-    "pageUrl": "https://typicalcolors2.fandom.com/wiki/Reap",
-    "gameMode": "King of the Hill",
-    "group": "Standard",
-    "status": "Seasonal",
-    "imageUrl": "tc2-assets/maps/koth-reap-a749627e53.webp",
-    "label": "koth_reap"
   },
   {
     "name": "Rig",
@@ -737,7 +717,7 @@ export const maps = [
     "gameMode": "King of the Hill",
     "group": "Standard",
     "status": "Active",
-    "imageUrl": "tc2-assets/maps/koth-rooftops-fc05a574a5.webp",
+    "imageUrl": "tc2-assets/maps/koth-rooftops-4ac6b39db9.webp",
     "label": "koth_rooftops"
   },
   {
@@ -796,7 +776,7 @@ export const maps = [
     "pageUrl": "https://typicalcolors2.fandom.com/wiki/Santa%27s_Workshop",
     "gameMode": "Vs. Bosses",
     "group": "Special",
-    "status": "Seasonal",
+    "status": "Active",
     "imageUrl": "tc2-assets/maps/vsb-santas-workshop-192e686a0d.webp",
     "label": "vsb_santas_workshop"
   },
@@ -821,6 +801,16 @@ export const maps = [
     "label": "koth_shiverift"
   },
   {
+    "name": "Shower Shore",
+    "page": "Shower_Shore",
+    "pageUrl": "https://typicalcolors2.fandom.com/wiki/Shower_Shore",
+    "gameMode": "Payload",
+    "group": "Standard",
+    "status": "Seasonal",
+    "imageUrl": "tc2-assets/maps/pl-shower-shore-f1658e9af3.webp",
+    "label": "pl_shower_shore"
+  },
+  {
     "name": "Skyfall",
     "page": "Skyfall",
     "pageUrl": "https://typicalcolors2.fandom.com/wiki/Skyfall",
@@ -839,16 +829,6 @@ export const maps = [
     "status": "Active",
     "imageUrl": "tc2-assets/maps/koth-smog-dd19397318.webp",
     "label": "koth_smog"
-  },
-  {
-    "name": "Snoduct",
-    "page": "Snoduct",
-    "pageUrl": "https://typicalcolors2.fandom.com/wiki/Snoduct",
-    "gameMode": "King of the Hill",
-    "group": "Standard",
-    "status": "Seasonal",
-    "imageUrl": "tc2-assets/maps/koth-snoduct-78fcb83b7c.webp",
-    "label": "koth_snoduct"
   },
   {
     "name": "Solarpower",
@@ -1047,7 +1027,7 @@ export const maps = [
     "gameMode": "Payload",
     "group": "Standard",
     "status": "Active",
-    "imageUrl": "tc2-assets/maps/pl-upward-e748ce7f9a.webp",
+    "imageUrl": "tc2-assets/maps/pl-upward-d0fd64f192.webp",
     "label": "pl_upward"
   },
   {
@@ -1097,7 +1077,7 @@ export const maps = [
     "gameMode": "Team Deathmatch",
     "group": "Standard",
     "status": "Active",
-    "imageUrl": "tc2-assets/maps/tdm-waterbog-f7a4c0662b.webp",
+    "imageUrl": "tc2-assets/maps/tdm-waterbog-b16be12b4b.webp",
     "label": "tdm_waterbog"
   },
   {
@@ -1119,6 +1099,16 @@ export const maps = [
     "status": "Active",
     "imageUrl": "tc2-assets/maps/vsb-wholesale-6975a9bb34.webp",
     "label": "vsb_wholesale"
+  },
+  {
+    "name": "Winter Clutter",
+    "page": "Winter_Clutter",
+    "pageUrl": "https://typicalcolors2.fandom.com/wiki/Winter_Clutter",
+    "gameMode": "Vs. Bosses",
+    "group": "Special",
+    "status": "Seasonal",
+    "imageUrl": "tc2-assets/maps/vsb-winter-clutter-23eb2b0da7.webp",
+    "label": "vsb_winter_clutter"
   },
   {
     "name": "Yellowvalley",

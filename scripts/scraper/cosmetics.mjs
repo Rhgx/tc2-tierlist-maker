@@ -1,5 +1,5 @@
 import { JSDOM } from "jsdom";
-import { getImageUrl } from "./shared/assets.mjs";
+import { fetchInfoboxImageUrl, getImageUrl } from "./shared/assets.mjs";
 import { cleanText, normalizeName } from "./shared/text.mjs";
 
 const COSMETICS_API_URL =
@@ -26,7 +26,41 @@ export async function scrapeCosmeticsFromWiki() {
   if (!html) throw new Error("TC2 cosmetics wiki API returned no rendered HTML.");
   const cosmetics = parseCosmeticsHtml(html);
   if (cosmetics.length < 50) throw new Error(`Scrape returned only ${cosmetics.length} cosmetics.`);
-  return cosmetics;
+  return addPendingWikiCosmetics(cosmetics);
+}
+
+// Typical Horrors VI cosmetics that the wiki's Cosmetics page does not list yet. Classes and slots come from
+// each page's infobox (equip region Hat = Head, Misc = Misc, Outfit = Body). Each one is skipped once the
+// Cosmetics page includes it, so entries can be removed after the wiki catches up.
+const PENDING_WIKI_COSMETICS = [
+  { name: "Pantheon Pacer", usedBy: ["Flanker"], slots: ["Body", "Head", "Misc"] },
+  { name: "Asphodel Roamer", usedBy: ["Trooper"], slots: ["Body", "Head", "Misc"] },
+  { name: "Bronze Bastion", usedBy: ["Arsonist"], slots: ["Body", "Head"] },
+  { name: "Flame Grilled", usedBy: ["Arsonist"], slots: ["Body", "Head", "Misc"] },
+  { name: "Shadow of Styx", usedBy: ["Arsonist"], slots: ["Body", "Head", "Misc"] },
+  { name: "300th", usedBy: ["Annihilator"], slots: ["Body", "Head", "Misc"] },
+  { name: "Flag Finish", usedBy: ["Brute"], slots: ["Body", "Head", "Misc"] },
+  { name: "Olympian", usedBy: ["Brute"], slots: ["Body", "Head", "Misc"] },
+  { name: "Godsmith", usedBy: ["Mechanic"], slots: ["Body", "Head", "Misc"] },
+  { name: "Belvedere", usedBy: ["Doctor"], slots: ["Body", "Head", "Misc"] },
+  { name: "Hypnus Somnus", usedBy: ["Doctor"], slots: ["Body", "Head"] },
+  { name: "Humble Hunter", usedBy: ["Marksman"], slots: ["Head"] },
+  { name: "Natural Instinct", usedBy: ["Marksman"], slots: ["Body", "Head", "Misc"] },
+  { name: "Mamba Mori", usedBy: ["Agent"], slots: ["Head"] },
+  { name: "Proud Vendetta", usedBy: ["Agent"], slots: ["Body", "Head"] },
+];
+
+async function addPendingWikiCosmetics(cosmetics) {
+  const listed = new Set(cosmetics.map((cosmetic) => cosmetic.name.toLowerCase()));
+  const pending = [];
+  for (const cosmetic of PENDING_WIKI_COSMETICS) {
+    if (listed.has(cosmetic.name.toLowerCase())) {
+      console.log(`[scrape] Cosmetics: the Cosmetics page now lists ${cosmetic.name}; remove it from PENDING_WIKI_COSMETICS.`);
+      continue;
+    }
+    pending.push({ ...cosmetic, imageUrl: await fetchInfoboxImageUrl(cosmetic.name) });
+  }
+  return [...cosmetics, ...pending].sort((a, b) => a.name.localeCompare(b.name));
 }
 
 function parseCosmeticsHtml(html) {
@@ -60,7 +94,8 @@ function getTableName(table) {
 }
 
 function normalizeSlot(value) {
-  return cleanText(value).replace(/\s+Cosmetics$/i, "");
+  // Some wiki navboxes use a singular "Body Cosmetic" header.
+  return cleanText(value).replace(/\s+Cosmetics?$/i, "");
 }
 
 function extractCosmeticItem(item, usedBy, slot) {

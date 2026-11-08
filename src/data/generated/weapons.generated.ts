@@ -1,4 +1,4 @@
-export const weaponsGeneratedAt = "2026-06-29T16:59:37.383Z";
+export const weaponsGeneratedAt = "2026-11-08T14:15:44.098Z";
 export const weapons = [
   {
     "name": "50-AE",
@@ -191,11 +191,6 @@ export const weapons = [
         "kind": "neutral",
         "label": "Neutral note",
         "text": "Fires special bolts that heal teammates and deal damage."
-      },
-      {
-        "kind": "neutral",
-        "label": "Neutral note",
-        "text": "Projectile cannot be deflected."
       },
       {
         "kind": "neutral",
@@ -573,11 +568,6 @@ export const weapons = [
         "kind": "positive",
         "label": "Positive trait",
         "text": "+15% damage resistance when fully spun up."
-      },
-      {
-        "kind": "positive",
-        "label": "Positive trait",
-        "text": "+10% explosive resistance when spun up."
       },
       {
         "kind": "negative",
@@ -1587,7 +1577,7 @@ export const weapons = [
     ],
     "slot": "Melee",
     "source": "Shop",
-    "capacity": null,
+    "capacity": 1,
     "ammo": null,
     "attributes": [
       {
@@ -1755,7 +1745,7 @@ export const weapons = [
       {
         "kind": "neutral",
         "label": "Neutral note",
-        "text": "Allows the player to place the Sentry, Dispenser and both Teleporters in the map."
+        "text": "Allows placement of the Sentry, Dispenser and both Teleporters."
       }
     ],
     "iconUrl": "tc2-assets/weapons/construct-85b1d7ca58.webp"
@@ -2149,11 +2139,6 @@ export const weapons = [
         "kind": "negative",
         "label": "Negative trait",
         "text": "+60% more falloff."
-      },
-      {
-        "kind": "negative",
-        "label": "Negative trait",
-        "text": "60% more falloff."
       }
     ],
     "iconUrl": "tc2-assets/weapons/deathblow-1d91af520b.webp"
@@ -2219,7 +2204,7 @@ export const weapons = [
       {
         "kind": "neutral",
         "label": "Neutral note",
-        "text": "Allows the player to destroy their Sentry, Dispenser and both Teleporters."
+        "text": "Allows demolishing of the Sentry, Dispenser and both Teleporters."
       }
     ],
     "iconUrl": "tc2-assets/weapons/demolish-568207f5f3.webp"
@@ -2585,6 +2570,18 @@ export const weapons = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/double-trouble-ee69b6dfe4.webp"
+  },
+  {
+    "name": "Dual Dread",
+    "classNames": [
+      "Trooper"
+    ],
+    "slot": "Primary",
+    "source": "Crate",
+    "capacity": null,
+    "ammo": null,
+    "attributes": [],
+    "iconUrl": "tc2-assets/weapons/dual-dread-662bfd4ce4.webp"
   },
   {
     "name": "Efficient Eliminator",
@@ -2957,6 +2954,18 @@ export const weapons = [
     "iconUrl": "tc2-assets/weapons/family-business-71585564d4.webp"
   },
   {
+    "name": "Favoring Seas",
+    "classNames": [
+      "Trooper"
+    ],
+    "slot": "Melee",
+    "source": "Crate",
+    "capacity": null,
+    "ammo": null,
+    "attributes": [],
+    "iconUrl": "tc2-assets/weapons/favoring-seas-0df6d8ece0.webp"
+  },
+  {
     "name": "Fire Extinguisher",
     "classNames": [
       "Arsonist"
@@ -3003,11 +3012,6 @@ export const weapons = [
         "kind": "positive",
         "label": "Positive trait",
         "text": "Does not require ammo."
-      },
-      {
-        "kind": "positive",
-        "label": "Positive trait",
-        "text": "+10% explosive resistance when spun up."
       },
       {
         "kind": "negative",
@@ -3716,37 +3720,22 @@ export const weapons = [
       {
         "kind": "positive",
         "label": "Positive trait",
-        "text": "'Alt-Fire': Launches a snowball that coveres the enemy's screen."
+        "text": "On Hit: Target is ignited for 5 seconds."
       },
       {
         "kind": "positive",
         "label": "Positive trait",
-        "text": "Snowball extinguishes teammates. (Unlisted)"
+        "text": "On Hit Teammate: Remove debuffs on teammate and restores 50 health."
+      },
+      {
+        "kind": "positive",
+        "label": "Positive trait",
+        "text": "Mini-crits burning targets."
       },
       {
         "kind": "negative",
         "label": "Negative trait",
-        "text": "Projectile deals -80% damage."
-      },
-      {
-        "kind": "negative",
-        "label": "Negative trait",
-        "text": "-20% damage penalty."
-      },
-      {
-        "kind": "negative",
-        "label": "Negative trait",
-        "text": "-25% decrease in recharge rate."
-      },
-      {
-        "kind": "negative",
-        "label": "Negative trait",
-        "text": "This weapon deploys 20% slower."
-      },
-      {
-        "kind": "neutral",
-        "label": "Neutral note",
-        "text": "Snow-Blind only applies at greater than 6 studs and lasts 3 seconds."
+        "text": "60% slower firing speed."
       }
     ],
     "iconUrl": "tc2-assets/weapons/grill-scout-0803e48991.webp"
@@ -3961,17 +3950,37 @@ export const weapons = [
       {
         "kind": "vs-bosses-positive",
         "label": "Vs. Bosses benefit",
+        "text": "Reduces the boss' rage by 5%"
+      },
+      {
+        "kind": "vs-bosses-positive",
+        "label": "Vs. Bosses benefit",
         "text": "Always crits."
       },
       {
         "kind": "positive",
         "label": "Positive trait",
-        "text": "'Alt-Fire': Launches a ball that slows opponents."
+        "text": "On Hit: One target at a time is marked for death, causing all damage taken to be mini-crits."
+      },
+      {
+        "kind": "positive",
+        "label": "Positive trait",
+        "text": "Mark for death lasts 15 seconds."
+      },
+      {
+        "kind": "positive",
+        "label": "Positive trait",
+        "text": "Crits whenever it would normally mini-crit."
+      },
+      {
+        "kind": "positive",
+        "label": "Positive trait",
+        "text": "This weapon deploys and holsters 35% faster."
       },
       {
         "kind": "negative",
         "label": "Negative trait",
-        "text": "-20% damage penalty."
+        "text": "-75% damage penalty."
       }
     ],
     "iconUrl": "tc2-assets/weapons/handyman-1d29b51812.webp"
@@ -4003,6 +4012,18 @@ export const weapons = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/heavy-metal-60459181cf.webp"
+  },
+  {
+    "name": "Hellraiser",
+    "classNames": [
+      "Arsonist"
+    ],
+    "slot": "Primary",
+    "source": "Crate",
+    "capacity": null,
+    "ammo": null,
+    "attributes": [],
+    "iconUrl": "tc2-assets/weapons/hellraiser-06c788ac5a.webp"
   },
   {
     "name": "Hermits' Haversack",
@@ -4208,11 +4229,6 @@ export const weapons = [
         "kind": "positive",
         "label": "Positive trait",
         "text": "The longer you aim, the more damage and faster the arrow travels."
-      },
-      {
-        "kind": "positive",
-        "label": "Positive trait",
-        "text": "Projectile cannot be deflected."
       },
       {
         "kind": "negative",
@@ -4965,11 +4981,6 @@ export const weapons = [
         "kind": "negative",
         "label": "Negative trait",
         "text": "-33% slower movement speed while active."
-      },
-      {
-        "kind": "negative",
-        "label": "Negative trait",
-        "text": "No explosive damage resistance."
       }
     ],
     "iconUrl": "tc2-assets/weapons/m249-3f56b628a1.webp"
@@ -5180,7 +5191,7 @@ export const weapons = [
       {
         "kind": "vs-bosses-positive",
         "label": "Vs. Bosses benefit",
-        "text": "This weapon always crits."
+        "text": "Always crits."
       },
       {
         "kind": "positive",
@@ -5302,11 +5313,6 @@ export const weapons = [
         "kind": "negative",
         "label": "Negative trait",
         "text": "Unable to crouch when spun up."
-      },
-      {
-        "kind": "negative",
-        "label": "Negative trait",
-        "text": "No explosive damage resistance when spun up."
       }
     ],
     "iconUrl": "tc2-assets/weapons/maxine-cbf08f69b0.webp"
@@ -5626,11 +5632,6 @@ export const weapons = [
         "kind": "negative",
         "label": "Negative trait",
         "text": "Unable to crouch when spun up."
-      },
-      {
-        "kind": "negative",
-        "label": "Negative trait",
-        "text": "No explosive damage resistance when spun up."
       }
     ],
     "iconUrl": "tc2-assets/weapons/monitor-of-duty-5224726bc4.webp"
@@ -6160,11 +6161,6 @@ export const weapons = [
       {
         "kind": "vs-bosses-positive",
         "label": "Vs. Bosses benefit",
-        "text": "Always mini-crits"
-      },
-      {
-        "kind": "vs-bosses-positive",
-        "label": "Vs. Bosses benefit",
         "text": "Always mini-crits."
       }
     ],
@@ -6392,7 +6388,7 @@ export const weapons = [
     ],
     "slot": "Melee",
     "source": "Item Drop",
-    "capacity": null,
+    "capacity": 1,
     "ammo": null,
     "attributes": [
       {
@@ -6426,7 +6422,7 @@ export const weapons = [
       {
         "kind": "vs-bosses-positive",
         "label": "Vs. Bosses benefit",
-        "text": "Always mini-crits"
+        "text": "Always mini-crits."
       }
     ],
     "iconUrl": "tc2-assets/weapons/raven-c94c13eed0.webp"
@@ -6836,7 +6832,7 @@ export const weapons = [
     ],
     "slot": "Melee",
     "source": "Shop",
-    "capacity": null,
+    "capacity": 1,
     "ammo": null,
     "attributes": [
       {
@@ -7520,7 +7516,7 @@ export const weapons = [
     ],
     "slot": "Melee",
     "source": "Item Drop",
-    "capacity": null,
+    "capacity": 1,
     "ammo": null,
     "attributes": [
       {
@@ -7692,11 +7688,6 @@ export const weapons = [
         "kind": "positive",
         "label": "Positive trait",
         "text": "The longer you aim, the more damage and faster the arrow travels."
-      },
-      {
-        "kind": "positive",
-        "label": "Positive trait",
-        "text": "Projectile cannot be deflected."
       },
       {
         "kind": "negative",
@@ -8140,11 +8131,6 @@ export const weapons = [
       {
         "kind": "neutral",
         "label": "Neutral note",
-        "text": "Projectile cannot be deflected."
-      },
-      {
-        "kind": "neutral",
-        "label": "Neutral note",
         "text": "This weapon will reload when not active."
       }
     ],
@@ -8399,11 +8385,6 @@ export const weapons = [
         "kind": "positive",
         "label": "Positive trait",
         "text": "Silent Killer: No barrel spin sound."
-      },
-      {
-        "kind": "positive",
-        "label": "Positive trait",
-        "text": "+10% explosive resistance when spun up."
       },
       {
         "kind": "negative",
@@ -8829,17 +8810,37 @@ export const weapons = [
       {
         "kind": "vs-bosses-positive",
         "label": "Vs. Bosses benefit",
+        "text": "Reduces the boss' rage by 5%"
+      },
+      {
+        "kind": "vs-bosses-positive",
+        "label": "Vs. Bosses benefit",
         "text": "Always crits."
       },
       {
         "kind": "positive",
         "label": "Positive trait",
-        "text": "'Alt-Fire': Launches a ball that slows opponents."
+        "text": "On Hit: One target at a time is marked for death, causing all damage taken to be mini-crits."
+      },
+      {
+        "kind": "positive",
+        "label": "Positive trait",
+        "text": "Mark for death lasts 15 seconds."
+      },
+      {
+        "kind": "positive",
+        "label": "Positive trait",
+        "text": "Crits whenever it would normally mini-crit."
+      },
+      {
+        "kind": "positive",
+        "label": "Positive trait",
+        "text": "This weapon deploys and holsters 35% faster."
       },
       {
         "kind": "negative",
         "label": "Negative trait",
-        "text": "-20% damage penalty."
+        "text": "-75% damage penalty."
       }
     ],
     "iconUrl": "tc2-assets/weapons/wooden-sword-aa3f23adf4.webp"
@@ -8970,7 +8971,7 @@ export const weapons = [
     ],
     "slot": "Melee",
     "source": "Shop",
-    "capacity": null,
+    "capacity": 1,
     "ammo": null,
     "attributes": [
       {
