@@ -38,6 +38,7 @@ body {
     
     /* Highlight border */
     --highlight: #8E8A75;
+    --new-highlight: #E8C15A;
     
     /* Text */
     --text-primary: #ffffff;

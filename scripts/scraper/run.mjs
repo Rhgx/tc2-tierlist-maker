@@ -56,7 +56,8 @@ if (target === "all" || target === "cosmetics") data.cosmetics = await scrapeCos
 if (target === "all" || target === "taunts") data.taunts = await scrapeTaunts();
 if (target === "all" || target === "unusuals") data.unusuals = await scrapeUnusuals();
 
-await writeFile(outputPaths.tierlists, renderTierlistsGeneratedFile(buildTierlists(data)), "utf8");
+const updateHistory = await loadUpdateHistory();
+await writeFile(outputPaths.tierlists, renderTierlistsGeneratedFile(buildTierlists(data), updateHistory.latestUpdate), "utf8");
 await writeManifest(data);
 logProgress("Generated tierlists and manifest.");
 
@@ -188,15 +189,17 @@ function buildTierlists({ weapons, maps, cosmetics, taunts, unusuals }) {
 
   return [
     { type: "folder", id: "cosmetic-tierlists", name: "Cosmetic Tierlists", children: cosmeticChildren },
-    { id: "maps-tierlist", name: "Maps Tierlist", images: [...maps].sort(sortMapsByLabel).map((map) => tierlistImage("map", map.label || map.name, map.imageUrl)) },
+    { id: "maps-tierlist", name: "Maps Tierlist", images: [...maps].sort(sortMapsByLabel).map((map) => tierlistImage("map", map.label || map.name, map.imageUrl, {}, map.name)) },
     { id: "taunt-tierlist", name: "Taunt Tierlist", images: [...taunts].sort(sortByName).map((taunt) => tierlistImage("taunt", taunt.name, taunt.imageUrl)) },
     { id: "unusual-tierlist", name: "Unusual Tierlist", images: [...unusuals].sort(sortByName).map((unusual) => tierlistImage("unusual", unusual.name, unusual.imageUrl)) },
     { id: "weapons-tierlist", name: "Weapons Tierlist", images: [...weapons].sort(sortByName).map((weapon) => tierlistImage("weapon", weapon.name, weapon.iconUrl, { classNames: weapon.classNames, slot: weapon.slot })) },
   ];
 }
 
-function tierlistImage(kind, name, src, metadata = {}) {
+// Maps are labelled like "cp_folly", so they pass their plain wiki name for the update lookup.
+function tierlistImage(kind, name, src, metadata = {}, updateLookupName = name) {
   const id = `${kind}-${slugify(name)}`;
+  const addedIn = updateHistory.addedIn.get(updateKey(kind, updateLookupName));
   return {
     id,
     name,
@@ -204,7 +207,53 @@ function tierlistImage(kind, name, src, metadata = {}) {
     sourceKind: kind,
     sourceId: id,
     ...metadata,
+    ...(addedIn ? { addedIn } : {}),
   };
+}
+
+// The TC2 Timeline lists what each update added, so items can be tagged with the update that introduced them.
+async function loadUpdateHistory() {
+  const timelineDataUrl = "https://rhgx.github.io/tc2-timeline/data";
+  const [updates, wiki] = await Promise.all([
+    fetchJson(`${timelineDataUrl}/updates.json`),
+    fetchJson(`${timelineDataUrl}/wiki.json`),
+  ]);
+  if (!Array.isArray(updates) || !updates.length || !wiki || typeof wiki !== "object") {
+    throw new Error("TC2 Timeline data has an unexpected shape.");
+  }
+  const dateByUpdate = new Map(updates.map((update) => [update.name, update.date]));
+  const kindByLabel = { Weapons: "weapon", Maps: "map", Cosmetics: "cosmetic", Taunts: "taunt" };
+  const earliest = new Map();
+  for (const [updateName, entry] of Object.entries(wiki)) {
+    const date = dateByUpdate.get(updateName);
+    if (!date) continue;
+    for (const feature of entry.features || []) {
+      const kind = kindByLabel[feature.label];
+      if (!kind) continue;
+      for (const item of feature.items || []) {
+        // An item can appear in later updates as a remake; keep the update that first added it.
+        const key = updateKey(kind, item);
+        const previous = earliest.get(key);
+        if (!previous || date < previous.date) earliest.set(key, { updateName, date });
+      }
+    }
+  }
+  const addedIn = new Map([...earliest].map(([key, value]) => [key, value.updateName]));
+  const latestUpdate = updates.at(-1).name;
+  logProgress(`Tagged items from ${dateByUpdate.size} timeline updates; latest is ${latestUpdate}.`);
+  return { addedIn, latestUpdate };
+}
+
+async function fetchJson(url) {
+  const response = await fetch(url);
+  if (!response.ok) throw new Error(`Request failed with ${response.status}: ${url}`);
+  return response.json();
+}
+
+// Ignore spacing, punctuation and a leading "The" so update pages' "Showershore" and "The 300th"
+// match the "Shower Shore" map and the "300th" cosmetic.
+function updateKey(kind, name) {
+  return `${kind}:${cleanText(name).toLowerCase().replace(/^the\s+/, "").replace(/[^a-z0-9]+/g, "")}`;
 }
 
 async function writeManifest(data) {

@@ -5,10 +5,11 @@ export const ${exportName} = ${JSON.stringify(items, null, 2)} as const;
 `;
 }
 
-export function renderTierlistsGeneratedFile(tierlists) {
+export function renderTierlistsGeneratedFile(tierlists, latestUpdate) {
   return `import type { TierlistEntry } from "../../types";
 
 export const tierlistsGeneratedAt = ${JSON.stringify(new Date().toISOString())};
+export const latestUpdate = ${JSON.stringify(latestUpdate)};
 export const tierlists: TierlistEntry[] = ${JSON.stringify(tierlists, null, 2)};
 `;
 }

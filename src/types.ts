@@ -16,6 +16,8 @@ export interface TierlistImage {
   sourceId: string;
   classNames?: string[];
   slot?: string;
+  /** TC2 update that added the item, when the TC2 Timeline records it. */
+  addedIn?: string;
 }
 
 export interface TierlistDefinition {
