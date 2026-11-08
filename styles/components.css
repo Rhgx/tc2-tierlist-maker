@@ -358,13 +358,6 @@
     transition: opacity 0.14s ease, transform 0.14s ease, visibility 0.14s ease;
 }
 
-.tooltip__detail {
-    display: block;
-    margin-top: 2px;
-    color: var(--text-secondary);
-    font-weight: 500;
-}
-
 .tooltip__content::after {
     content: "";
     position: absolute;

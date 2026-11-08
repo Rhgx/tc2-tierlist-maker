@@ -12,7 +12,6 @@ export const TierItem = memo(function TierItem({ image }: { image?: TierlistImag
     <Tooltip
       className="tier-item"
       label={image.name}
-      detail={image.addedIn ? `Added in ${image.addedIn}` : undefined}
       data-id={image.id}
       data-name={image.name}
       data-new={isNew ? "" : undefined}
